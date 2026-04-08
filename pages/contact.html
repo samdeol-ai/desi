@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Desi Theatre</title>
+  <meta name="description" content="Get in touch with Desi Theatre — for ticket enquiries, partnerships, sponsorship, media, or to register for auditions." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .contact-hero { background: var(--cream-dark); padding: 88px 40px 80px; }
+    .contact-hero-inner { max-width: 1160px; margin: 0 auto; }
+    .contact-hero h1 { margin-bottom: 16px; max-width: 600px; }
+    .contact-hero p { font-size: 18px; max-width: 520px; }
+
+    /* CONTACT GRID */
+    .contact-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 56px; align-items: start; }
+
+    /* INFO CARDS */
+    .info-card { background: var(--white); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 28px; margin-bottom: 16px; display: flex; gap: 18px; align-items: flex-start; transition: all 0.2s; }
+    .info-card:hover { box-shadow: var(--shadow-sm); }
+    .info-icon { width: 46px; height: 46px; border-radius: var(--radius-sm); background: var(--saffron-light); display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+    .info-content h4 { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 4px; font-family: var(--sans); }
+    .info-content p { font-size: 14px; color: var(--muted); line-height: 1.6; margin: 0; }
+    .info-content a { color: var(--saffron); font-weight: 500; }
+
+    /* ENQUIRY TYPES */
+    .enquiry-types { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+    .enquiry-type { padding: 10px 14px; border: 0.5px solid var(--border-strong); border-radius: var(--radius-sm); font-size: 13px; color: var(--muted); cursor: pointer; transition: all 0.2s; text-align: center; }
+    .enquiry-type.selected, .enquiry-type:hover { border-color: var(--saffron); background: var(--saffron-light); color: var(--saffron-dark); }
+
+    /* SOCIAL */
+    .social-section { background: var(--ink); border-radius: var(--radius-xl); padding: 48px; text-align: center; margin-top: 48px; }
+    .social-section h3 { color: var(--white); font-size: 26px; margin-bottom: 12px; }
+    .social-section p { color: rgba(255,255,255,0.55); margin-bottom: 28px; }
+    .social-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .social-btn { display: inline-flex; align-items: center; gap: 10px; padding: 12px 24px; border-radius: 100px; font-size: 14px; font-weight: 500; border: 0.5px solid rgba(255,255,255,0.20); color: var(--white); transition: all 0.2s; }
+    .social-btn:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.35); }
+
+    /* MAP PLACEHOLDER */
+    .map-box { background: var(--cream-dark); border-radius: var(--radius-lg); border: 0.5px solid var(--border); padding: 40px; text-align: center; min-height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 16px; }
+    .map-box p { font-size: 14px; color: var(--muted); margin-top: 8px; }
+
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .enquiry-types { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <script src="../css/shared.js"></script>
+
+  <!-- HERO -->
+  <section class="contact-hero">
+    <div class="contact-hero-inner">
+      <div class="breadcrumb"><a href="../index.html">Home</a><span>/</span><span>Contact</span></div>
+      <span class="section-label">Get in Touch</span>
+      <h1>We'd love to hear from <em class="serif-italic">you.</em></h1>
+      <p>Ticket questions, partnership enquiries, audition registration, sponsorship, media — the right person is just a message away.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT BODY -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- LEFT: Contact Info -->
+        <div>
+          <span class="section-label">Find Us</span>
+          <h2 style="font-size: 26px; margin-bottom: 28px;">Direct <em class="serif-italic">lines</em></h2>
+
+          <div class="info-card">
+            <div class="info-icon">&#9742;</div>
+            <div class="info-content">
+              <h4>Phone</h4>
+              <p><a href="tel:5109266339">510-926-6339</a></p>
+              <p>Available Mon–Sat, 10am–7pm PT</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">&#9993;</div>
+            <div class="info-content">
+              <h4>Email</h4>
+              <p><a href="mailto:contact@desitheatre.com">contact@desitheatre.com</a></p>
+              <p>We aim to respond within 24 hours</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">&#128205;</div>
+            <div class="info-content">
+              <h4>Mailing Address</h4>
+              <p>5068 Calwa Ct<br>San Jose, CA 95111</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">&#127981;</div>
+            <div class="info-content">
+              <h4>Show Venue</h4>
+              <p><strong style="color: var(--ink);">Historic Hoover Theater</strong><br>1635 Park Ave<br>San Jose, CA 95126</p>
+            </div>
+          </div>
+
+          <div class="map-box">
+            <div style="font-size: 36px; margin-bottom: 8px;">&#128506;</div>
+            <p><strong style="color: var(--ink);">Historic Hoover Theater</strong><br>1635 Park Ave, San Jose, CA 95126</p>
+            <a href="https://maps.google.com/?q=Historic+Hoover+Theater+1635+Park+Ave+San+Jose+CA" target="_blank" class="btn btn-ghost btn-sm mt-16">Open in Google Maps &rarr;</a>
+          </div>
+        </div>
+
+        <!-- RIGHT: Contact Form -->
+        <div>
+          <span class="section-label">Send a Message</span>
+          <h2 style="font-size: 26px; margin-bottom: 8px;">What can we help <em class="serif-italic">with?</em></h2>
+          <p style="margin-bottom: 28px; font-size: 14px;">Select an enquiry type below, or just write freely — we'll make sure it gets to the right person.</p>
+
+          <div class="enquiry-types">
+            <div class="enquiry-type selected">🎟️ Tickets &amp; Shows</div>
+            <div class="enquiry-type">🎭 Auditions</div>
+            <div class="enquiry-type">🤝 Partnerships &amp; Sponsorship</div>
+            <div class="enquiry-type">📣 Media &amp; Press</div>
+            <div class="enquiry-type">🙋 Volunteering</div>
+            <div class="enquiry-type">💬 General</div>
+          </div>
+
+          <div class="form-box" style="margin-top: 0; border-top-left-radius: 0; border-top-right-radius: 0;">
+            <div class="form-row">
+              <div class="form-group"><label class="form-label">First name *</label><input type="text" class="form-input" placeholder="First" /></div>
+              <div class="form-group"><label class="form-label">Last name *</label><input type="text" class="form-input" placeholder="Last" /></div>
+            </div>
+            <div class="form-group"><label class="form-label">Email address *</label><input type="email" class="form-input" placeholder="you@email.com" /></div>
+            <div class="form-group"><label class="form-label">Phone (optional)</label><input type="tel" class="form-input" placeholder="+1 (___) ___-____" /></div>
+            <div class="form-group"><label class="form-label">Subject *</label><input type="text" class="form-input" placeholder="e.g. Ticket enquiry for April 30th show" /></div>
+            <div class="form-group"><label class="form-label">Message *</label><textarea class="form-textarea" placeholder="Tell us what's on your mind…"></textarea></div>
+            <button class="btn btn-primary w-full" style="justify-content: center; font-size: 15px;">Send Message &rarr;</button>
+            <p style="font-size: 12px; color: var(--muted-light); text-align: center; margin-top: 12px;">We'll respond to your message within one business day.</p>
+          </div>
+
+          <!-- SOCIAL -->
+          <div class="social-section">
+            <h3>Follow the <em class="serif-italic">story</em></h3>
+            <p>Behind-the-scenes. Rehearsal moments. Show announcements. All the things that don't fit in a programme.</p>
+            <div class="social-btns">
+              <a href="https://www.instagram.com/desi_theatre/" target="_blank" class="social-btn">&#128247; @desi_theatre on Instagram</a>
+              <a href="https://www.facebook.com/desitheatre" target="_blank" class="social-btn">&#128483; Desi Theatre on Facebook</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DONATE -->
+  <section class="section" style="background: var(--cream-dark);">
+    <div class="container">
+      <div style="background: linear-gradient(135deg, var(--saffron) 0%, #C44F06 100%); border-radius: var(--radius-xl); padding: 64px 56px; display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center;">
+        <div>
+          <span class="section-label" style="color: rgba(255,255,255,0.65);">Support the Arts</span>
+          <h2 style="color: var(--white); margin-bottom: 14px;">Help us make the next production happen.</h2>
+          <p style="color: rgba(255,255,255,0.75); font-size: 17px; max-width: 500px;">Desi Theatre is a non-profit 501(c) organisation. Every contribution — large or small — goes directly into producing better theatre for the Bay Area community. No donors, no advertisers. Just you and the stage.</p>
+        </div>
+        <a href="https://www.zeffy.com/donation-form/48fbff1d-6cfd-417b-a36d-4b484be8253f" target="_blank" class="btn btn-white btn-lg" style="white-space: nowrap; flex-shrink: 0;">Donate Now &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.querySelectorAll('.enquiry-type').forEach(el => {
+      el.addEventListener('click', () => {
+        document.querySelectorAll('.enquiry-type').forEach(e => e.classList.remove('selected'));
+        el.classList.add('selected');
+      });
+    });
+  </script>
+</body>
+</html>

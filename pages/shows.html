@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shows — Desi Theatre</title>
+  <meta name="description" content="Book tickets for Desi Theatre's latest Hindi comedy naatak in San Jose. View current show timings, venue details, and past productions." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    /* ── SHOW HERO ── */
+    .show-hero { background: var(--ink); padding: 80px 40px 72px; }
+    .show-hero-inner { max-width: 1160px; margin: 0 auto; }
+    .show-hero h1 { color: var(--white); margin-bottom: 14px; }
+    .show-hero p { color: rgba(255,255,255,0.60); font-size: 18px; max-width: 560px; }
+    .show-hero-meta { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 20px; }
+
+    /* ── CURRENT SHOW GRID ── */
+    .current-show-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: start; }
+    .show-detail-box { background: var(--white); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 40px; }
+    .show-detail-box h2 { font-size: 36px; margin-bottom: 8px; }
+    .show-tagline { font-family: var(--serif); font-size: 16px; font-style: italic; color: var(--muted); margin-bottom: 24px; }
+    .show-crew { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; padding: 20px 0; border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); margin: 24px 0; }
+    .crew-item .crew-role { font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
+    .crew-item .crew-name { font-size: 15px; font-weight: 500; color: var(--ink); }
+    .show-desc { font-size: 15px; line-height: 1.8; color: var(--muted); margin-bottom: 28px; }
+
+    /* ── TICKET BOX ── */
+    .ticket-sticky { position: sticky; top: 90px; }
+    .ticket-box { background: var(--white); border: 0.5px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; }
+    .ticket-box-header { background: var(--saffron); padding: 26px 28px; }
+    .ticket-box-header h3 { color: var(--white); font-size: 20px; margin-bottom: 4px; }
+    .ticket-box-header p { color: rgba(255,255,255,0.75); font-size: 13px; }
+    .ticket-box-body { padding: 24px 28px; }
+    .showtime-row { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; border-radius: 10px; margin-bottom: 8px; border: 0.5px solid var(--border); cursor: pointer; transition: all 0.2s; }
+    .showtime-row:hover, .showtime-row.selected { background: var(--saffron-light); border-color: var(--saffron); }
+    .showtime-date { font-weight: 600; font-size: 14px; color: var(--ink); }
+    .showtime-time { font-size: 13px; color: var(--muted); }
+    .showtime-avail { font-size: 11px; font-weight: 600; color: var(--saffron); }
+    .ticket-perforated { border-top: 2px dashed var(--border-strong); margin: 20px 0; }
+    .venue-detail { font-size: 13px; color: var(--muted); line-height: 1.7; }
+    .venue-detail strong { color: var(--ink); display: block; }
+
+    /* ── PAST PRODUCTIONS ── */
+    .past-intro { max-width: 600px; margin-bottom: 48px; }
+    .past-intro h2 { margin-bottom: 12px; }
+    .past-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+    /* ── NOTICE ── */
+    .notice { background: var(--saffron-light); border: 0.5px solid rgba(232,96,10,0.25); border-radius: var(--radius-md); padding: 16px 20px; margin-top: 24px; font-size: 14px; color: var(--saffron-dark); }
+
+    @media (max-width: 768px) {
+      .current-show-grid, .past-grid { grid-template-columns: 1fr; }
+      .show-crew { grid-template-columns: 1fr; }
+      .ticket-sticky { position: static; }
+    }
+  </style>
+</head>
+<body>
+  <script src="../css/shared.js"></script>
+
+  <!-- SHOW HERO -->
+  <section class="show-hero">
+    <div class="show-hero-inner">
+      <div class="breadcrumb" style="color: rgba(255,255,255,0.35);">
+        <a href="../index.html" style="color: var(--saffron);">Home</a>
+        <span>/</span>
+        <span style="color: rgba(255,255,255,0.6);">Shows</span>
+      </div>
+      <div class="show-hero-meta">
+        <span class="tag tag-saffron">&#127881; Now Showing</span>
+        <span class="tag" style="background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.7);">Hindi + English Subtitles</span>
+        <span class="tag" style="background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.7);">~100 Min Running Time</span>
+      </div>
+      <h1>On Stage Now &mdash;<br><em class="serif-italic">Pati, Patni, aur "Oh Terri"</em></h1>
+      <p class="mt-16">A riotous new comedy about love, marriage, and the spectacular chaos that lives in between. Five shows only — don't miss your screening.</p>
+    </div>
+  </section>
+
+  <!-- CURRENT PRODUCTION -->
+  <section class="section">
+    <div class="container">
+      <div class="current-show-grid">
+
+        <!-- LEFT: Show Info -->
+        <div>
+          <span class="section-label">Current Production &mdash; Spring 2026</span>
+          <div class="show-detail-box">
+            <h2>Pati, Patni, aur <em class="serif-italic">"Oh Terri"</em></h2>
+            <p class="show-tagline">A Hindi comedy naatak in three acts &mdash; with English supertitles</p>
+
+            <div class="show-crew">
+              <div class="crew-item"><div class="crew-role">Director</div><div class="crew-name">Niranjan Page</div></div>
+              <div class="crew-item"><div class="crew-role">Producer</div><div class="crew-name">Nitin Deo</div></div>
+              <div class="crew-item"><div class="crew-role">Set Design</div><div class="crew-name">Chintan Vora</div></div>
+              <div class="crew-item"><div class="crew-role">Costume Design</div><div class="crew-name">Aditi Honawar</div></div>
+              <div class="crew-item"><div class="crew-role">English Supertitles</div><div class="crew-name">Arti Raina-Bambroo</div></div>
+              <div class="crew-item"><div class="crew-role">Props</div><div class="crew-name">Mousumi Chaudhuri</div></div>
+            </div>
+
+            <p class="show-desc">What happens when the perfect husband, the devoted wife, and an unexpected "Oh Terri" moment collide in the same living room? Pure, unadulterated chaos — and comedy gold. Pati, Patni, aur "Oh Terri" is a love letter to every married couple who has ever had a catastrophically bad day together and survived to laugh about it.</p>
+            <p class="show-desc">Performed entirely in Hindi with live English supertitles, this production is crafted for the entire Bay Area — desi and desi-adjacent alike. Expect sharp writing, expressive performances, and one or two moments that will make you nudge your partner in the ribs.</p>
+
+            <div class="quote-block">
+              <p>"No heavy drama. Just good stories, great people, and a lot of laughter."</p>
+              <cite>— The Desi Theatre Company</cite>
+            </div>
+
+            <div class="notice">
+              &#9679; Doors open 30 minutes before showtime. Light refreshments will be available in the foyer. Please arrive on time — the curtain rises promptly.
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Ticket Box -->
+        <div class="ticket-sticky">
+          <div class="ticket-box">
+            <div class="ticket-box-header">
+              <h3>Reserve Your Seats</h3>
+              <p>Historic Hoover Theater &middot; San Jose, CA</p>
+            </div>
+            <div class="ticket-box-body">
+              <p style="font-size: 13px; color: var(--muted); margin-bottom: 16px;">Select a showing:</p>
+
+              <div class="showtime-row selected">
+                <div><div class="showtime-date">Thu, Apr 30</div><div class="showtime-time">7:30 PM &ndash; 9:10 PM</div></div>
+                <span class="showtime-avail">Available</span>
+              </div>
+              <div class="showtime-row">
+                <div><div class="showtime-date">Fri, May 1</div><div class="showtime-time">7:30 PM &ndash; 9:10 PM</div></div>
+                <span class="showtime-avail">Available</span>
+              </div>
+              <div class="showtime-row">
+                <div><div class="showtime-date">Sat, May 2</div><div class="showtime-time">2:00 PM &ndash; 3:40 PM</div></div>
+                <span class="showtime-avail">Available</span>
+              </div>
+              <div class="showtime-row">
+                <div><div class="showtime-date">Sat, May 2</div><div class="showtime-time">6:00 PM &ndash; 7:40 PM</div></div>
+                <span class="showtime-avail">Available</span>
+              </div>
+              <div class="showtime-row">
+                <div><div class="showtime-date">Sun, May 3</div><div class="showtime-time">3:00 PM &ndash; 4:40 PM</div></div>
+                <span class="showtime-avail">Available</span>
+              </div>
+
+              <div class="ticket-perforated"></div>
+
+              <div class="venue-detail">
+                <strong>Venue</strong>
+                Historic Hoover Theater<br>
+                1635 Park Ave, San Jose, CA 95126
+              </div>
+
+              <a href="https://www.desitheatre.com/buy-ticket" target="_blank" class="btn btn-primary w-full mt-24" style="justify-content: center; font-size: 15px;">
+                Book on Desi Theatre &rarr;
+              </a>
+              <p style="font-size: 12px; color: var(--muted-light); text-align: center; margin-top: 10px;">You will be redirected to the official booking page</p>
+            </div>
+          </div>
+
+          <div style="background: var(--cream-dark); border-radius: var(--radius-md); padding: 20px; margin-top: 16px;">
+            <p style="font-size: 13px; color: var(--muted);"><strong style="color:var(--ink);">Questions?</strong> Call us at 510-926-6339 or email contact@desitheatre.com</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PAST PRODUCTIONS -->
+  <section class="section" id="past" style="background: var(--cream-dark);">
+    <div class="container">
+      <div class="past-intro">
+        <span class="section-label">The Archives &mdash; Past Productions</span>
+        <h2>Previously on <em class="serif-italic">Desi Theatre…</em></h2>
+        <p>Every production is a chapter. Here's how the story began. Each naatak brought the Bay Area community together for an evening of laughter, culture, and connection.</p>
+      </div>
+
+      <div class="past-grid">
+        <div class="prod-card">
+          <div class="prod-year-badge"><div class="year">2025</div><div class="season">Season 2</div></div>
+          <div class="prod-info">
+            <h4>Caught in the Net</h4>
+            <p>A full-length Hindi comedy about the perils of modern technology, social media obsession, and a family that communicates entirely through forwarded WhatsApp messages. Directed by Mukund Marathe.</p>
+            <div style="margin-top: 10px;" class="flex gap-12 flex-wrap">
+              <span class="tag tag-muted">Completed</span>
+              <span class="tag tag-muted">San Jose, CA</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="prod-card">
+          <div class="prod-year-badge"><div class="year">2024</div><div class="season">Season 1</div></div>
+          <div class="prod-info">
+            <h4>The Founding Naatak</h4>
+            <p>Desi Theatre's debut production — a short-form comedy showcase that introduced the Bay Area to a new kind of community theatre. Six scenes, twelve laughs, and one very nervous founding cast.</p>
+            <div style="margin-top: 10px;" class="flex gap-12 flex-wrap">
+              <span class="tag tag-muted">Completed</span>
+              <span class="tag tag-muted">San Jose, CA</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="prod-card" style="border: 0.5px dashed var(--border-strong); background: var(--cream);">
+          <div class="prod-year-badge" style="background: var(--cream-dark);"><div class="year" style="color: var(--muted);">2026</div><div class="season" style="color: var(--muted-light);">Fall</div></div>
+          <div class="prod-info">
+            <h4 style="color: var(--muted);">Next Release — TBA</h4>
+            <p>The next chapter is being written. Stay tuned for our Fall 2026 production announcement. Follow us on Instagram and Facebook to be first in line when tickets drop.</p>
+            <div style="margin-top: 12px;">
+              <a href="contact.html" class="btn btn-ghost btn-sm">Get Notified &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="prod-card" style="background: var(--ink); border-color: transparent; cursor: default;">
+          <div class="prod-info" style="color: var(--white);">
+            <p style="color: var(--saffron-mid); font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px;">Want to be in the next one?</p>
+            <h4 style="color: var(--white); margin-bottom: 8px;">Auditions Open Year-Round</h4>
+            <p style="color: rgba(255,255,255,0.55); font-size: 13px;">Prepare a short Hindi monologue, bring your energy, and walk onto our stage. No experience required — just expression, confidence, and presence.</p>
+            <a href="join.html#auditions" class="btn btn-primary btn-sm mt-16">Register for Audition &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

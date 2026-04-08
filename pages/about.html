@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Desi Theatre</title>
+  <meta name="description" content="Learn about Desi Theatre — Bay Area's Hindi comedy community theatre. Our story, vision, mission, and the culture we're building." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .about-hero { background: linear-gradient(160deg, #1A1208 60%, #3A1C06 100%); padding: 88px 40px 80px; }
+    .about-hero-inner { max-width: 1160px; margin: 0 auto; }
+    .about-hero h1 { color: var(--white); max-width: 700px; margin-bottom: 20px; }
+    .about-hero p { color: rgba(255,255,255,0.60); font-size: 19px; max-width: 560px; line-height: 1.75; }
+
+    .origin-section { }
+    .origin-num { font-family: var(--serif); font-size: 120px; font-weight: 900; color: var(--saffron-light); line-height: 0.9; margin-bottom: 8px; }
+    .origin-text h2 { margin-bottom: 18px; }
+    .origin-text p { margin-bottom: 16px; font-size: 16px; }
+
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .value-card { background: var(--white); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 32px 26px; }
+    .value-num { font-family: var(--serif); font-size: 40px; font-weight: 900; color: var(--saffron-light); line-height: 1; margin-bottom: 12px; }
+    .value-card h3 { font-size: 20px; margin-bottom: 10px; color: var(--ink); }
+    .value-card p { font-size: 14px; line-height: 1.75; }
+
+    .vision-band { background: var(--saffron); padding: 80px 40px; }
+    .vision-band-inner { max-width: 840px; margin: 0 auto; text-align: center; }
+    .vision-band h2 { color: var(--white); font-size: 38px; margin-bottom: 20px; }
+    .vision-band p { color: rgba(255,255,255,0.82); font-size: 18px; line-height: 1.8; }
+
+    .mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .mission-visual { background: var(--cream-dark); border-radius: var(--radius-xl); padding: 56px 40px; text-align: center; }
+    .mission-icon { font-size: 72px; margin-bottom: 20px; display: block; }
+    .mission-visual h3 { font-family: var(--serif); font-size: 26px; color: var(--ink); }
+
+    .timeline { margin-top: 48px; }
+    .timeline-item { display: flex; gap: 28px; margin-bottom: 36px; position: relative; }
+    .timeline-item::before { content: ''; position: absolute; left: 23px; top: 48px; bottom: -36px; width: 1px; background: var(--border-strong); }
+    .timeline-item:last-child::before { display: none; }
+    .timeline-dot { width: 48px; height: 48px; border-radius: 50%; background: var(--saffron-light); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 14px; font-weight: 900; color: var(--saffron-dark); flex-shrink: 0; border: 2px solid var(--saffron); }
+    .timeline-content h4 { font-size: 18px; color: var(--ink); margin-bottom: 6px; padding-top: 10px; }
+    .timeline-content p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+    @media (max-width: 768px) {
+      .values-grid { grid-template-columns: 1fr; }
+      .mission-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <script src="../css/shared.js"></script>
+
+  <!-- HERO -->
+  <section class="about-hero">
+    <div class="about-hero-inner">
+      <div class="breadcrumb" style="color: rgba(255,255,255,0.35);">
+        <a href="../index.html" style="color: var(--saffron);">Home</a>
+        <span>/</span>
+        <span style="color: rgba(255,255,255,0.6);">About</span>
+      </div>
+      <span class="section-label">Our Story</span>
+      <h1>We're not just here to put on plays. We're here to give you a <em class="serif-italic">break.</em></h1>
+      <p class="mt-24">Founded in the Bay Area by a group of passionate desi theatre lovers, Desi Theatre exists to create moments where you can forget everything and just enjoy.</p>
+    </div>
+  </section>
+
+  <!-- ORIGIN -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <div class="origin-num">2024</div>
+          <span class="section-label">Where It All Began</span>
+        </div>
+        <div class="origin-text">
+          <h2>Born from a simple idea: <em class="serif-italic">what if theatre felt like a holiday?</em></h2>
+          <p>It started with a living room conversation between a handful of Bay Area friends who missed the energy of desi theatre — the kind they grew up watching, the kind that made entire families laugh until their sides hurt.</p>
+          <p>The Bay Area has one of the largest South Asian communities in the United States. It has brilliant engineers, brilliant doctors, brilliant entrepreneurs. What it didn't have — at least not in the way it deserved — was a dedicated Hindi comedy theatre company producing high-quality naatak year-round.</p>
+          <p>So a group of passionate volunteers decided to build one. No corporate backing. No government grants. Just people who loved theatre, loved their community, and loved a good laugh.</p>
+          <p>Desi Theatre Company was born.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISION BAND -->
+  <section class="vision-band">
+    <div class="vision-band-inner">
+      <span class="section-label" style="color: rgba(255,255,255,0.65);">Our Vision</span>
+      <h2>In a world of constant hustle, we offer a space where stress fades and laughter takes over.</h2>
+      <p class="mt-24">Every individual feels at home celebrating life, culture, and community through lighthearted theatre. That is the world Desi Theatre is working to build — one naatak at a time.</p>
+    </div>
+  </section>
+
+  <!-- MISSION + TIMELINE -->
+  <section class="section" style="background: var(--cream-dark);">
+    <div class="container">
+      <div class="mission-grid">
+        <div>
+          <span class="section-label">Mission</span>
+          <h2>Bring people together through <em class="serif-italic">high-quality, creative theatre.</em></h2>
+          <div class="divider"></div>
+          <p>To deliver joy without ever compromising on craft. We are a community theatre, yes — but "community" is never an excuse for anything less than excellent.</p>
+          <p class="mt-16">From the set to the script, from the costumes to the supertitles, every element of a Desi Theatre production is handled with care, creativity, and a whole lot of heart.</p>
+
+          <div class="timeline mt-48">
+            <div class="timeline-item">
+              <div class="timeline-dot">24</div>
+              <div class="timeline-content">
+                <h4>Season 1 — The Debut</h4>
+                <p>Desi Theatre's founding production. A short-form comedy showcase that introduced the Bay Area to a fresh, energetic voice in Hindi theatre.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">25</div>
+              <div class="timeline-content">
+                <h4>Season 2 — Caught in the Net</h4>
+                <p>A full-length naatak exploring the chaos of modern family life in the age of social media. Bigger cast, bigger laughs, bigger ambitions.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">26</div>
+              <div class="timeline-content">
+                <h4>Season 3 — Pati, Patni, aur "Oh Terri"</h4>
+                <p>Our most polished production yet. Historic Hoover Theater. Five shows. A full creative team of 15+ volunteers. And a story that will make you call your partner on the way home.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mission-visual">
+          <span class="mission-icon">🎭</span>
+          <h3>Non-profit 501(c)<br>Registered Organization</h3>
+          <p class="mt-16" style="font-size: 14px; color: var(--muted);">Every ticket sold, every donation received goes directly back into producing better theatre for the Bay Area community.</p>
+          <a href="https://www.zeffy.com/donation-form/48fbff1d-6cfd-417b-a36d-4b484be8253f" target="_blank" class="btn btn-primary mt-24">Support the Company &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">What We Stand For</span>
+        <h2>Six values. One <em class="serif-italic">unforgettable</em> evening.</h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-num">01</div>
+          <h3>Comedy</h3>
+          <p>Comedy is at the heart of everything. We strive to create fun content for the Hindi-speaking audience — sometimes meaningful, sometimes meaningless. Always funny.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-num">02</div>
+          <h3>Community</h3>
+          <p>Promoting cultural diversity, integrity, and harmony in the Bay Area desi community. Theatre as a meeting point. A shared laugh as a shared identity.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-num">03</div>
+          <h3>Welcome</h3>
+          <p>Non-judgmental. Respectful. Focused on fun and food. Desi Theatre strives to be a space where everyone — from first-timers to veterans — feels at home.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-num">04</div>
+          <h3>Inclusion</h3>
+          <p>An inclusive, neutral, and joyful culture across all production aspects. English supertitles ensure the story reaches everyone in the room, regardless of background.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-num">05</div>
+          <h3>Vibrancy</h3>
+          <p>We seek vibrant, enthusiastic, and diverse volunteers. Energy is contagious — and the best performances come from people who genuinely want to be on that stage.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-num">06</div>
+          <h3>Empowerment</h3>
+          <p>Desi Theatre passionately champions women empowerment — onstage, backstage, and in every leadership role within the company. The spotlight belongs to everyone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
