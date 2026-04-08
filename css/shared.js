@@ -1,27 +1,24 @@
-/* shared.js — injects nav + footer. Uses root-relative paths for GitHub Pages. */
+/* shared.js — nav + footer injected into every page */
 (function () {
-  var path = window.location.pathname;
-  var page = path.split('/').pop();
-
-  function active(name) {
-    return page === name ? ' class="active"' : '';
-  }
+  var page = window.location.pathname.split('/').pop() || 'index.html';
+  function a(name){ return page === name ? ' class="active"' : ''; }
 
   var nav = [
-    '<nav class="nav">',
+    '<nav class="nav" id="site-nav">',
     '  <div class="nav-inner">',
     '    <a href="index.html" class="nav-logo">Desi <em>Theatre</em></a>',
-    '    <ul class="nav-links">',
-    '      <li><a href="index.html"' + active('index.html') + '>Home</a></li>',
-    '      <li><a href="shows.html"' + active('shows.html') + '>Shows</a></li>',
-    '      <li><a href="about.html"' + active('about.html') + '>About</a></li>',
-    '      <li><a href="team.html"' + active('team.html') + '>The Company</a></li>',
-    '      <li><a href="join.html"' + active('join.html') + '>Join Us</a></li>',
-    '      <li><a href="contact.html"' + active('contact.html') + '>Contact</a></li>',
+    '    <button class="nav-burger" id="nav-burger" aria-label="Open menu">',
+    '      <span></span><span></span><span></span>',
+    '    </button>',
+    '    <ul class="nav-links" id="nav-links">',
+    '      <li><a href="index.html"'+a('index.html')+'>Home</a></li>',
+    '      <li><a href="shows.html"'+a('shows.html')+'>Shows</a></li>',
+    '      <li><a href="about.html"'+a('about.html')+'>About</a></li>',
+    '      <li><a href="team.html"'+a('team.html')+'>The Company</a></li>',
+    '      <li><a href="join.html"'+a('join.html')+'>Join Us</a></li>',
+    '      <li><a href="contact.html"'+a('contact.html')+'>Contact</a></li>',
     '    </ul>',
-    '    <div class="nav-right">',
-    '      <a class="btn btn-primary btn-sm" href="shows.html">Book Tickets</a>',
-    '    </div>',
+    '    <a class="btn btn-gold btn-sm nav-cta" href="shows.html">Book Tickets</a>',
     '  </div>',
     '</nav>'
   ].join('\n');
@@ -32,7 +29,7 @@
     '    <div class="footer-top">',
     '      <div>',
     '        <div class="footer-logo">Desi <em>Theatre</em></div>',
-    '        <p class="footer-desc">Bay Area\'s Hindi comedy community theatre. Rooted in culture, powered by volunteers, driven by laughter since 2024.</p>',
+    '        <p class="footer-desc">Bay\'s Area\'s Hindi comedy community theatre. Rooted in culture, powered by volunteers, driven by laughter since 2024.</p>',
     '        <span class="nonprofit-pill">&#10003; Non-profit 501(c) Registered</span>',
     '      </div>',
     '      <div class="footer-col">',
@@ -56,9 +53,9 @@
     '      </div>',
     '      <div class="footer-col">',
     '        <div class="footer-col-title">Contact</div>',
-    '        <div class="footer-contact-item"><span>&#9742;</span> 510-926-6339</div>',
-    '        <div class="footer-contact-item"><span>&#9993;</span> contact@desitheatre.com</div>',
-    '        <div class="footer-contact-item"><span>&#128205;</span> 5068 Calwa Ct, San Jose CA 95111</div>',
+    '        <div class="footer-contact-item"><span>&#9742;</span><span>510-926-6339</span></div>',
+    '        <div class="footer-contact-item"><span>&#9993;</span><span>contact@desitheatre.com</span></div>',
+    '        <div class="footer-contact-item"><span>&#128205;</span><span>5068 Calwa Ct, San Jose CA 95111</span></div>',
     '      </div>',
     '    </div>',
     '    <div class="footer-bottom">',
@@ -74,4 +71,37 @@
 
   document.body.insertAdjacentHTML('afterbegin', nav);
   document.body.insertAdjacentHTML('beforeend', footer);
+
+  // Mobile burger toggle
+  document.addEventListener('DOMContentLoaded', function(){
+    var burger = document.getElementById('nav-burger');
+    var links  = document.getElementById('nav-links');
+    var navEl  = document.getElementById('site-nav');
+    if(!burger) return;
+    burger.addEventListener('click', function(){
+      var open = links.classList.toggle('open');
+      burger.classList.toggle('open', open);
+      navEl.classList.toggle('mobile-open', open);
+    });
+    // close on link click
+    links.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        links.classList.remove('open');
+        burger.classList.remove('open');
+        navEl.classList.remove('mobile-open');
+      });
+    });
+  });
 })();
+
+  // Scroll → nav background
+  (function(){
+    function onScroll(){
+      var nav = document.getElementById('site-nav');
+      if(!nav) return;
+      if(window.scrollY > 20){ nav.classList.add('scrolled'); }
+      else { nav.classList.remove('scrolled'); }
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+  })();
