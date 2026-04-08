@@ -1,96 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shows — Desi Theatre</title>
-  <meta name="description" content="Book tickets for Desi Theatre's latest Hindi comedy naatak in San Jose. View current show timings, venue details, and past productions." />
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="description" content="Book tickets for Desi Theatre's Hindi comedy naatak in San Jose. Current show timings, venue details, and past productions."/>
+  <link rel="stylesheet" href="css/style.css"/>
   <style>
-    .show-hero { background: var(--ink); padding: 80px 40px 72px; }
-    .show-hero-inner { max-width: 1160px; margin: 0 auto; }
-    .show-hero h1 { color: var(--white); margin-bottom: 14px; }
-    .show-hero p { color: rgba(255,255,255,0.60); font-size: 18px; max-width: 560px; }
-    .show-hero-meta { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 20px; }
-    .current-show-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: start; }
-    .show-detail-box { background: var(--white); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 40px; }
-    .show-detail-box h2 { font-size: 36px; margin-bottom: 8px; }
-    .show-tagline { font-family: var(--serif); font-size: 16px; font-style: italic; color: var(--muted); margin-bottom: 24px; }
-    .show-crew { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; padding: 20px 0; border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); margin: 24px 0; }
-    .crew-item .crew-role { font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
-    .crew-item .crew-name { font-size: 15px; font-weight: 500; color: var(--ink); }
-    .show-desc { font-size: 15px; line-height: 1.8; color: var(--muted); margin-bottom: 28px; }
-    .ticket-sticky { position: sticky; top: 90px; }
-    .ticket-box { background: var(--white); border: 0.5px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; }
-    .ticket-box-header { background: var(--gr-burg); padding: 26px 28px; }
-    .ticket-box-header h3 { color: var(--white); font-size: 20px; margin-bottom: 4px; }
-    .ticket-box-header p { color: rgba(255,255,255,0.75); font-size: 13px; }
+    /* ── Page hero ── */
+    .show-page-hero { position: relative; min-height: 52vh; display: flex; align-items: flex-end; overflow: hidden; background: var(--coal-950); }
+    .show-page-hero-bg { position: absolute; inset: 0; }
+    .show-page-hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.38; display: block; }
+    .show-page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,10,11,0.97) 0%, rgba(13,10,11,0.40) 55%, rgba(13,10,11,0.10) 100%); }
+    .show-page-hero-inner { position: relative; z-index: 2; max-width: 1180px; margin: 0 auto; width: 100%; padding: 0 40px 56px; }
+    .show-hero-meta { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 18px; }
+
+    /* ── Layout ── */
+    .show-main-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: start; }
+
+    /* ── Detail box ── */
+    .show-detail-box { background: #fff; border: 0.5px solid var(--bdr-soft); border-radius: var(--r-xl); padding: 40px; box-shadow: var(--sh-card); }
+    .show-tagline { font-family: var(--ff-display); font-size: 16px; font-style: italic; color: var(--txt-muted); margin-bottom: 24px; }
+    .show-crew { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 20px 0; border-top: 0.5px solid var(--bdr-hair); border-bottom: 0.5px solid var(--bdr-hair); margin: 24px 0; }
+    .crew-role { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--txt-muted); margin-bottom: 3px; }
+    .crew-name { font-size: 15px; font-weight: 500; color: var(--coal-900); font-family: var(--ff-display); }
+    .show-desc { font-size: 15px; line-height: 1.8; color: var(--txt-muted); margin-bottom: 22px; }
+
+    /* ── Ticket box ── */
+    .ticket-sticky { position: sticky; top: 84px; }
+    .ticket-box { background: #fff; border: 0.5px solid var(--bdr-soft); border-radius: var(--r-xl); overflow: hidden; box-shadow: var(--sh-lg); }
+    .ticket-box-header { background: var(--gr-burg); padding: 24px 28px; position: relative; overflow: hidden; }
+    .ticket-box-header::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 20% 50%, rgba(224,155,32,0.12) 0%, transparent 60%); }
+    .ticket-box-header h3 { color: var(--cream-50); font-size: 22px; margin-bottom: 4px; position: relative; z-index: 1; }
+    .ticket-box-header p { color: rgba(253,237,218,0.65); font-size: 13px; position: relative; z-index: 1; }
     .ticket-box-body { padding: 24px 28px; }
-    .showtime-row { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; border-radius: 10px; margin-bottom: 8px; border: 0.5px solid var(--border); transition: all 0.2s; }
-    .showtime-row.sel { background: var(--saffron-light); border-color: var(--saffron); }
-    .showtime-date { font-weight: 600; font-size: 14px; color: var(--ink); }
-    .showtime-time { font-size: 13px; color: var(--muted); }
-    .showtime-avail { font-size: 11px; font-weight: 600; color: var(--saffron); }
-    .ticket-perforated { border-top: 2px dashed var(--border-strong); margin: 20px 0; }
-    .venue-detail { font-size: 13px; color: var(--muted); line-height: 1.7; }
-    .venue-detail strong { color: var(--ink); display: block; }
-    .past-intro { max-width: 600px; margin-bottom: 48px; }
-    .past-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .notice { background: var(--saffron-light); border: 0.5px solid rgba(107,31,56,0.25); border-radius: var(--radius-md); padding: 16px 20px; margin-top: 24px; font-size: 14px; color: var(--saffron-dark); }
-    @media (max-width: 768px) {
-      .current-show-grid, .past-grid { grid-template-columns: 1fr; }
-      .show-crew { grid-template-columns: 1fr; }
+    .showtime-row { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; border-radius: var(--r-md); margin-bottom: 8px; border: 0.5px solid var(--bdr-soft); cursor: pointer; transition: all var(--ease-fast); }
+    .showtime-row:hover, .showtime-row.sel { background: var(--burg-50); border-color: rgba(107,31,56,0.28); }
+    .showtime-date { font-weight: 600; font-size: 14px; color: var(--coal-900); }
+    .showtime-time { font-size: 13px; color: var(--txt-muted); }
+    .showtime-avail { font-size: 11px; font-weight: 700; color: var(--burg-600); letter-spacing: 0.5px; }
+    .ticket-perforated { border-top: 2px dashed var(--bdr-med); margin: 18px 0; }
+    .venue-detail { font-size: 13px; color: var(--txt-muted); line-height: 1.65; }
+    .venue-detail strong { color: var(--coal-900); display: block; margin-bottom: 2px; font-family: var(--ff-display); font-size: 15px; }
+    .ticket-help-box { background: var(--bg-warm); border: 0.5px solid var(--bdr-gold-s); border-radius: var(--r-lg); padding: 16px 20px; margin-top: 14px; }
+    .ticket-help-box p { font-size: 13px; color: var(--txt-muted); margin: 0; }
+
+    /* ── Notice ── */
+    .show-notice { background: var(--burg-50); border: 0.5px solid rgba(107,31,56,0.20); border-left: 3px solid var(--burg-500); border-radius: 0 var(--r-md) var(--r-md) 0; padding: 14px 18px; margin-top: 24px; font-size: 14px; color: var(--burg-700); }
+
+    /* ── Past grid ── */
+    .past-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .show-main-grid { grid-template-columns: 1fr; }
       .ticket-sticky { position: static; }
+      .past-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .show-page-hero-inner { padding: 0 20px 40px; }
+      .show-detail-box { padding: 24px 20px; }
+      .ticket-box-body { padding: 18px 20px; }
+      .show-crew { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
   <script src="css/shared.js"></script>
 
-  <!-- HERO image: images/shows-hero-1.jpg -->
-  <section class="show-hero" style="position:relative;overflow:hidden;min-height:45vh;display:flex;align-items:flex-end;margin-top:-64px;background:var(--coal-950);">
-    <div style="position:absolute;inset:0;"><img src="images/shows-hero-1.jpg" alt="Desi Theatre show night — stage lights and audience" style="width:100%;height:100%;object-fit:cover;opacity:0.35;" /></div>
-    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(13,10,11,0.95) 0%,rgba(13,10,11,0.20) 60%,transparent 100%);"></div>
-    <div class="show-hero-inner">
-      <div class="breadcrumb" style="color: rgba(255,255,255,0.35);">
-        <a href="index.html" style="color: var(--saffron);">Home</a><span>/</span>
-        <span style="color: rgba(255,255,255,0.6);">Shows</span>
+  <!-- ═══════════ PAGE HERO · image: images/shows-hero-1.jpg ═══════════ -->
+  <section class="show-page-hero">
+    <div class="show-page-hero-bg">
+      <img src="images/shows-hero-1.jpg" alt="Stage lights at Desi Theatre — dramatic spotlight on an empty stage"/>
+    </div>
+    <div class="show-page-hero-overlay"></div>
+    <div class="show-page-hero-inner">
+      <div class="breadcrumb light" style="margin-bottom: 20px;">
+        <a href="index.html">Home</a><span>/</span><span>Shows</span>
       </div>
       <div class="show-hero-meta">
-        <span class="tag tag-burg">&#127881; Now Showing</span>
-        <span class="tag" style="background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.7);">Hindi + English Subtitles</span>
-        <span class="tag" style="background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.7);">~100 Min Running Time</span>
+        <span class="tag tag-live">&#9679; Now Showing</span>
+        <span class="tag tag-dark">Hindi + English Subtitles</span>
+        <span class="tag tag-dark">~100 Min</span>
       </div>
-      <h1>On Stage Now &mdash;<br><em class="serif-italic">Pati, Patni, aur "Oh Terri"</em></h1>
-      <p class="mt-16">A riotous new comedy about love, marriage, and the spectacular chaos that lives in between. Five shows only &mdash; don't miss your screening.</p>
+      <h1 style="color: #fff; max-width: 720px;">On Stage Now &mdash;<br><em style="color: var(--gold-300); font-style: italic;">Pati, Patni, aur &#8220;Oh Terri&#8221;</em></h1>
+      <p style="color: rgba(253,237,218,0.65); font-size: 17px; max-width: 520px; margin-top: 14px;">A riotous comedy about love, marriage, and the spectacular chaos that lives in between. Five shows only.</p>
     </div>
   </section>
 
-  <section class="section">
+  <!-- ═══════════ CURRENT SHOW ═══════════ -->
+  <section class="section" style="background: var(--cream-50);">
     <div class="container">
-      <div class="current-show-grid">
+      <div class="show-main-grid">
+
+        <!-- Left: show detail -->
         <div>
-          <span class="section-label">Current Production &mdash; Spring 2026</span>
           <div class="show-detail-box">
-            <h2>Pati, Patni, aur <em class="serif-italic">"Oh Terri"</em></h2>
-            <p class="show-tagline">A Hindi comedy naatak &mdash; with English supertitles</p>
-            <div class="show-crew">
-              <div class="crew-item"><div class="crew-role">Director</div><div class="crew-name">Niranjan Page</div></div>
-              <div class="crew-item"><div class="crew-role">Producer</div><div class="crew-name">Nitin Deo</div></div>
-              <div class="crew-item"><div class="crew-role">Set Design</div><div class="crew-name">Chintan Vora</div></div>
-              <div class="crew-item"><div class="crew-role">Costume Design</div><div class="crew-name">Aditi Honawar</div></div>
-              <div class="crew-item"><div class="crew-role">English Supertitles</div><div class="crew-name">Arti Raina-Bambroo</div></div>
-              <div class="crew-item"><div class="crew-role">Props</div><div class="crew-name">Mousumi Chaudhuri</div></div>
+            <!-- image: images/shows-poster-2.jpg -->
+            <div style="aspect-ratio: 16/7; border-radius: var(--r-lg); overflow: hidden; background: var(--coal-800); margin-bottom: 28px;">
+              <img src="images/shows-poster-2.jpg" alt="Pati Patni aur Oh Terri — show poster" style="width:100%;height:100%;object-fit:cover;display:block;"/>
             </div>
-            <p class="show-desc">What happens when the perfect husband, the devoted wife, and an unexpected "Oh Terri" moment collide in the same living room? Pure, unadulterated chaos — and comedy gold. Pati, Patni, aur "Oh Terri" is a love letter to every married couple who has ever had a catastrophically bad day together and survived to laugh about it.</p>
-            <p class="show-desc">Performed entirely in Hindi with live English supertitles, this production is crafted for the entire Bay Area — desi and desi-adjacent alike. Expect sharp writing, expressive performances, and one or two moments that will make you nudge your partner in the ribs.</p>
+            <h2 style="font-size: clamp(24px,3vw,34px); margin-bottom: 6px;">Pati, Patni, aur <em style="color:var(--burg-600);font-style:italic;">&#8220;Oh Terri&#8221;</em></h2>
+            <p class="show-tagline">A Hindi comedy naatak with English supertitles &mdash; Spring 2026</p>
+            <div class="show-crew">
+              <div><div class="crew-role">Director</div><div class="crew-name">Niranjan Page</div></div>
+              <div><div class="crew-role">Producer</div><div class="crew-name">Nitin Deo</div></div>
+              <div><div class="crew-role">Set Design</div><div class="crew-name">Chintan Vora</div></div>
+              <div><div class="crew-role">Costume Design</div><div class="crew-name">Aditi Honawar</div></div>
+              <div><div class="crew-role">English Supertitles</div><div class="crew-name">Arti Raina-Bambroo</div></div>
+              <div><div class="crew-role">Props</div><div class="crew-name">Mousumi Chaudhuri</div></div>
+            </div>
+            <p class="show-desc">What happens when the perfect husband, the devoted wife, and an unexpected &#8220;Oh Terri&#8221; moment collide in the same living room? Pure, unadulterated chaos — and comedy gold. This is a love letter to every married couple who has survived a catastrophically bad day together and laughed about it.</p>
+            <p class="show-desc">Performed entirely in Hindi with live English supertitles — crafted for the entire Bay Area, desi and desi-adjacent alike.</p>
             <div class="quote-block">
-              <p>"No heavy drama. Just good stories, great people, and a lot of laughter."</p>
+              <p>&#8220;No heavy drama. Just good stories, great people, and a lot of laughter.&#8221;</p>
               <cite>— The Desi Theatre Company</cite>
             </div>
-            <div class="notice">&#9679; Doors open 30 minutes before showtime. Light refreshments available in the foyer. Please arrive on time — the curtain rises promptly.</div>
+            <div class="show-notice">&#9679;&nbsp; Doors open 30 minutes before showtime. Light refreshments in the foyer. Curtain rises promptly — please arrive on time.</div>
           </div>
         </div>
+
+        <!-- Right: ticket box -->
         <div class="ticket-sticky">
           <div class="ticket-box">
             <div class="ticket-box-header">
@@ -98,40 +128,60 @@
               <p>Historic Hoover Theater &middot; San Jose, CA</p>
             </div>
             <div class="ticket-box-body">
-              <p style="font-size: 13px; color: var(--muted); margin-bottom: 16px;">Select a showing:</p>
-              <div class="showtime-row sel"><div><div class="showtime-date">Thu, Apr 30</div><div class="showtime-time">7:30 PM &ndash; 9:10 PM</div></div><span class="showtime-avail">Available</span></div>
-              <div class="showtime-row"><div><div class="showtime-date">Fri, May 1</div><div class="showtime-time">7:30 PM &ndash; 9:10 PM</div></div><span class="showtime-avail">Available</span></div>
-              <div class="showtime-row"><div><div class="showtime-date">Sat, May 2</div><div class="showtime-time">2:00 PM &ndash; 3:40 PM</div></div><span class="showtime-avail">Available</span></div>
-              <div class="showtime-row"><div><div class="showtime-date">Sat, May 2</div><div class="showtime-time">6:00 PM &ndash; 7:40 PM</div></div><span class="showtime-avail">Available</span></div>
-              <div class="showtime-row"><div><div class="showtime-date">Sun, May 3</div><div class="showtime-time">3:00 PM &ndash; 4:40 PM</div></div><span class="showtime-avail">Available</span></div>
+              <p style="font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--txt-muted); margin-bottom: 14px;">Select a showing</p>
+              <div class="showtime-row sel">
+                <div><div class="showtime-date">Thu, Apr 30</div><div class="showtime-time">7:30 PM &ndash; 9:10 PM</div></div>
+                <span class="showtime-avail">Available</span>
+              </div>
+              <div class="showtime-row">
+                <div><div class="showtime-date">Fri, May 1</div><div class="showtime-time">7:30 PM &ndash; 9:10 PM</div></div>
+                <span class="showtime-avail">Available</span>
+              </div>
+              <div class="showtime-row">
+                <div><div class="showtime-date">Sat, May 2</div><div class="showtime-time">2:00 PM &ndash; 3:40 PM</div></div>
+                <span class="showtime-avail">Available</span>
+              </div>
+              <div class="showtime-row">
+                <div><div class="showtime-date">Sat, May 2</div><div class="showtime-time">6:00 PM &ndash; 7:40 PM</div></div>
+                <span class="showtime-avail">Available</span>
+              </div>
+              <div class="showtime-row">
+                <div><div class="showtime-date">Sun, May 3</div><div class="showtime-time">3:00 PM &ndash; 4:40 PM</div></div>
+                <span class="showtime-avail">Available</span>
+              </div>
               <div class="ticket-perforated"></div>
-              <div class="venue-detail"><strong>Venue</strong>Historic Hoover Theater<br>1635 Park Ave, San Jose, CA 95126</div>
-              <a href="https://www.desitheatre.com/buy-ticket" target="_blank" class="btn btn-primary w-full mt-24" style="justify-content: center; font-size: 15px;">Book on Desi Theatre &rarr;</a>
-              <p style="font-size: 12px; color: var(--muted-light); text-align: center; margin-top: 10px;">You will be redirected to the official booking page</p>
+              <div class="venue-detail">
+                <strong>Historic Hoover Theater</strong>
+                1635 Park Ave, San Jose, CA 95126
+              </div>
+              <a href="https://www.desitheatre.com/buy-ticket" target="_blank" class="btn btn-primary w-full" style="justify-content:center; margin-top: 20px; font-size:15px;">Book on Desi Theatre &rarr;</a>
+              <p style="font-size: 12px; color: var(--txt-muted); text-align: center; margin-top: 10px;">Opens official booking page in a new tab</p>
             </div>
           </div>
-          <div style="background: var(--cream-dark); border-radius: var(--radius-md); padding: 20px; margin-top: 16px;">
-            <p style="font-size: 13px; color: var(--muted);"><strong style="color:var(--ink);">Questions?</strong> Call 510-926-6339 or email contact@desitheatre.com</p>
+          <div class="ticket-help-box">
+            <p><strong style="color: var(--coal-900);">Questions?</strong> Call&nbsp;510-926-6339 or email contact@desitheatre.com</p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <section class="section" id="past" style="background: var(--cream-dark);">
+  <!-- ═══════════ PAST PRODUCTIONS ═══════════ -->
+  <section class="section section-cream" id="past">
     <div class="container">
-      <div class="past-intro">
-        <span class="section-label">The Archives &mdash; Past Productions</span>
-        <h2>Previously on <em class="serif-italic">Desi Theatre…</em></h2>
-        <p>Every production is a chapter. Here's how the story began. Each naatak brought the Bay Area community together for an evening of laughter, culture, and connection.</p>
+      <div style="max-width: 580px; margin-bottom: 44px;">
+        <span class="section-eyebrow">The Archives</span>
+        <h2>Previously on <em style="color:var(--burg-600);font-style:italic;">Desi Theatre&#8230;</em></h2>
+        <p style="margin-top: 12px;">Every production is a chapter. Here's how the story began — and how it keeps growing.</p>
       </div>
       <div class="past-grid">
         <div class="prod-card">
           <div class="prod-year-badge"><div class="year">2025</div><div class="season">Season 2</div></div>
           <div class="prod-info">
             <h4>Caught in the Net</h4>
-            <p>A full-length Hindi comedy about the perils of modern technology, social media obsession, and a family that communicates entirely through forwarded WhatsApp messages. Directed by Mukund Marathe.</p>
-            <div style="margin-top: 10px;" class="flex gap-12 flex-wrap">
+            <p>A full-length Hindi comedy about modern technology, social media obsession, and a family that communicates entirely through forwarded WhatsApp messages. Directed by Mukund Marathe.</p>
+            <div style="display:flex; gap:8px; margin-top:12px; flex-wrap:wrap;">
               <span class="tag tag-muted">Completed</span>
               <span class="tag tag-muted">San Jose, CA</span>
             </div>
@@ -141,31 +191,35 @@
           <div class="prod-year-badge"><div class="year">2024</div><div class="season">Season 1</div></div>
           <div class="prod-info">
             <h4>The Founding Naatak</h4>
-            <p>Desi Theatre's debut production — a short-form comedy showcase that introduced the Bay Area to a new kind of community theatre. Six scenes, twelve laughs, and one very nervous founding cast.</p>
-            <div style="margin-top: 10px;" class="flex gap-12 flex-wrap">
+            <p>Desi Theatre's debut — a short-form comedy showcase that introduced the Bay Area to a fresh, energetic voice in Hindi theatre. Six scenes, twelve laughs, one very nervous cast.</p>
+            <div style="display:flex; gap:8px; margin-top:12px; flex-wrap:wrap;">
               <span class="tag tag-muted">Completed</span>
               <span class="tag tag-muted">San Jose, CA</span>
             </div>
           </div>
         </div>
-        <div class="prod-card" style="border: 0.5px dashed var(--border-strong); background: var(--cream);">
-          <div class="prod-year-badge" style="background: var(--cream-dark);"><div class="year" style="color: var(--muted);">2026</div><div class="season" style="color: var(--muted-light);">Fall</div></div>
+        <div class="prod-card" style="border-style: dashed; background: var(--cream-50);">
+          <div class="prod-year-badge" style="background: var(--cream-100); border-color: var(--bdr-soft);">
+            <div class="year" style="color: var(--txt-muted);">2026</div>
+            <div class="season" style="color: var(--txt-subtle);">Fall</div>
+          </div>
           <div class="prod-info">
-            <h4 style="color: var(--muted);">Next Release — TBA</h4>
-            <p>The next chapter is being written. Stay tuned for our Fall 2026 production announcement. Follow us on Instagram and Facebook to be first in line when tickets drop.</p>
-            <div style="margin-top: 12px;"><a href="contact.html" class="btn btn-ghost btn-sm">Get Notified &rarr;</a></div>
+            <h4 style="color: var(--txt-muted);">Next Release &mdash; TBA</h4>
+            <p>The next chapter is being written. Follow us on Instagram and Facebook to be first in line when tickets drop.</p>
+            <a href="contact.html" class="btn btn-secondary btn-sm" style="margin-top:14px; display:inline-flex;">Get Notified &rarr;</a>
           </div>
         </div>
-        <div class="prod-card" style="background: var(--ink); border-color: transparent; cursor: default;">
+        <div class="prod-card" style="background: var(--coal-900); border-color: transparent;">
           <div class="prod-info">
-            <p style="color: var(--saffron-mid); font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px;">Want to be in the next one?</p>
-            <h4 style="color: var(--white); margin-bottom: 8px;">Auditions Open Year-Round</h4>
-            <p style="color: rgba(255,255,255,0.55); font-size: 13px;">Prepare a short Hindi monologue, bring your energy, and walk onto our stage. No experience required — just expression, confidence, and presence.</p>
-            <a href="join.html#auditions" class="btn btn-primary btn-sm mt-16">Register for Audition &rarr;</a>
+            <p style="color: var(--gold-300); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px;">Want to be in the next one?</p>
+            <h4 style="color: #fff; margin-bottom: 10px;">Auditions Open Year-Round</h4>
+            <p style="color: rgba(255,255,255,0.55); font-size: 13px;">Prepare a short Hindi monologue and bring your energy. No experience required — just expression, confidence, and presence.</p>
+            <a href="join.html#auditions" class="btn btn-gold btn-sm" style="margin-top:18px; display:inline-flex;">Register for Audition &rarr;</a>
           </div>
         </div>
       </div>
     </div>
   </section>
+
 </body>
 </html>

@@ -1,68 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Desi Theatre — Bay Area Hindi Comedy Naatak</title>
-  <meta name="description" content="Bay Area's finest Hindi comedy community theatre. High-quality naatak that makes you laugh, connect, and feel lighter. Performing in San Jose, CA." />
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="description" content="Bay Area's finest Hindi comedy community theatre. High-quality naatak that makes you laugh, connect, and feel lighter. Performing in San Jose, CA."/>
+  <link rel="stylesheet" href="css/style.css"/>
   <style>
-    .why-pillars{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
-    .pillar{background:#fff;border:0.5px solid var(--bdr-soft);border-radius:var(--r-lg);padding:24px 20px;transition:all var(--ease-base);}
-    .pillar:hover{border-color:var(--bdr-gold-s);box-shadow:var(--sh-card);transform:translateY(-2px);}
-    .pillar-icon{font-size:24px;margin-bottom:10px;}
-    .pillar h4{font-family:var(--ff-display);font-size:18px;color:var(--coal-900);margin-bottom:6px;}
-    .pillar p{font-size:13px;color:var(--txt-muted);line-height:1.65;}
-    .show-poster-home{border-radius:var(--r-xl);overflow:hidden;background:var(--coal-800);aspect-ratio:4/5;position:relative;box-shadow:var(--sh-xl),var(--sh-glow-b);}
-    .show-poster-home img{width:100%;height:100%;object-fit:cover;object-position:center top;}
-    .show-poster-home::after{content:'';position:absolute;bottom:0;left:0;right:0;height:55%;background:linear-gradient(to top,rgba(13,10,11,0.92),transparent);}
-    .show-poster-overlay{position:absolute;bottom:0;left:0;right:0;padding:28px;z-index:2;}
-    .show-poster-overlay h3{font-family:var(--ff-display);font-size:24px;color:#fff;margin-bottom:4px;}
-    .show-poster-overlay p{font-size:13px;color:var(--gold-300);font-style:italic;margin-bottom:16px;}
-    .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
-    .home-gallery{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:260px 260px;gap:12px;}
-    .hg-item{border-radius:var(--r-lg);overflow:hidden;background:var(--coal-800);position:relative;}
-    .hg-item img{width:100%;height:100%;object-fit:cover;transition:transform var(--ease-slow);}
-    .hg-item:hover img{transform:scale(1.05);}
-    .hg-1{grid-column:1/3;grid-row:1/2;}
-    .hg-2{grid-column:3/4;grid-row:1/2;}
-    .hg-3{grid-column:1/2;grid-row:2/3;}
-    .hg-4{grid-column:2/4;grid-row:2/3;}
-    .culture-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
-    .culture-card{background:rgba(255,255,255,0.05);border:0.5px solid rgba(255,255,255,0.09);border-radius:var(--r-xl);padding:32px 26px;transition:all var(--ease-base);}
-    .culture-card:hover{background:rgba(255,255,255,0.08);}
-    .culture-icon{font-size:28px;margin-bottom:16px;}
-    .culture-card h3{font-family:var(--ff-display);font-size:22px;color:#fff;margin-bottom:10px;}
-    .culture-card p{font-size:14px;color:rgba(255,255,255,0.52);line-height:1.75;}
-    .cta-band{background:var(--gr-burg);padding:80px 40px;text-align:center;position:relative;overflow:hidden;}
-    .cta-band::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 0%,rgba(224,155,32,0.12) 0%,transparent 60%);}
-    .cta-band-inner{position:relative;z-index:1;max-width:700px;margin:0 auto;}
-    .cta-band h2{color:#fff;margin-bottom:12px;}
-    .cta-band p{color:rgba(253,237,218,0.72);font-size:18px;margin-bottom:32px;}
-    @media(max-width:768px){
-      .why-pillars{grid-template-columns:1fr;}
-      .stats-row{grid-template-columns:repeat(2,1fr);}
-      .culture-cards{grid-template-columns:1fr;}
-      .home-gallery{grid-template-columns:1fr 1fr;grid-template-rows:180px 180px 180px;}
-      .hg-1{grid-column:1/3;}
-      .hg-2{grid-column:1/2;grid-row:2/3;}
-      .hg-3{grid-column:2/3;grid-row:2/3;}
-      .hg-4{grid-column:1/3;grid-row:3/4;}
-      .cta-band{padding:56px 20px;}
+    /* ── Why pillars ── */
+    .why-pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px; }
+    .pillar { background: #fff; border: 0.5px solid var(--bdr-soft); border-radius: var(--r-lg); padding: 22px 18px; transition: all var(--ease-base); }
+    .pillar:hover { border-color: var(--bdr-gold-s); box-shadow: var(--sh-card); transform: translateY(-2px); }
+    .pillar-icon { font-size: 22px; margin-bottom: 8px; }
+    .pillar h4 { font-family: var(--ff-display); font-size: 17px; color: var(--coal-900); margin-bottom: 5px; font-weight: 700; }
+    .pillar p { font-size: 13px; color: var(--txt-muted); line-height: 1.6; }
+
+    /* ── Show poster ── */
+    .show-poster-home { border-radius: var(--r-xl); overflow: hidden; background: var(--coal-800); aspect-ratio: 4/5; position: relative; box-shadow: var(--sh-xl), var(--sh-glow-b); }
+    .show-poster-home img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+    .show-poster-home::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 55%; background: linear-gradient(to top, rgba(13,10,11,0.94), transparent); }
+    .show-poster-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 28px; z-index: 2; }
+    .show-poster-overlay h3 { font-family: var(--ff-display); font-size: 22px; color: #fff; margin-bottom: 4px; line-height: 1.2; }
+    .show-poster-overlay p { font-size: 13px; color: var(--gold-300); font-style: italic; margin-bottom: 14px; }
+
+    /* ── Stats ── */
+    .stats-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
+
+    /* ── Gallery ── */
+    .home-gallery { display: grid; grid-template-columns: repeat(3,1fr); grid-template-rows: 260px 260px; gap: 10px; border-radius: var(--r-xl); overflow: hidden; }
+    .hg-item { overflow: hidden; background: var(--coal-800); position: relative; }
+    .hg-item img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--ease-slow); display: block; }
+    .hg-item:hover img { transform: scale(1.06); }
+    .hg-1 { grid-column: 1/3; grid-row: 1/2; }
+    .hg-2 { grid-column: 3/4; grid-row: 1/2; }
+    .hg-3 { grid-column: 1/2; grid-row: 2/3; }
+    .hg-4 { grid-column: 2/4; grid-row: 2/3; }
+
+    /* ── Culture cards ── */
+    .culture-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 48px; }
+    .culture-card { background: rgba(255,255,255,0.05); border: 0.5px solid rgba(255,255,255,0.10); border-radius: var(--r-xl); padding: 32px 26px; transition: all var(--ease-base); }
+    .culture-card:hover { background: rgba(255,255,255,0.09); transform: translateY(-2px); }
+    .culture-icon { font-size: 30px; margin-bottom: 16px; }
+    .culture-card h3 { font-family: var(--ff-display); font-size: 22px; color: #fff; margin-bottom: 10px; }
+    .culture-card p { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.75; }
+
+    /* ── CTA band ── */
+    .cta-band { background: var(--gr-burg); padding: 80px 40px; text-align: center; position: relative; overflow: hidden; }
+    .cta-band::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(224,155,32,0.13) 0%, transparent 60%); }
+    .cta-band-inner { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
+    .cta-band h2 { color: #fff; margin-bottom: 12px; }
+    .cta-band p { color: rgba(253,237,218,0.72); font-size: 18px; margin-bottom: 32px; }
+
+    /* ── Venue info box ── */
+    .venue-box { background: var(--bg-warm); border: 0.5px solid var(--bdr-gold-s); border-radius: var(--r-md); padding: 18px 22px; margin: 20px 0; }
+    .venue-box p { font-size: 14px; margin: 0; }
+    .venue-box p + p { margin-top: 3px; }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .why-pillars { grid-template-columns: 1fr 1fr; }
+      .stats-row { grid-template-columns: repeat(2,1fr); }
+      .culture-cards { grid-template-columns: 1fr 1fr; }
+      .home-gallery { grid-template-columns: 1fr 1fr; grid-template-rows: 180px 180px 180px; }
+      .hg-1 { grid-column: 1/3; grid-row: 1/2; }
+      .hg-2 { grid-column: 1/2; grid-row: 2/3; }
+      .hg-3 { grid-column: 2/3; grid-row: 2/3; }
+      .hg-4 { grid-column: 1/3; grid-row: 3/4; }
     }
-    @media(max-width:480px){
-      .home-gallery{grid-template-columns:1fr;grid-template-rows:auto;}
-      .hg-1,.hg-2,.hg-3,.hg-4{grid-column:auto;grid-row:auto;height:220px;}
+    @media (max-width: 600px) {
+      .why-pillars { grid-template-columns: 1fr; }
+      .culture-cards { grid-template-columns: 1fr; }
+      .stats-row { grid-template-columns: repeat(2,1fr); gap: 12px; }
+      .home-gallery { grid-template-columns: 1fr; grid-template-rows: auto; border-radius: var(--r-lg); }
+      .hg-1,.hg-2,.hg-3,.hg-4 { grid-column: auto; grid-row: auto; height: 200px; }
+      .cta-band { padding: 56px 20px; }
     }
   </style>
 </head>
 <body>
   <script src="css/shared.js"></script>
 
-  <!-- HERO BANNER · image: images/index-hero-1.jpg -->
+  <!-- ═══════════ HERO BANNER · image: images/index-hero-1.jpg ═══════════ -->
   <section class="hero-banner">
     <div class="hero-banner-bg">
-      <img src="images/index-hero-1.jpg" alt="Desi Theatre performers on stage under dramatic warm spotlights" />
+      <img src="images/index-hero-1.jpg" alt="Desi Theatre performers on stage under dramatic warm spotlights"/>
     </div>
     <div class="hero-banner-overlay"></div>
     <div class="hero-banner-spot"></div>
@@ -70,42 +91,39 @@
     <div class="hero-banner-inner">
       <div class="hero-banner-content">
         <div class="hero-badge fade-up delay-1">&#9679; Now Playing in San Jose, CA</div>
-        <h1 class="fade-up delay-2">Laugh a Little Louder. Live a Little <em>Lighter.</em></h1>
+        <h1 class="fade-up delay-2">Laugh a Little Louder.<br>Live a Little <em>Lighter.</em></h1>
         <p class="fade-up delay-3">High-quality, lighthearted Hindi theatre that brings people together, makes you laugh, and lets you switch off for a while.</p>
         <div class="hero-banner-actions fade-up delay-4">
           <a href="shows.html" class="btn btn-gold btn-xl">Book Tickets &rarr;</a>
-          <a href="join.html"  class="btn btn-ghost btn-xl">Join the Fun</a>
+          <a href="join.html" class="btn btn-ghost btn-xl">Join the Fun</a>
         </div>
         <p class="hero-banner-micro fade-up delay-5">No heavy drama. Just good stories, great people, and a lot of laughter.</p>
       </div>
     </div>
     <div class="hero-scroll-cue">Scroll</div>
-    <div class="hero-lights"></div>
-    <div class="hero-curtain-left"></div>
-    <div class="hero-curtain-right"></div>
   </section>
 
-  <!-- WHY WE EXIST · image: images/index-backstage-2.jpg -->
+  <!-- ═══════════ WHY WE EXIST · image: images/index-backstage-2.jpg ═══════════ -->
   <section class="section section-cream">
     <div class="container">
-      <div class="grid-2" style="gap:var(--sp-16);">
-        <div class="split-content fade-up">
+      <div class="grid-2" style="gap: var(--sp-16); align-items: start;">
+        <div>
           <span class="section-eyebrow">Why We Exist</span>
           <h2>Because life is already dramatic enough.</h2>
           <div class="gold-rule"></div>
-          <p style="margin-top:var(--sp-2);">Deadlines. Meetings. Responsibilities. Life gets busy — too busy sometimes. So we created a space where you can pause, sit back, and just laugh. No pressure. No stress. Just theatre that feels like a well-deserved break.</p>
-          <p style="margin-top:var(--sp-4);">Rooted in Hindi theatre and open to all cultures, we bring the Bay Area desi community together through stories that make you laugh, connect, and feel lighter.</p>
-          <a href="about.html" class="btn btn-secondary" style="margin-top:var(--sp-8);">Our Story &rarr;</a>
+          <p style="margin-top: 16px;">Deadlines. Meetings. Responsibilities. Life gets busy — too busy sometimes. So we created a space where you can pause, sit back, and just laugh. No pressure. No stress. Just theatre that feels like a well-deserved break.</p>
+          <p style="margin-top: 14px;">Rooted in Hindi theatre and open to all cultures, we bring the Bay Area desi community together through stories that make you laugh, connect, and feel lighter.</p>
+          <a href="about.html" class="btn btn-secondary" style="margin-top: 28px; display: inline-flex;">Our Story &rarr;</a>
         </div>
         <div>
-          <!-- Backstage candid: performers laughing together before a show -->
-          <div class="img-frame" style="aspect-ratio:4/3;margin-bottom:var(--sp-4);" class="fade-up delay-2">
-            <img src="images/index-backstage-2.jpg" alt="Desi Theatre performers sharing a laugh backstage before showtime" class="img-cover" />
+          <!-- image: performers laughing backstage -->
+          <div class="img-frame" style="aspect-ratio: 4/3; margin-bottom: 16px;">
+            <img src="images/index-backstage-2.jpg" alt="Desi Theatre performers sharing a laugh backstage" class="img-cover"/>
           </div>
           <div class="why-pillars">
             <div class="pillar"><div class="pillar-icon">&#128514;</div><h4>Comedy First</h4><p>Sometimes meaningful, sometimes gloriously meaningless. Always funny.</p></div>
-            <div class="pillar"><div class="pillar-icon">&#129309;</div><h4>Community Driven</h4><p>Built by volunteers who show up because they love it, not because they're paid.</p></div>
-            <div class="pillar"><div class="pillar-icon">&#127758;</div><h4>Inclusive Stage</h4><p>English subtitles ensure nobody misses the punchline. All are welcome here.</p></div>
+            <div class="pillar"><div class="pillar-icon">&#129309;</div><h4>Community Driven</h4><p>Built by volunteers who show up because they love it.</p></div>
+            <div class="pillar"><div class="pillar-icon">&#127758;</div><h4>Inclusive Stage</h4><p>English subtitles so nobody misses the punchline.</p></div>
             <div class="pillar"><div class="pillar-icon">&#128170;</div><h4>Women Empowered</h4><p>Championing women across every role — on stage and behind it.</p></div>
           </div>
         </div>
@@ -113,128 +131,122 @@
     </div>
   </section>
 
-  <!-- CURRENT SHOW SPOTLIGHT · image: images/index-show-poster-3.jpg -->
-  <section class="section" style="background:var(--bg-surface);">
+  <!-- ═══════════ CURRENT SHOW · image: images/index-show-poster-3.jpg ═══════════ -->
+  <section class="section" style="background: #fff;">
     <div class="container">
-      <div class="grid-2" style="gap:var(--sp-16);align-items:start;">
-        <div class="show-poster-home fade-up">
-          <!-- Show poster — portrait, theatrical print style -->
-          <img src="images/index-show-poster-3.jpg" alt="Pati Patni aur Oh Terri official show poster — Desi Theatre Spring 2026" />
+      <div class="grid-2" style="gap: var(--sp-16); align-items: start;">
+        <div class="show-poster-home">
+          <img src="images/index-show-poster-3.jpg" alt="Pati Patni aur Oh Terri — official show poster"/>
           <div class="show-poster-overlay">
             <h3>Pati, Patni, aur &#8220;Oh Terri&#8221;</h3>
             <p>Spring 2026 &mdash; World Premiere</p>
             <a href="shows.html" class="btn btn-gold btn-sm">Book Tickets &rarr;</a>
           </div>
         </div>
-        <div class="split-content fade-up delay-2">
+        <div>
           <span class="section-eyebrow">Now in Cinemas &mdash; er, on Stage</span>
-          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:var(--sp-5);">
-            <span class="tag tag-live">Now Showing</span>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+            <span class="tag tag-live">&#9679; Now Showing</span>
             <span class="tag tag-gold">Hindi + English Subtitles</span>
           </div>
-          <h2>Pati, Patni, aur <em class="serif-italic dark">&#8220;Oh Terri&#8221;</em></h2>
+          <h2>Pati, Patni, aur <em style="color: var(--burg-600); font-style: italic;">&#8220;Oh Terri&#8221;</em></h2>
           <div class="gold-rule"></div>
-          <p style="font-size:17px;margin-top:var(--sp-2);">A riotous new comedy about love, marriage, and the spectacular chaos that lives in between. Directed by Niranjan Page. Produced by Nitin Deo.</p>
-          <div style="background:var(--bg-warm);border:0.5px solid var(--bdr-gold-s);border-radius:var(--r-md);padding:18px 22px;margin:var(--sp-6) 0;">
-            <p style="font-size:14px;margin:0;"><strong style="color:var(--coal-900);">Historic Hoover Theater</strong></p>
-            <p style="font-size:14px;margin:4px 0 0;">1635 Park Ave, San Jose, CA 95126</p>
-            <p style="font-size:13px;color:var(--txt-muted);margin-top:6px;">Apr 30 &ndash; May 3, 2026 &nbsp;|&nbsp; ~100 min running time</p>
+          <p style="font-size: 17px; margin-top: 12px; color: var(--txt-body);">A riotous new comedy about love, marriage, and the spectacular chaos that lives in between. Directed by Niranjan Page. Produced by Nitin Deo.</p>
+          <div class="venue-box">
+            <p><strong style="color: var(--coal-900);">Historic Hoover Theater</strong></p>
+            <p style="color: var(--txt-muted);">1635 Park Ave, San Jose, CA 95126</p>
+            <p style="color: var(--txt-muted); margin-top: 6px; font-size: 13px;">Apr 30 &ndash; May 3, 2026 &nbsp;|&nbsp; ~100 min running time</p>
           </div>
           <div class="date-row"><span class="date-day">Thu, Apr 30</span><span class="date-time">7:30 PM</span><span class="date-status">Available</span></div>
           <div class="date-row"><span class="date-day">Fri, May 1</span><span class="date-time">7:30 PM</span><span class="date-status">Available</span></div>
           <div class="date-row"><span class="date-day">Sat, May 2</span><span class="date-time">2:00 PM &amp; 6:00 PM</span><span class="date-status">Available</span></div>
           <div class="date-row"><span class="date-day">Sun, May 3</span><span class="date-time">3:00 PM</span><span class="date-status">Available</span></div>
-          <a href="shows.html" class="btn btn-primary" style="margin-top:var(--sp-6);">View All Showtimes &rarr;</a>
+          <a href="shows.html" class="btn btn-primary" style="margin-top: 20px; display: inline-flex;">View All Showtimes &rarr;</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- STATS -->
+  <!-- ═══════════ STATS ═══════════ -->
   <section class="section section-golden">
     <div class="container">
-      <div class="text-center mb-12">
+      <div class="text-center" style="margin-bottom: 40px;">
         <span class="section-eyebrow">By the Numbers</span>
-        <h2>A small company making a <em class="serif-italic dark">big</em> impact</h2>
+        <h2>A small company making a <em style="color: var(--burg-600); font-style: italic;">big</em> impact</h2>
       </div>
       <div class="stats-row">
-        <div class="stat-card fade-up delay-1"><div class="stat-num">3</div><div class="stat-label">Seasons Performed</div></div>
-        <div class="stat-card fade-up delay-2"><div class="stat-num">500+</div><div class="stat-label">Audience Members Delighted</div></div>
-        <div class="stat-card fade-up delay-3"><div class="stat-num">40+</div><div class="stat-label">Volunteer Artists</div></div>
-        <div class="stat-card fade-up delay-4"><div class="stat-num">10+</div><div class="stat-label">Show Nights &amp; Counting</div></div>
+        <div class="stat-card"><div class="stat-num">3</div><div class="stat-label">Seasons Performed</div></div>
+        <div class="stat-card"><div class="stat-num">500+</div><div class="stat-label">Audience Members Delighted</div></div>
+        <div class="stat-card"><div class="stat-num">40+</div><div class="stat-label">Volunteer Artists</div></div>
+        <div class="stat-card"><div class="stat-num">10+</div><div class="stat-label">Show Nights &amp; Counting</div></div>
       </div>
     </div>
   </section>
 
-  <!-- GALLERY
-       images/index-gallery-4.jpg  images/index-gallery-5.jpg
-       images/index-gallery-6.jpg  images/index-gallery-7.jpg -->
+  <!-- ═══════════ GALLERY · images: index-gallery-4/5/6/7.jpg ═══════════ -->
   <section class="section section-cream">
     <div class="container">
-      <div class="text-center mb-12">
+      <div class="text-center" style="margin-bottom: 40px;">
         <span class="section-eyebrow">Behind the Curtain</span>
-        <h2>Moments that <em class="serif-italic dark">make us.</em></h2>
+        <h2>Moments that <em style="color: var(--burg-600); font-style: italic;">make us.</em></h2>
       </div>
       <div class="home-gallery">
-        <!-- Wide: full cast on stage mid-performance, dramatic warm lighting -->
-        <div class="hg-item hg-1"><img src="images/index-gallery-4.jpg" alt="Desi Theatre cast performing on stage under warm spotlights" /></div>
-        <!-- Portrait: director or lead actor candid rehearsal close-up -->
-        <div class="hg-item hg-2"><img src="images/index-gallery-5.jpg" alt="Director during rehearsal, Desi Theatre backstage" /></div>
-        <!-- Square: audience laughing, warm theatre ambience -->
-        <div class="hg-item hg-3"><img src="images/index-gallery-6.jpg" alt="Audience members laughing and enjoying a Desi Theatre show" /></div>
-        <!-- Wide: full cast group photo or post-show celebration -->
-        <div class="hg-item hg-4"><img src="images/index-gallery-7.jpg" alt="Full cast and crew celebrating after a successful Desi Theatre show" /></div>
+        <div class="hg-item hg-1"><img src="images/index-gallery-4.jpg" alt="Cast performing on stage under warm spotlights"/></div>
+        <div class="hg-item hg-2"><img src="images/index-gallery-5.jpg" alt="Director during rehearsal backstage"/></div>
+        <div class="hg-item hg-3"><img src="images/index-gallery-6.jpg" alt="Audience laughing during a Desi Theatre show"/></div>
+        <div class="hg-item hg-4"><img src="images/index-gallery-7.jpg" alt="Full cast celebrating after the show"/></div>
       </div>
-      <div class="text-center" style="margin-top:var(--sp-8);">
+      <div class="text-center" style="margin-top: 32px;">
         <a href="team.html" class="btn btn-secondary">Meet the Company &rarr;</a>
       </div>
     </div>
   </section>
 
-  <!-- CULTURE DARK -->
+  <!-- ═══════════ CULTURE (dark) ═══════════ -->
   <section class="section section-stage">
     <div class="container">
       <div class="text-center">
         <span class="section-eyebrow light">The Desi Theatre Culture</span>
-        <h2 style="color:#fff;">What we stand for, <em class="serif-italic">every night.</em></h2>
+        <h2 style="color: #fff; margin-top: 8px;">What we stand for, <em style="color: var(--gold-300); font-style: italic;">every night.</em></h2>
       </div>
       <div class="culture-cards">
-        <div class="culture-card fade-up delay-1"><div class="culture-icon">&#127916;</div><h3>Craft over Chaos</h3><p>Passionate volunteers, professional standards. Every show is rehearsed, polished, and produced with love.</p></div>
-        <div class="culture-card fade-up delay-2"><div class="culture-icon">&#127861;</div><h3>Fun and Food</h3><p>Theatre runs on good stories and good food. Our productions are full evenings of entertainment and community.</p></div>
-        <div class="culture-card fade-up delay-3"><div class="culture-icon">&#127800;</div><h3>Respect &amp; Joy</h3><p>A non-judgmental, inclusive, joyful environment. Whether on stage or in the audience, you belong here.</p></div>
+        <div class="culture-card"><div class="culture-icon">&#127916;</div><h3>Craft over Chaos</h3><p>Passionate volunteers, professional standards. Every show is rehearsed, polished, and produced with genuine love for the craft.</p></div>
+        <div class="culture-card"><div class="culture-icon">&#127861;</div><h3>Fun and Food</h3><p>Theatre runs on good stories and good food. Our productions are full evenings of entertainment and community.</p></div>
+        <div class="culture-card"><div class="culture-icon">&#127800;</div><h3>Respect &amp; Joy</h3><p>Non-judgmental, inclusive, and joyful. Whether you're on stage or in the audience, you belong here.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- JOIN CTA · image: images/index-join-8.jpg -->
+  <!-- ═══════════ JOIN · image: images/index-join-8.jpg ═══════════ -->
   <section class="section section-cream">
     <div class="container">
-      <div class="grid-2" style="gap:var(--sp-16);">
-        <div class="split-content fade-up">
+      <div class="grid-2" style="gap: var(--sp-16); align-items: center;">
+        <div>
           <span class="section-eyebrow">Be Part of the Story</span>
           <h2>Your stage is waiting.</h2>
           <div class="gold-rule"></div>
-          <p style="margin-top:var(--sp-2);">No experience needed. Just curiosity and enthusiasm. From acting to backstage, marketing to food &amp; hospitality — there is a place for you here.</p>
-          <div style="display:flex;gap:var(--sp-3);flex-wrap:wrap;margin-top:var(--sp-8);">
+          <p style="margin-top: 14px;">No experience needed. Just curiosity and enthusiasm. From acting to backstage, marketing to food &amp; hospitality — there is a place for you here.</p>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px;">
             <a href="join.html" class="btn btn-primary">Join the Team &rarr;</a>
-            <a href="join.html#auditions" class="btn btn-secondary">Register for Auditions</a>
+            <a href="join.html#auditions" class="btn btn-secondary">Auditions</a>
           </div>
         </div>
-        <!-- Volunteers working: warm, energetic ensemble scene -->
-        <div class="img-frame img-landscape fade-up delay-2">
-          <img src="images/index-join-8.jpg" alt="Desi Theatre volunteers working together backstage with energy and enthusiasm" class="img-cover" />
+        <!-- image: volunteers working together -->
+        <div class="img-frame" style="aspect-ratio: 16/10;">
+          <img src="images/index-join-8.jpg" alt="Desi Theatre volunteers working together backstage" class="img-cover"/>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FINAL CTA -->
+  <!-- ═══════════ CTA BAND ═══════════ -->
   <section class="cta-band">
     <div class="cta-band-inner">
-      <h2>Ready for your next <em class="serif-italic">night out?</em></h2>
+      <h2>Ready for your next <em style="font-style: italic; color: var(--gold-300);">night out?</em></h2>
       <p>Seats are filling fast. Grab yours before the curtain rises for the final time.</p>
       <a href="shows.html" class="btn btn-gold btn-xl">Book Tickets &rarr;</a>
     </div>
   </section>
+
 </body>
 </html>
