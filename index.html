@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desi Theatre — Bay Area Hindi Comedy Naatak</title>
+  <meta name="description" content="Bay Area's finest Hindi comedy community theatre. High-quality naatak that makes you laugh, connect, and feel lighter. Performing in San Jose, CA." />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── HERO ── */
+    .hero { padding: 96px 40px 80px; }
+    .hero-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--saffron-light); color: var(--saffron-dark); font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; padding: 7px 16px; border-radius: 100px; margin-bottom: 24px; }
+    .hero-badge::before { content: ''; width: 6px; height: 6px; background: var(--saffron); border-radius: 50%; flex-shrink: 0; }
+    .hero h1 { margin-bottom: 22px; }
+    .hero p { font-size: 18px; margin-bottom: 36px; max-width: 480px; }
+    .hero-btns { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin-bottom: 20px; }
+    .hero-micro { font-size: 13px; color: var(--muted-light); font-style: italic; }
+
+    /* ── WHY ── */
+    .why-text h2 { margin-bottom: 18px; }
+    .why-pillars { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 16px; }
+    .pillar { background: var(--white); border: 0.5px solid var(--border); border-radius: var(--radius-md); padding: 22px 20px; }
+    .pillar-icon { font-size: 22px; margin-bottom: 10px; }
+    .pillar h4 { font-family: var(--serif); font-size: 17px; color: var(--ink); margin-bottom: 6px; font-weight: 700; }
+    .pillar p { font-size: 13px; }
+
+    /* ── SHOW SPOTLIGHT ── */
+    .spotlight-section { background: var(--cream-dark); }
+    .spotlight-meta { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+    .spotlight h2 { margin-bottom: 16px; }
+    .spotlight p.lead { font-size: 18px; margin-bottom: 28px; }
+    .venue-info { background: var(--white); border: 0.5px solid var(--border); border-radius: var(--radius-md); padding: 18px 22px; margin-bottom: 28px; }
+    .venue-info p { font-size: 14px; color: var(--muted); margin: 0; }
+    .venue-info strong { color: var(--ink); }
+
+    /* ── STATS ── */
+    .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+
+    /* ── CULTURE ── */
+    .culture-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .culture-card { background: rgba(255,255,255,0.06); border: 0.5px solid rgba(255,255,255,0.10); border-radius: var(--radius-lg); padding: 32px 26px; }
+    .culture-icon { font-size: 28px; margin-bottom: 16px; }
+    .culture-card h3 { font-family: var(--serif); font-size: 22px; color: var(--white); margin-bottom: 10px; }
+    .culture-card p { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.75; }
+
+    /* ── CTA BAND ── */
+    .cta-band { background: var(--saffron); padding: 64px 40px; text-align: center; }
+    .cta-band h2 { color: var(--white); margin-bottom: 12px; }
+    .cta-band p { color: rgba(255,255,255,0.80); font-size: 18px; margin-bottom: 32px; }
+    .cta-band .btn-white { font-weight: 600; }
+
+    @media (max-width: 768px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .why-pillars { grid-template-columns: 1fr; }
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+      .culture-cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <script src="css/shared.js"></script>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badge fade-up fade-up-1">Now Playing in San Jose, CA</div>
+        <h1 class="fade-up fade-up-2">Laugh a Little Louder. Live a Little <em class="serif-italic">Lighter.</em></h1>
+        <p class="fade-up fade-up-3">High-quality, lighthearted Hindi theatre that brings people together, makes you laugh, and lets you switch off for a while.</p>
+        <div class="hero-btns fade-up fade-up-4">
+          <a href="pages/shows.html" class="btn btn-primary btn-lg">Book Tickets &rarr;</a>
+          <a href="pages/join.html" class="btn btn-ghost btn-lg">Join the Fun</a>
+        </div>
+        <p class="hero-micro fade-up fade-up-5">No heavy drama. Just good stories, great people, and a lot of laughter.</p>
+      </div>
+      <div class="poster-block fade-up fade-up-3">
+        <div class="stage-lights">
+          <div class="sl a"></div><div class="sl w"></div><div class="sl a"></div><div class="sl w"></div><div class="sl a"></div>
+        </div>
+        <div class="curtain-l"></div>
+        <div class="curtain-r"></div>
+        <div class="poster-content">
+          <span class="poster-emoji">🎭</span>
+          <div class="poster-title">Pati, Patni,<br>aur "Oh Terri"</div>
+          <div class="poster-sub">Now Showing &mdash; Apr 30 &ndash; May 3, 2026</div>
+          <div style="margin-top: 20px;">
+            <a href="pages/shows.html" class="btn btn-white btn-sm">Grab Your Seat &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY WE EXIST -->
+  <section class="section" style="background: var(--cream-dark);">
+    <div class="container">
+      <div class="grid-2">
+        <div class="why-text">
+          <span class="section-label">Why We Exist</span>
+          <h2>Because life is already dramatic enough.</h2>
+          <div class="divider"></div>
+          <p>Deadlines. Meetings. Responsibilities. Life gets busy — too busy sometimes. So we created a space where you can pause, sit back, and just laugh. No pressure. No stress. Just theatre that feels like a well-deserved break.</p>
+          <p class="mt-16">Rooted in Hindi theatre and open to all cultures, we bring the Bay Area desi community together through stories that make you laugh, connect, and feel lighter.</p>
+          <a href="pages/about.html" class="btn btn-ghost mt-32">Our Story &rarr;</a>
+        </div>
+        <div class="why-pillars">
+          <div class="pillar">
+            <div class="pillar-icon">😂</div>
+            <h4>Comedy First</h4>
+            <p>Sometimes meaningful, sometimes gloriously meaningless. Always funny.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🤝</div>
+            <h4>Community Driven</h4>
+            <p>Built by volunteers who show up because they love it, not because they're paid.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🌍</div>
+            <h4>Inclusive Stage</h4>
+            <p>English subtitles ensure nobody misses the punchline. All are welcome here.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">💪</div>
+            <h4>Women Empowered</h4>
+            <p>Passionately championing women across every role — on stage and behind it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOW SPOTLIGHT -->
+  <section class="section spotlight-section">
+    <div class="container">
+      <div class="grid-2">
+        <div class="spotlight">
+          <span class="section-label">Now in Cinemas &mdash; er, on Stage</span>
+          <div class="spotlight-meta">
+            <span class="tag tag-saffron">World Premiere</span>
+            <span class="tag tag-muted">Hindi + English Subtitles</span>
+          </div>
+          <h2>Pati, Patni, aur <em class="serif-italic">"Oh Terri"</em></h2>
+          <p class="lead">A riotous new comedy about love, marriage, and the spectacular chaos that lives in between. Directed by Niranjan Page. Produced by Nitin Deo.</p>
+          <div class="venue-info">
+            <p><strong>Historic Hoover Theater</strong></p>
+            <p>1635 Park Ave, San Jose, CA 95126</p>
+            <p style="margin-top:6px;">Apr 30 &ndash; May 3, 2026 &nbsp;|&nbsp; Running time: ~100 min (no interval)</p>
+          </div>
+          <a href="pages/shows.html" class="btn btn-primary">View All Showtimes &rarr;</a>
+        </div>
+        <div>
+          <div style="background: var(--white); border: 0.5px solid var(--border); border-radius: var(--radius-lg); overflow: hidden;">
+            <div style="background: linear-gradient(135deg, #FFE4C4, #F5A872); padding: 40px; text-align: center;">
+              <span style="font-size: 64px;">👫</span>
+            </div>
+            <div style="padding: 24px;">
+              <div class="date-row"><span class="date-day">Thu, Apr 30</span><span class="date-time">7:30 PM</span><span class="date-status">Available</span></div>
+              <div class="date-row"><span class="date-day">Fri, May 1</span><span class="date-time">7:30 PM</span><span class="date-status">Available</span></div>
+              <div class="date-row"><span class="date-day">Sat, May 2</span><span class="date-time">2:00 PM</span><span class="date-status">Available</span></div>
+              <div class="date-row"><span class="date-day">Sat, May 2</span><span class="date-time">6:00 PM</span><span class="date-status">Available</span></div>
+              <div class="date-row"><span class="date-day">Sun, May 3</span><span class="date-time">3:00 PM</span><span class="date-status">Available</span></div>
+              <a href="pages/shows.html" class="btn btn-primary w-full mt-16" style="justify-content: center;">Reserve Your Seats</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center mb-48">
+        <span class="section-label">By the Numbers</span>
+        <h2>A small company making a <em class="serif-italic">big</em> impact</h2>
+      </div>
+      <div class="stats-row">
+        <div class="stat-card"><div class="stat-num">3</div><div class="stat-label">Seasons Performed</div></div>
+        <div class="stat-card"><div class="stat-num">500+</div><div class="stat-label">Audience Members Delighted</div></div>
+        <div class="stat-card"><div class="stat-num">40+</div><div class="stat-label">Volunteer Artists</div></div>
+        <div class="stat-card"><div class="stat-num">10+</div><div class="stat-label">Show Nights & Counting</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CULTURE / DARK -->
+  <section class="section dark-section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">The Desi Theatre Culture</span>
+        <h2>What we stand for, <em class="serif-italic">every night.</em></h2>
+      </div>
+      <div class="culture-cards">
+        <div class="culture-card">
+          <div class="culture-icon">🎬</div>
+          <h3>Craft over Chaos</h3>
+          <p>We're passionate volunteers, but we take quality seriously. Every show is rehearsed, polished, and produced with the same love you'd expect from a professional company.</p>
+        </div>
+        <div class="culture-card">
+          <div class="culture-icon">🍽️</div>
+          <h3>Fun and Food</h3>
+          <p>Theatre runs on two things: good stories and good food. Our productions are designed to be full evenings — entertainment and community, together.</p>
+        </div>
+        <div class="culture-card">
+          <div class="culture-icon">🌸</div>
+          <h3>Respect &amp; Joy</h3>
+          <p>A non-judgmental, inclusive, and joyful environment for everyone. Whether you're on stage or in the audience, you belong here.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <h2>Ready for your next <em class="serif-italic">night out?</em></h2>
+    <p>Seats are filling fast. Grab yours before the curtain rises.</p>
+    <a href="pages/shows.html" class="btn btn-white btn-lg">Book Tickets &rarr;</a>
+  </section>
+
+</body>
+</html>
