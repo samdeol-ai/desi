@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Company — Desi Theatre</title>
+  <meta name="description" content="Meet the talented volunteer team behind Desi Theatre — the directors, producers, designers, and passionate people who bring each naatak to life." />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .team-hero { background: var(--cream-dark); padding: 88px 40px 80px; }
+    .team-hero-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .team-hero h1 { margin-bottom: 18px; }
+    .team-hero p { font-size: 18px; max-width: 480px; }
+    .founding-strip { background: var(--saffron-light); border: 0.5px solid rgba(232,96,10,0.2); border-radius: var(--radius-md); padding: 18px 22px; margin-top: 28px; }
+    .founding-strip p { font-size: 14px; color: var(--saffron-dark); margin: 0; }
+
+    /* FOUNDING VISUAL */
+    .founding-visual { background: linear-gradient(135deg, #FFE4C4, #F5A872); border-radius: var(--radius-xl); padding: 40px; }
+    .founding-names { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+    .founding-name-pill { background: white; border-radius: 100px; padding: 8px 16px; font-size: 14px; font-weight: 500; color: var(--saffron-dark); }
+
+    /* PRODUCTION TEAM SECTION */
+    .dept-label { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--saffron); border-top: 2px solid var(--saffron); padding-top: 12px; margin: 48px 0 24px; }
+    .team-card-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .team-member-card { background: var(--white); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 26px 20px; text-align: center; transition: all 0.25s; }
+    .team-member-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .tm-avatar { width: 64px; height: 64px; border-radius: 50%; background: var(--saffron-light); color: var(--saffron); font-size: 18px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; font-family: var(--serif); }
+    .tm-name { font-family: var(--serif); font-size: 16px; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+    .tm-role { font-size: 12px; font-weight: 600; letter-spacing: 0.8px; color: var(--saffron); text-transform: uppercase; }
+    .tm-desc { font-size: 13px; color: var(--muted); margin-top: 8px; line-height: 1.6; }
+
+    /* CREATIVE LEADERSHIP */
+    .lead-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .lead-card { background: var(--ink); border-radius: var(--radius-lg); padding: 32px; display: flex; gap: 22px; align-items: flex-start; }
+    .lead-avatar { width: 68px; height: 68px; border-radius: 50%; background: rgba(232,96,10,0.2); color: var(--saffron-mid); font-size: 20px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-family: var(--serif); }
+    .lead-info h3 { font-family: var(--serif); font-size: 20px; color: var(--white); margin-bottom: 4px; }
+    .lead-info .lead-role { font-size: 12px; font-weight: 600; letter-spacing: 1.2px; text-transform: uppercase; color: var(--saffron-mid); margin-bottom: 10px; }
+    .lead-info p { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.7; }
+
+    /* JOIN CTA */
+    .join-cta { background: var(--saffron); border-radius: var(--radius-xl); padding: 56px 48px; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
+    .join-cta h2 { color: var(--white); margin-bottom: 10px; }
+    .join-cta p { color: rgba(255,255,255,0.80); font-size: 17px; }
+
+    @media (max-width: 768px) {
+      .team-hero-inner { grid-template-columns: 1fr; }
+      .team-card-grid { grid-template-columns: repeat(2, 1fr); }
+      .lead-grid { grid-template-columns: 1fr; }
+      .join-cta { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <script src="css/shared.js"></script>
+
+  <!-- HERO -->
+  <section class="team-hero">
+    <div class="team-hero-inner">
+      <div>
+        <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>The Company</span></div>
+        <span class="section-label">The People Behind the Curtain</span>
+        <h1>Meet the <em class="serif-italic">brilliant</em> volunteers who make it happen.</h1>
+        <p>No salaries. No agents. Just a group of passionate people who show up because they love theatre, love their community, and love a good laugh.</p>
+        <div class="founding-strip">
+          <p><strong>Founding members:</strong> Maitreyi &middot; Sharmila &middot; Poonam &middot; Ajitesh &middot; Aditi &middot; Puneet</p>
+        </div>
+      </div>
+      <div class="founding-visual">
+        <p style="font-family: var(--serif); font-size: 20px; font-style: italic; color: var(--saffron-dark); text-align: center; margin-bottom: 24px;">"A community theatre driven by passionate volunteers."</p>
+        <div class="founding-names">
+          <span class="founding-name-pill">Maitreyi</span>
+          <span class="founding-name-pill">Sharmila</span>
+          <span class="founding-name-pill">Poonam</span>
+          <span class="founding-name-pill">Ajitesh</span>
+          <span class="founding-name-pill">Aditi</span>
+          <span class="founding-name-pill">Puneet</span>
+        </div>
+        <p style="text-align: center; font-size: 12px; color: var(--saffron-dark); margin-top: 16px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;">Est. 2024 &middot; San Jose, CA</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREATIVE LEADERSHIP -->
+  <section class="section">
+    <div class="container">
+      <span class="section-label">Spring 2026 Production</span>
+      <h2 style="margin-bottom: 36px;">Pati, Patni, aur "Oh Terri" &mdash; <em class="serif-italic">Creative Leadership</em></h2>
+      <div class="lead-grid">
+        <div class="lead-card">
+          <div class="lead-avatar">NP</div>
+          <div class="lead-info">
+            <h3>Niranjan Page</h3>
+            <div class="lead-role">Director</div>
+            <p>Helming the Spring 2026 production, Niranjan brings a sharp comedic sensibility and a deep respect for the Hindi theatrical tradition. Known for drawing out naturalistic, laugh-out-loud performances from volunteer casts.</p>
+          </div>
+        </div>
+        <div class="lead-card">
+          <div class="lead-avatar">ND</div>
+          <div class="lead-info">
+            <h3>Nitin Deo</h3>
+            <div class="lead-role">Producer</div>
+            <p>The logistical force keeping the show on the road. Nitin oversees everything from venue booking to curtain call — ensuring that what the audience sees is polished, punctual, and memorable.</p>
+          </div>
+        </div>
+        <div class="lead-card">
+          <div class="lead-avatar">MM</div>
+          <div class="lead-info">
+            <h3>Mukund Marathe</h3>
+            <div class="lead-role">Director — Season 2 (Caught in the Net)</div>
+            <p>Directed Desi Theatre's critically loved Season 2 production. Mukund's approach to Hindi comedy is rooted in character truth — find the person first, the punchline follows.</p>
+          </div>
+        </div>
+        <div class="lead-card">
+          <div class="lead-avatar">PG</div>
+          <div class="lead-info">
+            <h3>Puneet Goyal</h3>
+            <div class="lead-role">Producer — Season 2 (Caught in the Net)</div>
+            <p>Co-founder and producer of Season 2. Puneet is one of the founding pillars of the company — part creative visionary, part spreadsheet wizard, part the person who makes sure everyone's actually on time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTION TEAM — CAUGHT IN THE NET -->
+  <section class="section" style="background: var(--cream-dark);">
+    <div class="container">
+      <span class="section-label">Behind the Scenes</span>
+      <h2>The Production Team — <em class="serif-italic">Spring 2026</em></h2>
+      <p style="max-width: 580px; margin-top: 12px;">From costumes to code, from props to partnership — every element of a Desi Theatre production is handled by someone who genuinely cares. Meet the crew.</p>
+
+      <div class="dept-label">Creative &amp; Design</div>
+      <div class="team-card-grid">
+        <div class="team-member-card">
+          <div class="tm-avatar">AH</div>
+          <div class="tm-name">Aditi Honawar</div>
+          <div class="tm-role">Costume Designer</div>
+          <p class="tm-desc">Dressing the cast to perfection. Aditi's costumes bring character to life before a single line is spoken.</p>
+        </div>
+        <div class="team-member-card">
+          <div class="tm-avatar">CV</div>
+          <div class="tm-name">Chintan Vora</div>
+          <div class="tm-role">Set Designer</div>
+          <p class="tm-desc">Building the world the characters live in — one flat-packed set piece at a time.</p>
+        </div>
+        <div class="team-member-card">
+          <div class="tm-avatar">LR</div>
+          <div class="tm-name">Lakshmi Ramachandran</div>
+          <div class="tm-role">Set</div>
+          <p class="tm-desc">Transforming an empty stage into a believable, lovable world for every performance.</p>
+        </div>
+        <div class="team-member-card">
+          <div class="tm-avatar">AV</div>
+          <div class="tm-name">Aman Virmani</div>
+          <div class="tm-role">Set</div>
+          <p class="tm-desc">Bringing physical dimension and detail to Desi Theatre's signature stagecraft.</p>
+        </div>
+      </div>
+
+      <div class="dept-label">Operations &amp; Logistics</div>
+      <div class="team-card-grid">
+        <div class="team-member-card">
+          <div class="tm-avatar">MoC</div>
+          <div class="tm-name">Mousumi Chaudhuri</div>
+          <div class="tm-role">Props</div>
+          <p class="tm-desc">Every prop is in the right place at the right moment. Mousumi is the reason nothing gets forgotten backstage.</p>
+        </div>
+        <div class="team-member-card">
+          <div class="tm-avatar">MoG</div>
+          <div class="tm-name">Monika Goyal</div>
+          <div class="tm-role">Culinary</div>
+          <p class="tm-desc">Because great theatre deserves great food. Monika oversees the refreshments that make show night a full experience.</p>
+        </div>
+        <div class="team-member-card">
+          <div class="tm-avatar">PS</div>
+          <div class="tm-name">Poonam Singh</div>
+          <div class="tm-role">Culinary</div>
+          <p class="tm-desc">Co-managing the culinary side of things — and yes, the food is always as good as the show.</p>
+        </div>
+        <div class="team-member-card">
+          <div class="tm-avatar">AG</div>
+          <div class="tm-name">Ajitesh Gupta</div>
+          <div class="tm-role">IT</div>
+          <p class="tm-desc">Keeping the website running, the lights cued, and the tech gremlins firmly in check.</p>
+        </div>
+      </div>
+
+      <div class="dept-label">Marketing &amp; Audience</div>
+      <div class="team-card-grid">
+        <div class="team-member-card">
+          <div class="tm-avatar">AT</div>
+          <div class="tm-name">Anshoo Tikoo</div>
+          <div class="tm-role">Marketing</div>
+          <p class="tm-desc">Getting the word out so the seats don't stay empty. Anshoo leads the charge on outreach and promotion.</p>
+        </div>
+        <div class="team-member-card">
+          <div class="tm-avatar">MS</div>
+          <div class="tm-name">Meera Shah</div>
+          <div class="tm-role">Marketing</div>
+          <p class="tm-desc">Crafting campaigns that speak to the Bay Area desi community and beyond.</p>
+        </div>
+        <div class="team-member-card">
+          <div class="tm-avatar">SR</div>
+          <div class="tm-name">Shalini Ramachandran</div>
+          <div class="tm-role">Marketing</div>
+          <p class="tm-desc">Social, digital, word-of-mouth — Shalini ensures Desi Theatre is always the talk of the community.</p>
+        </div>
+        <div class="team-member-card">
+          <div class="tm-avatar">AB</div>
+          <div class="tm-name">Anjali Bhaid</div>
+          <div class="tm-role">Partnerships</div>
+          <p class="tm-desc">Building bridges between Desi Theatre and the businesses, organisations, and sponsors who believe in the mission.</p>
+        </div>
+      </div>
+
+      <div class="dept-label">Accessibility</div>
+      <div class="team-card-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="team-member-card" style="text-align: left; display: flex; gap: 18px; align-items: flex-start;">
+          <div class="tm-avatar" style="flex-shrink: 0;">ARB</div>
+          <div>
+            <div class="tm-name">Arti Raina-Bambroo</div>
+            <div class="tm-role">English Supertitles</div>
+            <p class="tm-desc" style="text-align: left;">Translating every joke, every nuance, and every cultural reference so the whole audience can be in on it. A quietly essential role.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOIN CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="join-cta">
+        <div>
+          <h2>Your name could be on this page.</h2>
+          <p>We're always looking for vibrant, enthusiastic, diverse volunteers across every department. Experience optional. Enthusiasm essential.</p>
+        </div>
+        <a href="join.html" class="btn btn-white btn-lg" style="white-space: nowrap;">Join the Team &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
