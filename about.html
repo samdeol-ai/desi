@@ -8,49 +8,49 @@
   <link rel="stylesheet" href="css/style.css"/>
   <style>
     /* ── Page hero ── */
-    .about-page-hero { position: relative; min-height: 58vh; display: flex; align-items: flex-end; overflow: hidden; background: var(--coal-950); }
+    .about-page-hero { position: relative; min-height: 58vh; display: flex; align-items: flex-end; overflow: hidden; background: #0D0A0B; }
     .about-page-hero-bg { position: absolute; inset: 0; }
     .about-page-hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.38; display: block; }
     .about-page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,10,11,0.97) 0%, rgba(13,10,11,0.45) 55%, rgba(13,10,11,0.10) 100%); }
     .about-page-hero-inner { position: relative; z-index: 2; max-width: 1180px; margin: 0 auto; width: 100%; padding: 0 40px 64px; }
 
     /* ── Origin year ── */
-    .origin-year { font-family: var(--ff-display); font-size: clamp(80px,12vw,140px); font-weight: 700; line-height: 0.9; color: var(--gold-100); letter-spacing: -0.04em; display: block; }
+    .origin-year { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(80px,12vw,140px); font-weight: 700; line-height: 0.9; color: #FBE9B0; letter-spacing: -0.04em; display: block; }
 
     /* ── Vision & Mission ── */
     .vm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-    .vm-card { border-radius: var(--r-xl); padding: 44px 40px; position: relative; overflow: hidden; }
-    .vm-card-vision { background: var(--coal-950); border: 0.5px solid rgba(253,237,218,0.12); }
+    .vm-card { border-radius: 28px; padding: 44px 40px; position: relative; overflow: hidden; }
+    .vm-card-vision { background: #0D0A0B; border: 0.5px solid rgba(253,237,218,0.12); }
     .vm-card-vision::before { content: ''; position: absolute; top:-20%;left:-10%;width:80%;height:80%; background: radial-gradient(ellipse 55% 50% at 30% 20%, rgba(224,155,32,0.14) 0%, transparent 65%); pointer-events:none; }
-    .vm-card-mission { background: var(--gr-burg); border: 0.5px solid rgba(253,237,218,0.12); }
+    .vm-card-mission { background: linear-gradient(135deg, #6B1F38 0%, #4A1528 100%); border: 0.5px solid rgba(253,237,218,0.12); }
     .vm-card-mission::before { content: ''; position: absolute; top:-20%;right:-10%;width:80%;height:80%; background: radial-gradient(ellipse 55% 50% at 70% 20%, rgba(240,184,64,0.12) 0%, transparent 65%); pointer-events:none; }
-    .vm-card-label { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-300); margin-bottom: 18px; display: flex; align-items: center; gap: 12px; position: relative; z-index: 1; }
+    .vm-card-label { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #F0B840; margin-bottom: 18px; display: flex; align-items: center; gap: 12px; position: relative; z-index: 1; }
     .vm-card-label::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(224,155,32,0.4), transparent); }
     .vm-icon { font-size: 40px; margin-bottom: 18px; display: block; position: relative; z-index: 1; }
-    .vm-card h2 { font-family: var(--ff-display); font-size: clamp(20px,2.5vw,28px); color: #fff; line-height: 1.3; margin-bottom: 16px; position: relative; z-index: 1; font-weight: 700; }
+    .vm-card h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(20px,2.5vw,28px); color: #fff; line-height: 1.3; margin-bottom: 16px; position: relative; z-index: 1; font-weight: 700; }
     .vm-card p { font-size: 15px; color: rgba(253,237,218,0.65); line-height: 1.8; position: relative; z-index: 1; }
 
     /* ── Timeline ── */
     .timeline { margin-top: 36px; }
     .tl-item { display: flex; gap: 22px; margin-bottom: 32px; position: relative; }
-    .tl-item:not(:last-child)::before { content:''; position:absolute; left:23px; top:50px; bottom:-32px; width:1px; background: var(--bdr-gold-s); }
-    .tl-dot { width: 48px; height: 48px; border-radius: 50%; background: var(--gr-gold-s); border: 1.5px solid var(--bdr-gold); display: flex; align-items: center; justify-content: center; font-family: var(--ff-display); font-size: 13px; font-weight: 700; color: var(--gold-700); flex-shrink: 0; box-shadow: var(--sh-sm); }
+    .tl-item:not(:last-child)::before { content:''; position:absolute; left:23px; top:50px; bottom:-32px; width:1px; background: rgba(196,125,10,0.16); }
+    .tl-dot { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #FEF6DC 0%, #FBE9B0 100%); border: 1.5px solid rgba(196,125,10,0.32); display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 13px; font-weight: 700; color: #704400; flex-shrink: 0; box-shadow: 0 2px 8px rgba(20,10,12,0.09); }
     .tl-content { padding-top: 10px; }
-    .tl-content h4 { font-family: var(--ff-display); font-size: 20px; color: var(--coal-900); margin-bottom: 6px; font-weight: 700; }
-    .tl-content p { font-size: 14px; color: var(--txt-muted); line-height: 1.7; }
+    .tl-content h4 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; color: #140F10; margin-bottom: 6px; font-weight: 700; }
+    .tl-content p { font-size: 14px; color: #705860; line-height: 1.7; }
 
     /* ── Values ── */
     .values-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
-    .value-card { background: #fff; border: 0.5px solid var(--bdr-soft); border-radius: var(--r-xl); padding: 30px 26px; transition: all var(--ease-spring); }
-    .value-card:hover { border-color: var(--bdr-gold-s); box-shadow: var(--sh-card-h); transform: translateY(-3px); }
-    .value-num { font-family: var(--ff-display); font-size: 40px; font-weight: 700; color: var(--gold-100); line-height: 1; margin-bottom: 10px; }
-    .value-card h3 { font-family: var(--ff-display); font-size: 20px; margin-bottom: 8px; color: var(--coal-900); font-weight: 700; }
-    .value-card p { font-size: 14px; line-height: 1.75; color: var(--txt-muted); }
+    .value-card { background: #fff; border: 0.5px solid rgba(60,30,25,0.12); border-radius: 28px; padding: 30px 26px; transition: all 360ms cubic-bezier(0.34,1.56,0.64,1); }
+    .value-card:hover { border-color: rgba(196,125,10,0.16); box-shadow: 0 12px 40px rgba(107,31,56,0.15), 0 4px 14px rgba(20,10,12,0.09); transform: translateY(-3px); }
+    .value-num { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 40px; font-weight: 700; color: #FBE9B0; line-height: 1; margin-bottom: 10px; }
+    .value-card h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; margin-bottom: 8px; color: #140F10; font-weight: 700; }
+    .value-card p { font-size: 14px; line-height: 1.75; color: #705860; }
 
     /* ── Donate box ── */
-    .donate-box { background: var(--bg-golden); border: 0.5px solid var(--bdr-gold); border-radius: var(--r-xl); padding: 32px 28px; text-align: center; margin-top: 20px; }
-    .donate-box h4 { font-family: var(--ff-display); font-size: 20px; color: var(--coal-900); margin-bottom: 8px; }
-    .donate-box p { font-size: 13px; color: var(--txt-muted); margin-bottom: 20px; }
+    .donate-box { background: #FEF6DC; border: 0.5px solid rgba(196,125,10,0.32); border-radius: 28px; padding: 32px 28px; text-align: center; margin-top: 20px; }
+    .donate-box h4 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; color: #140F10; margin-bottom: 8px; }
+    .donate-box p { font-size: 13px; color: #705860; margin-bottom: 20px; }
 
     /* ── Responsive ── */
     @media (max-width: 900px) {
@@ -65,9 +65,37 @@
   </style>
 </head>
 <body>
-  <script src="css/shared.js"></script>
-
-  <!-- ═══════════ PAGE HERO · image: images/about-hero-1.jpg ═══════════ -->
+  <nav class="nav" id="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Desi <em>Theatre</em></a>
+      <ul class="nav-links" id="nav-links">
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item">
+          <button class="nav-parent-btn" aria-haspopup="true">Shows <span class="nav-chevron"></span></button>
+          <ul class="nav-dropdown">
+            <li><a href="shows.html">Current Show</a></li>
+            <li><a href="shows.html#past">Past Productions</a></li>
+            <li><a href="shows.html">Book Tickets</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="about.html" class="active">About</a></li>
+        <li class="nav-item">
+          <button class="nav-parent-btn" aria-haspopup="true">The Company <span class="nav-chevron"></span></button>
+          <ul class="nav-dropdown">
+            <li><a href="team.html">Meet the Team</a></li>
+            <li><a href="join.html">Volunteer With Us</a></li>
+            <li><a href="join.html#auditions">Auditions</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav-burger" id="nav-burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="nav-cta" href="shows.html">Book Tickets</a>
+    </div>
+  </nav>
+<!-- ═══════════ PAGE HERO · image: images/about-hero-1.jpg ═══════════ -->
   <section class="about-page-hero">
     <div class="about-page-hero-bg">
       <img src="images/about-hero-1.jpg" alt="The full Desi Theatre Company on stage"/>
@@ -78,7 +106,7 @@
         <a href="index.html">Home</a><span>/</span><span>About</span>
       </div>
       <span class="section-eyebrow light">Our Story</span>
-      <h1 style="color:#fff; max-width:700px; margin-top:10px;">We're not just here to put on plays.<br>We're here to give you a <em style="color:var(--gold-300);font-style:italic;">break.</em></h1>
+      <h1 style="color:#fff; max-width:700px; margin-top:10px;">We're not just here to put on plays.<br>We're here to give you a <em style="color:#F0B840;font-style:italic;">break.</em></h1>
       <p style="color:rgba(253,237,218,0.65);font-size:18px;max-width:540px;line-height:1.75;margin-top:16px;">Founded in the Bay Area by passionate desi theatre lovers. Built on laughs, culture, and community.</p>
     </div>
   </section>
@@ -86,18 +114,18 @@
   <!-- ═══════════ ORIGIN · image: images/about-origin-2.jpg ═══════════ -->
   <section class="section section-cream">
     <div class="container">
-      <div class="grid-2" style="gap: var(--sp-16); align-items: start;">
+      <div class="grid-2" style="gap: 64px; align-items: start;">
         <div>
           <span class="origin-year">2024</span>
           <span class="section-eyebrow" style="margin-top: 12px; display: block;">Where It All Began</span>
         </div>
         <div>
-          <h2>Born from a simple idea: <em style="color:var(--burg-600);font-style:italic;">what if theatre felt like a holiday?</em></h2>
+          <h2>Born from a simple idea: <em style="color:#6B1F38;font-style:italic;">what if theatre felt like a holiday?</em></h2>
           <div class="gold-rule" style="margin-top:20px;"></div>
           <p style="margin-top:16px;">It started with a living room conversation between a handful of Bay Area friends who missed the energy of desi theatre — the kind they grew up watching, the kind that made entire families laugh until their sides hurt.</p>
           <p style="margin-top:14px;">The Bay Area has one of the largest South Asian communities in the United States. What it didn't have was a dedicated Hindi comedy theatre company producing high-quality naatak year-round.</p>
           <p style="margin-top:14px;">So a group of passionate volunteers decided to build one. No corporate backing. No government grants. Just people who loved theatre, loved their community, and loved a good laugh.</p>
-          <p style="margin-top:14px; font-family: var(--ff-display); font-size:18px; font-style:italic; color:var(--burg-600);">Desi Theatre Company was born.</p>
+          <p style="margin-top:14px; font-family: 'Cormorant Garamond', Georgia, serif; font-size:18px; font-style:italic; color:#6B1F38;">Desi Theatre Company was born.</p>
         </div>
       </div>
       <!-- image: founding team wide shot -->
@@ -108,11 +136,11 @@
   </section>
 
   <!-- ═══════════ VISION & MISSION ═══════════ -->
-  <section class="section" style="background: var(--coal-950);">
+  <section class="section" style="background: #0D0A0B;">
     <div class="container">
       <div class="text-center" style="margin-bottom: 44px;">
         <span class="section-eyebrow light">Our North Star</span>
-        <h2 style="color:#fff; margin-top:10px;">Vision &amp; <em style="color:var(--gold-300);font-style:italic;">Mission</em></h2>
+        <h2 style="color:#fff; margin-top:10px;">Vision &amp; <em style="color:#F0B840;font-style:italic;">Mission</em></h2>
       </div>
       <div class="vm-grid">
         <div class="vm-card vm-card-vision">
@@ -133,10 +161,10 @@
   <!-- ═══════════ TIMELINE + IMAGE · image: images/about-mission-3.jpg ═══════════ -->
   <section class="section section-cream">
     <div class="container">
-      <div class="grid-2" style="gap: var(--sp-16); align-items: start;">
+      <div class="grid-2" style="gap: 64px; align-items: start;">
         <div>
           <span class="section-eyebrow">The Journey</span>
-          <h2>Three seasons. One <em style="color:var(--burg-600);font-style:italic;">growing story.</em></h2>
+          <h2>Three seasons. One <em style="color:#6B1F38;font-style:italic;">growing story.</em></h2>
           <div class="gold-rule" style="margin-top:20px;"></div>
           <div class="timeline">
             <div class="tl-item">
@@ -181,11 +209,11 @@
   <!-- ═══════════ VALUES · image: images/about-values-4.jpg ═══════════ -->
   <section class="section section-stage">
     <div class="container">
-      <div class="grid-2" style="gap: var(--sp-16); align-items: center; margin-bottom: 56px;">
+      <div class="grid-2" style="gap: 64px; align-items: center; margin-bottom: 56px;">
         <div>
           <span class="section-eyebrow light">What We Stand For</span>
-          <h2 style="color:#fff; margin-top:10px;">Six values. One <em style="color:var(--gold-300);font-style:italic;">unforgettable</em> evening.</h2>
-          <div class="gold-rule" style="margin-top:20px; background: var(--gold-400);"></div>
+          <h2 style="color:#fff; margin-top:10px;">Six values. One <em style="color:#F0B840;font-style:italic;">unforgettable</em> evening.</h2>
+          <div class="gold-rule" style="margin-top:20px; background: #E09B20;"></div>
           <p style="color:rgba(253,237,218,0.60); margin-top:14px;">Every production, every rehearsal, every backstage moment is guided by these principles. They're not posters on a wall — they're the reason people keep coming back.</p>
         </div>
         <!-- image: company on stage, diverse, celebratory -->
@@ -209,5 +237,49 @@
     </div>
   </section>
 
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">Desi <em>Theatre</em></div>
+          <p class="footer-desc">Bay Area's Hindi comedy community theatre. Rooted in culture, powered by volunteers, driven by laughter since 2024.</p>
+          <span class="nonprofit-pill">&#10003; Non-profit 501(c) Registered</span>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Navigate</div>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shows.html">Current Show</a></li>
+            <li><a href="shows.html#past">Past Productions</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="team.html">The Company</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Get Involved</div>
+          <ul>
+            <li><a href="join.html">Volunteer</a></li>
+            <li><a href="join.html#auditions">Auditions</a></li>
+            <li><a href="https://www.zeffy.com/donation-form/48fbff1d-6cfd-417b-a36d-4b484be8253f" target="_blank">Donate</a></li>
+            <li><a href="contact.html">Partner With Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Contact</div>
+          <div class="footer-contact-item"><span>&#9742;</span><span>510-926-6339</span></div>
+          <div class="footer-contact-item"><span>&#9993;</span><span>contact@desitheatre.com</span></div>
+          <div class="footer-contact-item"><span>&#128205;</span><span>5068 Calwa Ct, San Jose CA 95111</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">&copy; 2026 Desi Theatre Company. All rights reserved.</span>
+        <div class="social-links">
+          <a href="https://www.instagram.com/desi_theatre/" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/desitheatre" target="_blank">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="css/shared.js"></script>
 </body>
 </html>

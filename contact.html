@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css"/>
   <style>
     /* ── Page hero ── */
-    .contact-page-hero { position: relative; min-height: 46vh; display: flex; align-items: flex-end; overflow: hidden; background: var(--coal-950); }
+    .contact-page-hero { position: relative; min-height: 46vh; display: flex; align-items: flex-end; overflow: hidden; background: #0D0A0B; }
     .contact-page-hero-bg { position: absolute; inset: 0; }
     .contact-page-hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.32; display: block; }
     .contact-page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,10,11,0.97) 0%, rgba(13,10,11,0.40) 55%, rgba(13,10,11,0.08) 100%); }
@@ -18,38 +18,38 @@
     .contact-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 56px; align-items: start; }
 
     /* ── Info cards ── */
-    .info-card { background: #fff; border: 0.5px solid var(--bdr-soft); border-radius: var(--r-lg); padding: 22px; margin-bottom: 14px; display: flex; gap: 16px; align-items: flex-start; transition: all var(--ease-base); box-shadow: var(--sh-card); }
-    .info-card:hover { box-shadow: var(--sh-card-h); transform: translateY(-2px); border-color: var(--bdr-gold-s); }
-    .info-icon { width: 44px; height: 44px; border-radius: var(--r-sm); background: var(--burg-50); border: 0.5px solid rgba(107,31,56,0.15); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
-    .info-content h4 { font-size: 13px; font-weight: 700; color: var(--coal-900); margin-bottom: 4px; letter-spacing: 0.2px; }
-    .info-content p { font-size: 14px; color: var(--txt-muted); line-height: 1.6; margin: 0; }
-    .info-content a { color: var(--burg-600); font-weight: 500; }
-    .info-content a:hover { color: var(--burg-700); }
+    .info-card { background: #fff; border: 0.5px solid rgba(60,30,25,0.12); border-radius: 20px; padding: 22px; margin-bottom: 14px; display: flex; gap: 16px; align-items: flex-start; transition: all 250ms cubic-bezier(0.4,0,0.2,1); box-shadow: 0 4px 20px rgba(20,10,12,0.09); }
+    .info-card:hover { box-shadow: 0 12px 40px rgba(107,31,56,0.15), 0 4px 14px rgba(20,10,12,0.09); transform: translateY(-2px); border-color: rgba(196,125,10,0.16); }
+    .info-icon { width: 44px; height: 44px; border-radius: 8px; background: #FDF4F6; border: 0.5px solid rgba(107,31,56,0.15); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+    .info-content h4 { font-size: 13px; font-weight: 700; color: #140F10; margin-bottom: 4px; letter-spacing: 0.2px; }
+    .info-content p { font-size: 14px; color: #705860; line-height: 1.6; margin: 0; }
+    .info-content a { color: #6B1F38; font-weight: 500; }
+    .info-content a:hover { color: #4A1528; }
 
     /* ── Enquiry types ── */
     .enquiry-types { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 20px; }
-    .eq-type { padding: 10px 14px; border: 0.5px solid var(--bdr-med); border-radius: var(--r-sm); font-size: 13px; color: var(--txt-muted); cursor: pointer; transition: all var(--ease-fast); text-align: center; background: #fff; }
-    .eq-type:hover, .eq-type.selected { border-color: var(--burg-400); background: var(--burg-50); color: var(--burg-700); }
+    .eq-type { padding: 10px 14px; border: 0.5px solid rgba(60,30,25,0.20); border-radius: 8px; font-size: 13px; color: #705860; cursor: pointer; transition: all 150ms cubic-bezier(0.4,0,0.2,1); text-align: center; background: #fff; }
+    .eq-type:hover, .eq-type.selected { border-color: #B03C5E; background: #FDF4F6; color: #4A1528; }
 
     /* ── Social section ── */
-    .social-box { background: var(--coal-900); border-radius: var(--r-xl); padding: 40px; text-align: center; margin-top: 40px; }
-    .social-box h3 { font-family: var(--ff-display); font-size: 24px; color: #fff; margin-bottom: 10px; }
+    .social-box { background: #140F10; border-radius: 28px; padding: 40px; text-align: center; margin-top: 40px; }
+    .social-box h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; color: #fff; margin-bottom: 10px; }
     .social-box p { color: rgba(253,237,218,0.55); font-size:14px; margin-bottom: 24px; }
     .social-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    .social-btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 22px; border-radius: var(--r-full); font-size: 14px; font-weight: 500; border: 0.5px solid rgba(255,255,255,0.18); color: rgba(237,216,184,0.85); background: rgba(255,255,255,0.05); transition: all var(--ease-fast); text-decoration: none; }
-    .social-btn:hover { background: rgba(224,155,32,0.10); border-color: rgba(224,155,32,0.35); color: var(--gold-200); }
+    .social-btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 22px; border-radius: 9999px; font-size: 14px; font-weight: 500; border: 0.5px solid rgba(255,255,255,0.18); color: rgba(237,216,184,0.85); background: rgba(255,255,255,0.05); transition: all 150ms cubic-bezier(0.4,0,0.2,1); text-decoration: none; }
+    .social-btn:hover { background: rgba(224,155,32,0.10); border-color: rgba(224,155,32,0.35); color: #F7D278; }
 
     /* ── Donate band ── */
-    .donate-band { background: var(--gr-burg); border-radius: var(--r-xl); padding: 56px 48px; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; position: relative; overflow: hidden; }
+    .donate-band { background: linear-gradient(135deg, #6B1F38 0%, #4A1528 100%); border-radius: 28px; padding: 56px 48px; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; position: relative; overflow: hidden; }
     .donate-band::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 20% 50%, rgba(224,155,32,0.12) 0%, transparent 60%); }
     .donate-band h2 { color: #fff; margin-bottom: 12px; position: relative; z-index:1; }
     .donate-band p { color: rgba(253,237,218,0.72); font-size: 16px; max-width: 500px; position: relative; z-index:1; }
     .donate-band-btn { position: relative; z-index:1; flex-shrink:0; }
 
     /* ── Map box ── */
-    .map-box { background: var(--bg-warm); border-radius: var(--r-lg); border: 0.5px solid var(--bdr-gold-s); padding: 36px; text-align: center; margin-top: 14px; }
-    .map-box h4 { font-family: var(--ff-display); font-size: 18px; color: var(--coal-900); margin: 10px 0 4px; }
-    .map-box p { font-size: 14px; color: var(--txt-muted); }
+    .map-box { background: #F7EDDA; border-radius: 20px; border: 0.5px solid rgba(196,125,10,0.16); padding: 36px; text-align: center; margin-top: 14px; }
+    .map-box h4 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 18px; color: #140F10; margin: 10px 0 4px; }
+    .map-box p { font-size: 14px; color: #705860; }
 
     /* ── Responsive ── */
     @media (max-width: 900px) {
@@ -65,9 +65,37 @@
   </style>
 </head>
 <body>
-  <script src="css/shared.js"></script>
-
-  <!-- ═══════════ PAGE HERO · image: images/contact-hero-1.jpg ═══════════ -->
+  <nav class="nav" id="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Desi <em>Theatre</em></a>
+      <ul class="nav-links" id="nav-links">
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item">
+          <button class="nav-parent-btn" aria-haspopup="true">Shows <span class="nav-chevron"></span></button>
+          <ul class="nav-dropdown">
+            <li><a href="shows.html">Current Show</a></li>
+            <li><a href="shows.html#past">Past Productions</a></li>
+            <li><a href="shows.html">Book Tickets</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="about.html">About</a></li>
+        <li class="nav-item">
+          <button class="nav-parent-btn" aria-haspopup="true">The Company <span class="nav-chevron"></span></button>
+          <ul class="nav-dropdown">
+            <li><a href="team.html">Meet the Team</a></li>
+            <li><a href="join.html">Volunteer With Us</a></li>
+            <li><a href="join.html#auditions">Auditions</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <button class="nav-burger" id="nav-burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="nav-cta" href="shows.html">Book Tickets</a>
+    </div>
+  </nav>
+<!-- ═══════════ PAGE HERO · image: images/contact-hero-1.jpg ═══════════ -->
   <section class="contact-page-hero">
     <div class="contact-page-hero-bg">
       <img src="images/contact-hero-1.jpg" alt="Historic Hoover Theater exterior, San Jose"/>
@@ -76,13 +104,13 @@
     <div class="contact-page-hero-inner">
       <div class="breadcrumb light" style="margin-bottom:18px;"><a href="index.html">Home</a><span>/</span><span>Contact</span></div>
       <span class="section-eyebrow light">Get in Touch</span>
-      <h1 style="color:#fff; max-width:600px; margin-top:10px;">We'd love to hear from <em style="color:var(--gold-300);font-style:italic;">you.</em></h1>
+      <h1 style="color:#fff; max-width:600px; margin-top:10px;">We'd love to hear from <em style="color:#F0B840;font-style:italic;">you.</em></h1>
       <p style="color:rgba(253,237,218,0.65); font-size:17px; max-width:500px; margin-top:14px;">Ticket questions, partnership enquiries, audition registration, sponsorship, or media — the right person is just a message away.</p>
     </div>
   </section>
 
   <!-- ═══════════ CONTACT BODY ═══════════ -->
-  <section class="section" style="background: var(--cream-50);">
+  <section class="section" style="background: #FDFAF4;">
     <div class="container">
       <div class="contact-grid">
 
@@ -104,7 +132,7 @@
           </div>
           <div class="info-card">
             <div class="info-icon">&#127981;</div>
-            <div class="info-content"><h4>Show Venue</h4><p><strong style="color:var(--coal-900);">Historic Hoover Theater</strong><br/>1635 Park Ave, San Jose, CA 95126</p></div>
+            <div class="info-content"><h4>Show Venue</h4><p><strong style="color:#140F10;">Historic Hoover Theater</strong><br/>1635 Park Ave, San Jose, CA 95126</p></div>
           </div>
           <div class="map-box">
             <div style="font-size:36px;">&#128506;</div>
@@ -118,7 +146,7 @@
         <div>
           <span class="section-eyebrow">Send a Message</span>
           <h2 style="margin-top:8px;margin-bottom:8px;font-size:clamp(22px,3vw,30px);">What can we help with?</h2>
-          <p style="font-size:14px;color:var(--txt-muted);margin-bottom:22px;">Select an enquiry type — we'll make sure it gets to the right person.</p>
+          <p style="font-size:14px;color:#705860;margin-bottom:22px;">Select an enquiry type — we'll make sure it gets to the right person.</p>
 
           <div class="enquiry-types" id="eq-types">
             <div class="eq-type selected">&#127917; Tickets &amp; Shows</div>
@@ -139,11 +167,11 @@
             <div class="form-group"><label class="form-label">Subject *</label><input type="text" class="form-input" placeholder="e.g. Ticket enquiry for April 30th"/></div>
             <div class="form-group"><label class="form-label">Message *</label><textarea class="form-textarea" placeholder="Tell us what's on your mind&#8230;"></textarea></div>
             <button class="btn btn-primary w-full" style="justify-content:center;font-size:15px;">Send Message &rarr;</button>
-            <p style="font-size:12px;color:var(--txt-muted);text-align:center;margin-top:12px;">We respond within one business day.</p>
+            <p style="font-size:12px;color:#705860;text-align:center;margin-top:12px;">We respond within one business day.</p>
           </div>
 
           <div class="social-box">
-            <h3>Follow the <em style="color:var(--gold-300);font-style:italic;">story</em></h3>
+            <h3>Follow the <em style="color:#F0B840;font-style:italic;">story</em></h3>
             <p>Behind-the-scenes, rehearsal moments, show announcements. All on social.</p>
             <div class="social-btns">
               <a href="https://www.instagram.com/desi_theatre/" target="_blank" class="social-btn">&#128247; @desi_theatre on Instagram</a>
@@ -178,5 +206,49 @@
     });
   </script>
 
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">Desi <em>Theatre</em></div>
+          <p class="footer-desc">Bay Area's Hindi comedy community theatre. Rooted in culture, powered by volunteers, driven by laughter since 2024.</p>
+          <span class="nonprofit-pill">&#10003; Non-profit 501(c) Registered</span>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Navigate</div>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shows.html">Current Show</a></li>
+            <li><a href="shows.html#past">Past Productions</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="team.html">The Company</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Get Involved</div>
+          <ul>
+            <li><a href="join.html">Volunteer</a></li>
+            <li><a href="join.html#auditions">Auditions</a></li>
+            <li><a href="https://www.zeffy.com/donation-form/48fbff1d-6cfd-417b-a36d-4b484be8253f" target="_blank">Donate</a></li>
+            <li><a href="contact.html">Partner With Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Contact</div>
+          <div class="footer-contact-item"><span>&#9742;</span><span>510-926-6339</span></div>
+          <div class="footer-contact-item"><span>&#9993;</span><span>contact@desitheatre.com</span></div>
+          <div class="footer-contact-item"><span>&#128205;</span><span>5068 Calwa Ct, San Jose CA 95111</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">&copy; 2026 Desi Theatre Company. All rights reserved.</span>
+        <div class="social-links">
+          <a href="https://www.instagram.com/desi_theatre/" target="_blank">Instagram</a>
+          <a href="https://www.facebook.com/desitheatre" target="_blank">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="css/shared.js"></script>
 </body>
 </html>
