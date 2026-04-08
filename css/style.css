@@ -103,6 +103,49 @@
   --ease-spring: 360ms cubic-bezier(0.34,1.56,0.64,1);
 }
 
+/* ═══════════════════════════════════════════════════════
+   COMPATIBILITY BRIDGE — maps legacy tokens → new system
+   Must come AFTER the base :root token definitions above
+   ═══════════════════════════════════════════════════════ */
+:root {
+  /* saffron → burgundy brand */
+  --saffron:        #6B1F38;
+  --saffron-light:  #F7E4E9;
+  --saffron-mid:    #B03C5E;
+  --saffron-dark:   #4A1528;
+
+  /* cream/surface aliases */
+  --cream:          #FDFAF4;
+  --cream-dark:     #F7EDDA;
+
+  /* text aliases */
+  --ink:            #140F10;
+  --ink-light:      #1E1618;
+  --muted:          #705860;
+  --muted-light:    #9A808A;
+  --white:          #FFFFFF;
+
+  /* border aliases */
+  --border:         rgba(60,30,25,0.12);
+  --border-strong:  rgba(60,30,25,0.36);
+
+  /* typography aliases */
+  --serif:          'Cormorant Garamond', Georgia, serif;
+  --sans:           'Outfit', 'Segoe UI', sans-serif;
+
+  /* radius aliases */
+  --radius-xs:      4px;
+  --radius-sm:      8px;
+  --radius-md:      14px;
+  --radius-lg:      20px;
+  --radius-xl:      28px;
+  --radius-2xl:     40px;
+  --radius-full:    9999px;
+
+  /* divider (old design used this) */
+  --divider:        2px;
+}
+
 /* 2 — RESET */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
