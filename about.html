@@ -15,7 +15,7 @@
     .about-page-hero-inner { position: relative; z-index: 2; max-width: 1180px; margin: 0 auto; width: 100%; padding: 0 40px 64px; }
 
     /* ── Origin year ── */
-    .origin-year { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(80px,12vw,140px); font-weight: 700; line-height: 0.9; color: #FBE9B0; letter-spacing: -0.04em; display: block; }
+    .origin-year { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(80px,12vw,140px); font-weight: 700; line-height: 0.9; color: #1C0610; letter-spacing: -0.04em; display: block; }
 
     /* ── Vision & Mission ── */
     .vm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
@@ -24,33 +24,33 @@
     .vm-card-vision::before { content: ''; position: absolute; top:-20%;left:-10%;width:80%;height:80%; background: radial-gradient(ellipse 55% 50% at 30% 20%, rgba(224,155,32,0.14) 0%, transparent 65%); pointer-events:none; }
     .vm-card-mission { background: linear-gradient(135deg, #6B1F38 0%, #4A1528 100%); border: 0.5px solid rgba(253,237,218,0.12); }
     .vm-card-mission::before { content: ''; position: absolute; top:-20%;right:-10%;width:80%;height:80%; background: radial-gradient(ellipse 55% 50% at 70% 20%, rgba(240,184,64,0.12) 0%, transparent 65%); pointer-events:none; }
-    .vm-card-label { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #F0B840; margin-bottom: 18px; display: flex; align-items: center; gap: 12px; position: relative; z-index: 1; }
+    .vm-card-label { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #D4748E; margin-bottom: 18px; display: flex; align-items: center; gap: 12px; position: relative; z-index: 1; }
     .vm-card-label::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(224,155,32,0.4), transparent); }
     .vm-icon { font-size: 40px; margin-bottom: 18px; display: block; position: relative; z-index: 1; }
-    .vm-card h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(20px,2.5vw,28px); color: #fff; line-height: 1.3; margin-bottom: 16px; position: relative; z-index: 1; font-weight: 700; }
+    .vm-card h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(20px,2.5vw,28px); color: #1A1A1A; line-height: 1.3; margin-bottom: 16px; position: relative; z-index: 1; font-weight: 700; }
     .vm-card p { font-size: 15px; color: rgba(253,237,218,0.65); line-height: 1.8; position: relative; z-index: 1; }
 
     /* ── Timeline ── */
     .timeline { margin-top: 36px; }
     .tl-item { display: flex; gap: 22px; margin-bottom: 32px; position: relative; }
-    .tl-item:not(:last-child)::before { content:''; position:absolute; left:23px; top:50px; bottom:-32px; width:1px; background: rgba(196,125,10,0.16); }
-    .tl-dot { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #FEF6DC 0%, #FBE9B0 100%); border: 1.5px solid rgba(196,125,10,0.32); display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 13px; font-weight: 700; color: #704400; flex-shrink: 0; box-shadow: 0 2px 8px rgba(20,10,12,0.09); }
+    .tl-item:not(:last-child)::before { content:''; position:absolute; left:23px; top:50px; bottom:-32px; width:1px; background: rgba(107,31,56,0.30); }
+    .tl-dot { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #2E0D1C 0%, #1C0610 100%); border: 1.5px solid rgba(107,31,56,0.50); display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 13px; font-weight: 700; color: #D4748E; flex-shrink: 0; box-shadow: 0 2px 8px rgba(20,10,12,0.09); }
     .tl-content { padding-top: 10px; }
-    .tl-content h4 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; color: #140F10; margin-bottom: 6px; font-weight: 700; }
-    .tl-content p { font-size: 14px; color: #705860; line-height: 1.7; }
+    .tl-content h4 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; color: #111111; margin-bottom: 6px; font-weight: 700; }
+    .tl-content p { font-size: 14px; color: #D4748E; line-height: 1.7; }
 
     /* ── Values ── */
     .values-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
-    .value-card { background: #fff; border: 0.5px solid rgba(60,30,25,0.12); border-radius: 28px; padding: 30px 26px; transition: all 360ms cubic-bezier(0.34,1.56,0.64,1); }
-    .value-card:hover { border-color: rgba(196,125,10,0.16); box-shadow: 0 12px 40px rgba(107,31,56,0.15), 0 4px 14px rgba(20,10,12,0.09); transform: translateY(-3px); }
-    .value-num { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 40px; font-weight: 700; color: #FBE9B0; line-height: 1; margin-bottom: 10px; }
-    .value-card h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; margin-bottom: 8px; color: #140F10; font-weight: 700; }
-    .value-card p { font-size: 14px; line-height: 1.75; color: #705860; }
+    .value-card { background: #1A1A1A; border: 0.5px solid rgba(107,31,56,0.30); border-radius: 28px; padding: 30px 26px; transition: all 360ms cubic-bezier(0.34,1.56,0.64,1); }
+    .value-card:hover { border-color: rgba(107,31,56,0.30); box-shadow: 0 12px 40px rgba(107,31,56,0.15), 0 4px 14px rgba(20,10,12,0.09); transform: translateY(-3px); }
+    .value-num { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 40px; font-weight: 700; color: #1C0610; line-height: 1; margin-bottom: 10px; }
+    .value-card h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; margin-bottom: 8px; color: #111111; font-weight: 700; }
+    .value-card p { font-size: 14px; line-height: 1.75; color: #D4748E; }
 
     /* ── Donate box ── */
-    .donate-box { background: #FEF6DC; border: 0.5px solid rgba(196,125,10,0.32); border-radius: 28px; padding: 32px 28px; text-align: center; margin-top: 20px; }
-    .donate-box h4 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; color: #140F10; margin-bottom: 8px; }
-    .donate-box p { font-size: 13px; color: #705860; margin-bottom: 20px; }
+    .donate-box { background: #2E0D1C; border: 0.5px solid rgba(107,31,56,0.50); border-radius: 28px; padding: 32px 28px; text-align: center; margin-top: 20px; }
+    .donate-box h4 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; color: #111111; margin-bottom: 8px; }
+    .donate-box p { font-size: 13px; color: #D4748E; margin-bottom: 20px; }
 
     /* ── Responsive ── */
     @media (max-width: 900px) {
@@ -106,7 +106,7 @@
         <a href="index.html">Home</a><span>/</span><span>About</span>
       </div>
       <span class="section-eyebrow light">Our Story</span>
-      <h1 style="color:#fff; max-width:700px; margin-top:10px;">We're not just here to put on plays.<br>We're here to give you a <em style="color:#F0B840;font-style:italic;">break.</em></h1>
+      <h1 style="color:#111111; max-width:700px; margin-top:10px;">We're not just here to put on plays.<br>We're here to give you a <em style="color:#D4748E;font-style:italic;">break.</em></h1>
       <p style="color:rgba(253,237,218,0.65);font-size:18px;max-width:540px;line-height:1.75;margin-top:16px;">Founded in the Bay Area by passionate desi theatre lovers. Built on laughs, culture, and community.</p>
     </div>
   </section>
@@ -140,7 +140,7 @@
     <div class="container">
       <div class="text-center" style="margin-bottom: 44px;">
         <span class="section-eyebrow light">Our North Star</span>
-        <h2 style="color:#fff; margin-top:10px;">Vision &amp; <em style="color:#F0B840;font-style:italic;">Mission</em></h2>
+        <h2 style="color:#111111; margin-top:10px;">Vision &amp; <em style="color:#D4748E;font-style:italic;">Mission</em></h2>
       </div>
       <div class="vm-grid">
         <div class="vm-card vm-card-vision">
@@ -212,8 +212,8 @@
       <div class="grid-2" style="gap: 64px; align-items: center; margin-bottom: 56px;">
         <div>
           <span class="section-eyebrow light">What We Stand For</span>
-          <h2 style="color:#fff; margin-top:10px;">Six values. One <em style="color:#F0B840;font-style:italic;">unforgettable</em> evening.</h2>
-          <div class="gold-rule" style="margin-top:20px; background: #E09B20;"></div>
+          <h2 style="color:#111111; margin-top:10px;">Six values. One <em style="color:#D4748E;font-style:italic;">unforgettable</em> evening.</h2>
+          <div class="gold-rule" style="margin-top:20px; background: linear-gradient(90deg,#8C2748,#D4748E);"></div>
           <p style="color:rgba(253,237,218,0.60); margin-top:14px;">Every production, every rehearsal, every backstage moment is guided by these principles. They're not posters on a wall — they're the reason people keep coming back.</p>
         </div>
         <!-- image: company on stage, diverse, celebratory -->
@@ -224,7 +224,7 @@
     </div>
   </section>
 
-  <section class="section" style="background: #fff;">
+  <section class="section" style="background: #111111;">
     <div class="container">
       <div class="values-grid">
         <div class="value-card"><div class="value-num">01</div><h3>Comedy</h3><p>Comedy is at the heart of everything. Sometimes meaningful, sometimes gloriously meaningless. Always funny.</p></div>

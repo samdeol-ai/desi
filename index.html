@@ -9,19 +9,19 @@
   <style>
     /* ── Why pillars ── */
     .why-pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px; }
-    .pillar { background: #fff; border: 0.5px solid rgba(60,30,25,0.12); border-radius: 20px; padding: 22px 18px; transition: all 250ms cubic-bezier(0.4,0,0.2,1); }
-    .pillar:hover { border-color: rgba(196,125,10,0.16); box-shadow: 0 4px 20px rgba(20,10,12,0.09); transform: translateY(-2px); }
+    .pillar { background: #1A1A1A; border: 0.5px solid rgba(107,31,56,0.30); border-radius: 20px; padding: 22px 18px; transition: all 250ms cubic-bezier(0.4,0,0.2,1); }
+    .pillar:hover { border-color: rgba(107,31,56,0.30); box-shadow: 0 4px 20px rgba(20,10,12,0.09); transform: translateY(-2px); }
     .pillar-icon { font-size: 22px; margin-bottom: 8px; }
-    .pillar h4 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 17px; color: #140F10; margin-bottom: 5px; font-weight: 700; }
-    .pillar p { font-size: 13px; color: #705860; line-height: 1.6; }
+    .pillar h4 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 17px; color: #111111; margin-bottom: 5px; font-weight: 700; }
+    .pillar p { font-size: 13px; color: #D4748E; line-height: 1.6; }
 
     /* ── Show poster ── */
     .show-poster-home { border-radius: 28px; overflow: hidden; background: #1E1618; aspect-ratio: 4/5; position: relative; box-shadow: 0 28px 72px rgba(20,10,12,0.20), 0 10px 30px rgba(20,10,12,0.11), 0 0 32px rgba(107,31,56,0.26); }
     .show-poster-home img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
     .show-poster-home::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 55%; background: linear-gradient(to top, rgba(13,10,11,0.94), transparent); }
     .show-poster-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 28px; z-index: 2; }
-    .show-poster-overlay h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; color: #fff; margin-bottom: 4px; line-height: 1.2; }
-    .show-poster-overlay p { font-size: 13px; color: #F0B840; font-style: italic; margin-bottom: 14px; }
+    .show-poster-overlay h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; color: #1A1A1A; margin-bottom: 4px; line-height: 1.2; }
+    .show-poster-overlay p { font-size: 13px; color: #D4748E; font-style: italic; margin-bottom: 14px; }
 
     /* ── Stats ── */
     .stats-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; }
@@ -41,18 +41,18 @@
     .culture-card { background: rgba(255,255,255,0.05); border: 0.5px solid rgba(255,255,255,0.10); border-radius: 28px; padding: 32px 26px; transition: all 250ms cubic-bezier(0.4,0,0.2,1); }
     .culture-card:hover { background: rgba(255,255,255,0.09); transform: translateY(-2px); }
     .culture-icon { font-size: 30px; margin-bottom: 16px; }
-    .culture-card h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; color: #fff; margin-bottom: 10px; }
+    .culture-card h3 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; color: #1A1A1A; margin-bottom: 10px; }
     .culture-card p { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.75; }
 
     /* ── CTA band ── */
     .cta-band { background: linear-gradient(135deg, #6B1F38 0%, #4A1528 100%); padding: 80px 40px; text-align: center; position: relative; overflow: hidden; }
     .cta-band::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(224,155,32,0.13) 0%, transparent 60%); }
     .cta-band-inner { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
-    .cta-band h2 { color: #fff; margin-bottom: 12px; }
+    .cta-band h2 { color: #1A1A1A; margin-bottom: 12px; }
     .cta-band p { color: rgba(253,237,218,0.72); font-size: 18px; margin-bottom: 32px; }
 
     /* ── Venue info box ── */
-    .venue-box { background: #F7EDDA; border: 0.5px solid rgba(196,125,10,0.16); border-radius: 14px; padding: 18px 22px; margin: 20px 0; }
+    .venue-box { background: #2E0D1C; border: 0.5px solid rgba(107,31,56,0.30); border-radius: 14px; padding: 18px 22px; margin: 20px 0; }
     .venue-box p { font-size: 14px; margin: 0; }
     .venue-box p + p { margin-top: 3px; }
 
@@ -160,7 +160,7 @@
   </section>
 
   <!-- ═══════════ CURRENT SHOW · image: images/index-show-poster-3.jpg ═══════════ -->
-  <section class="section" style="background: #fff;">
+  <section class="section" style="background: #111111;">
     <div class="container">
       <div class="grid-2" style="gap: 64px; align-items: start;">
         <div class="show-poster-home">
@@ -181,9 +181,9 @@
           <div class="gold-rule"></div>
           <p style="font-size: 17px; margin-top: 12px; color: #2A1E21;">A riotous new comedy about love, marriage, and the spectacular chaos that lives in between. Directed by Niranjan Page. Produced by Nitin Deo.</p>
           <div class="venue-box">
-            <p><strong style="color: #140F10;">Historic Hoover Theater</strong></p>
-            <p style="color: #705860;">1635 Park Ave, San Jose, CA 95126</p>
-            <p style="color: #705860; margin-top: 6px; font-size: 13px;">Apr 30 &ndash; May 3, 2026 &nbsp;|&nbsp; ~100 min running time</p>
+            <p><strong style="color: #FFFFFF;">Historic Hoover Theater</strong></p>
+            <p style="color: rgba(255,255,255,0.55);">1635 Park Ave, San Jose, CA 95126</p>
+            <p style="color: rgba(255,255,255,0.55); margin-top: 6px; font-size: 13px;">Apr 30 &ndash; May 3, 2026 &nbsp;|&nbsp; ~100 min running time</p>
           </div>
           <div class="date-row"><span class="date-day">Thu, Apr 30</span><span class="date-time">7:30 PM</span><span class="date-status">Available</span></div>
           <div class="date-row"><span class="date-day">Fri, May 1</span><span class="date-time">7:30 PM</span><span class="date-status">Available</span></div>
@@ -235,7 +235,7 @@
     <div class="container">
       <div class="text-center">
         <span class="section-eyebrow light">The Desi Theatre Culture</span>
-        <h2 style="color: #fff; margin-top: 8px;">What we stand for, <em style="color: #F0B840; font-style: italic;">every night.</em></h2>
+        <h2 style="color: #111111; margin-top: 8px;">What we stand for, <em style="color: #D4748E; font-style: italic;">every night.</em></h2>
       </div>
       <div class="culture-cards">
         <div class="culture-card"><div class="culture-icon">&#127916;</div><h3>Craft over Chaos</h3><p>Passionate volunteers, professional standards. Every show is rehearsed, polished, and produced with genuine love for the craft.</p></div>
@@ -270,7 +270,7 @@
   <!-- ═══════════ CTA BAND ═══════════ -->
   <section class="cta-band">
     <div class="cta-band-inner">
-      <h2>Ready for your next <em style="font-style: italic; color: #F0B840;">night out?</em></h2>
+      <h2>Ready for your next <em style="font-style: italic; color: #D4748E;">night out?</em></h2>
       <p>Seats are filling fast. Grab yours before the curtain rises for the final time.</p>
       <a href="shows.html" class="btn btn-gold btn-xl">Book Tickets &rarr;</a>
     </div>
