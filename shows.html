@@ -6,64 +6,6 @@
   <title>Shows — Desi Theatre</title>
   <meta name="description" content="Book tickets for Desi Theatre's Hindi comedy naatak in San Jose. Current show timings, venue details, and past productions."/>
   <link rel="stylesheet" href="css/style.css"/>
-  <style>
-    /* ── Page hero ── */
-    .show-page-hero { position: relative; min-height: 52vh; display: flex; align-items: flex-end; overflow: hidden; background: #0D0A0B; }
-    .show-page-hero-bg { position: absolute; inset: 0; }
-    .show-page-hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.38; display: block; }
-    .show-page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,10,11,0.97) 0%, rgba(13,10,11,0.40) 55%, rgba(13,10,11,0.10) 100%); }
-    .show-page-hero-inner { position: relative; z-index: 2; max-width: 1180px; margin: 0 auto; width: 100%; padding: 0 40px 56px; }
-    .show-hero-meta { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 18px; }
-
-    /* ── Layout ── */
-    .show-main-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: start; }
-
-    /* ── Detail box ── */
-    .show-detail-box { background: #1A1A1A; border: 0.5px solid rgba(107,31,56,0.30); border-radius: 28px; padding: 40px; box-shadow: 0 4px 20px rgba(20,10,12,0.09); }
-    .show-tagline { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 16px; font-style: italic; color: #D4748E; margin-bottom: 24px; }
-    .show-crew { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 20px 0; border-top: 0.5px solid rgba(60,30,25,0.07); border-bottom: 0.5px solid rgba(60,30,25,0.07); margin: 24px 0; }
-    .crew-role { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #D4748E; margin-bottom: 3px; }
-    .crew-name { font-size: 15px; font-weight: 500; color: #111111; font-family: 'Cormorant Garamond', Georgia, serif; }
-    .show-desc { font-size: 15px; line-height: 1.8; color: #D4748E; margin-bottom: 22px; }
-
-    /* ── Ticket box ── */
-    .ticket-sticky { position: sticky; top: 84px; }
-    .ticket-box { background: #1A1A1A; border: 0.5px solid rgba(107,31,56,0.30); border-radius: 28px; overflow: hidden; box-shadow: 0 16px 48px rgba(20,10,12,0.17); }
-    .ticket-box-header { background: linear-gradient(135deg, #6B1F38 0%, #4A1528 100%); padding: 24px 28px; position: relative; overflow: hidden; }
-    .ticket-box-header::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 20% 50%, rgba(224,155,32,0.12) 0%, transparent 60%); }
-    .ticket-box-header h3 { color: #1C0610; font-size: 22px; margin-bottom: 4px; position: relative; z-index: 1; }
-    .ticket-box-header p { color: rgba(253,237,218,0.65); font-size: 13px; position: relative; z-index: 1; }
-    .ticket-box-body { padding: 24px 28px; }
-    .showtime-row { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; border-radius: 14px; margin-bottom: 8px; border: 0.5px solid rgba(107,31,56,0.30); cursor: pointer; transition: all 150ms cubic-bezier(0.4,0,0.2,1); }
-    .showtime-row:hover, .showtime-row.sel { background: #2E0D1C; border-color: rgba(107,31,56,0.28); }
-    .showtime-date { font-weight: 600; font-size: 14px; color: #111111; }
-    .showtime-time { font-size: 13px; color: #D4748E; }
-    .showtime-avail { font-size: 11px; font-weight: 700; color: #6B1F38; letter-spacing: 0.5px; }
-    .ticket-perforated { border-top: 2px dashed rgba(107,31,56,0.40); margin: 18px 0; }
-    .venue-detail { font-size: 13px; color: #D4748E; line-height: 1.65; }
-    .venue-detail strong { color: #111111; display: block; margin-bottom: 2px; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; }
-    .ticket-help-box { background: #2E0D1C; border: 0.5px solid rgba(107,31,56,0.30); border-radius: 20px; padding: 16px 20px; margin-top: 14px; }
-    .ticket-help-box p { font-size: 13px; color: #D4748E; margin: 0; }
-
-    /* ── Notice ── */
-    .show-notice { background: #2E0D1C; border: 0.5px solid rgba(107,31,56,0.20); border-left: 3px solid #8C2748; border-radius: 0 14px 14px 0; padding: 14px 18px; margin-top: 24px; font-size: 14px; color: #D4748E; }
-
-    /* ── Past grid ── */
-    .past-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-
-    /* ── Responsive ── */
-    @media (max-width: 900px) {
-      .show-main-grid { grid-template-columns: 1fr; }
-      .ticket-sticky { position: static; }
-      .past-grid { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 600px) {
-      .show-page-hero-inner { padding: 0 20px 40px; }
-      .show-detail-box { padding: 24px 20px; }
-      .ticket-box-body { padding: 18px 20px; }
-      .show-crew { grid-template-columns: 1fr; }
-    }
-  </style>
 </head>
 <body>
   <nav class="nav" id="site-nav">
@@ -90,45 +32,35 @@
         </li>
         <li class="nav-item"><a href="contact.html">Contact</a></li>
       </ul>
-      <button class="nav-burger" id="nav-burger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="nav-burger" id="nav-burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
       <a class="nav-cta" href="shows.html">Book Tickets</a>
     </div>
   </nav>
-<!-- ═══════════ PAGE HERO · image: images/shows-hero-1.jpg ═══════════ -->
+
   <section class="show-page-hero">
-    <div class="show-page-hero-bg">
-      <img src="images/shows-hero-1.jpg" alt="Stage lights at Desi Theatre — dramatic spotlight on an empty stage"/>
-    </div>
+    <div class="show-page-hero-bg"><img src="images/shows-hero-1.jpg" alt="Stage lights at Desi Theatre"/></div>
     <div class="show-page-hero-overlay"></div>
     <div class="show-page-hero-inner">
-      <div class="breadcrumb light" style="margin-bottom: 20px;">
-        <a href="index.html">Home</a><span>/</span><span>Shows</span>
-      </div>
-      <div class="show-hero-meta">
+      <div class="breadcrumb light mb-6"><a href="index.html">Home</a><span>/</span><span>Shows</span></div>
+      <div class="show-hero-tags">
         <span class="tag tag-live">&#9679; Now Showing</span>
         <span class="tag tag-dark">Hindi + English Subtitles</span>
         <span class="tag tag-dark">~100 Min</span>
       </div>
-      <h1 style="color: #111111; max-width: 720px;">On Stage Now &mdash;<br><em style="color: #D4748E; font-style: italic;">Pati, Patni, aur &#8220;Oh Terri&#8221;</em></h1>
-      <p style="color: rgba(253,237,218,0.65); font-size: 17px; max-width: 520px; margin-top: 14px;">A riotous comedy about love, marriage, and the spectacular chaos that lives in between. Five shows only.</p>
+      <h1>On Stage Now &mdash;<br><em>Pati, Patni, aur &#8220;Oh Terri&#8221;</em></h1>
+      <p class="hero-sub">A riotous comedy about love, marriage, and the spectacular chaos that lives in between. Five shows only.</p>
     </div>
   </section>
 
-  <!-- ═══════════ CURRENT SHOW ═══════════ -->
-  <section class="section" style="background: #1C0610;">
+  <section class="section section-cream">
     <div class="container">
       <div class="show-main-grid">
-
-        <!-- Left: show detail -->
         <div>
           <div class="show-detail-box">
-            <!-- image: images/shows-poster-2.jpg -->
-            <div style="aspect-ratio: 16/7; border-radius: 20px; overflow: hidden; background: #1E1618; margin-bottom: 28px;">
-              <img src="images/shows-poster-2.jpg" alt="Pati Patni aur Oh Terri — show poster" style="width:100%;height:100%;object-fit:cover;display:block;"/>
+            <div class="img-frame mb-8" style="aspect-ratio:16/7;">
+              <img src="images/shows-poster-2.jpg" alt="Pati Patni aur Oh Terri — show poster" class="img-cover"/>
             </div>
-            <h2 style="font-size: clamp(24px,3vw,34px); margin-bottom: 6px;">Pati, Patni, aur <em style="color:#6B1F38;font-style:italic;">&#8220;Oh Terri&#8221;</em></h2>
+            <h2>Pati, Patni, aur <em>&#8220;Oh Terri&#8221;</em></h2>
             <p class="show-tagline">A Hindi comedy naatak with English supertitles &mdash; Spring 2026</p>
             <div class="show-crew">
               <div><div class="crew-role">Director</div><div class="crew-name">Niranjan Page</div></div>
@@ -138,17 +70,15 @@
               <div><div class="crew-role">English Supertitles</div><div class="crew-name">Arti Raina-Bambroo</div></div>
               <div><div class="crew-role">Props</div><div class="crew-name">Mousumi Chaudhuri</div></div>
             </div>
-            <p class="show-desc">What happens when the perfect husband, the devoted wife, and an unexpected &#8220;Oh Terri&#8221; moment collide in the same living room? Pure, unadulterated chaos — and comedy gold. This is a love letter to every married couple who has survived a catastrophically bad day together and laughed about it.</p>
+            <p class="show-desc">What happens when the perfect husband, the devoted wife, and an unexpected &#8220;Oh Terri&#8221; moment collide in the same living room? Pure, unadulterated chaos — and comedy gold. A love letter to every married couple who has survived a catastrophically bad day together and laughed about it.</p>
             <p class="show-desc">Performed entirely in Hindi with live English supertitles — crafted for the entire Bay Area, desi and desi-adjacent alike.</p>
             <div class="quote-block">
               <p>&#8220;No heavy drama. Just good stories, great people, and a lot of laughter.&#8221;</p>
               <cite>— The Desi Theatre Company</cite>
             </div>
-            <div class="show-notice">&#9679;&nbsp; Doors open 30 minutes before showtime. Light refreshments in the foyer. Curtain rises promptly — please arrive on time.</div>
+            <div class="show-notice">&#9679;&nbsp; Doors open 30 minutes before showtime. Light refreshments in the foyer. Curtain rises promptly.</div>
           </div>
         </div>
-
-        <!-- Right: ticket box -->
         <div class="ticket-sticky">
           <div class="ticket-box">
             <div class="ticket-box-header">
@@ -156,7 +86,7 @@
               <p>Historic Hoover Theater &middot; San Jose, CA</p>
             </div>
             <div class="ticket-box-body">
-              <p style="font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 14px;">Select a showing</p>
+              <p class="ticket-select-label">Select a showing</p>
               <div class="showtime-row sel">
                 <div><div class="showtime-date">Thu, Apr 30</div><div class="showtime-time">7:30 PM &ndash; 9:10 PM</div></div>
                 <span class="showtime-avail">Available</span>
@@ -178,30 +108,25 @@
                 <span class="showtime-avail">Available</span>
               </div>
               <div class="ticket-perforated"></div>
-              <div class="venue-detail">
-                <strong>Historic Hoover Theater</strong>
-                1635 Park Ave, San Jose, CA 95126
-              </div>
-              <a href="https://www.desitheatre.com/buy-ticket" target="_blank" class="btn btn-primary w-full" style="justify-content:center; margin-top: 20px; font-size:15px;">Book on Desi Theatre &rarr;</a>
-              <p style="font-size: 12px; color: rgba(255,255,255,0.55); text-align: center; margin-top: 10px;">Opens official booking page in a new tab</p>
+              <div class="venue-detail"><strong>Historic Hoover Theater</strong>1635 Park Ave, San Jose, CA 95126</div>
+              <a href="https://www.desitheatre.com/buy-ticket" target="_blank" class="btn btn-primary w-full mt-6" style="justify-content:center;">Book on Desi Theatre &rarr;</a>
+              <p class="ticket-book-note">Opens official booking page in a new tab</p>
             </div>
           </div>
           <div class="ticket-help-box">
-            <p><strong style="color: #FFFFFF;">Questions?</strong> Call&nbsp;510-926-6339 or email contact@desitheatre.com</p>
+            <p><strong>Questions?</strong> Call&nbsp;510-926-6339 or email contact@desitheatre.com</p>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ═══════════ PAST PRODUCTIONS ═══════════ -->
-  <section class="section section-cream" id="past">
+  <section class="section section-golden" id="past">
     <div class="container">
-      <div style="max-width: 580px; margin-bottom: 44px;">
+      <div class="past-intro">
         <span class="section-eyebrow">The Archives</span>
-        <h2>Previously on <em style="color:#6B1F38;font-style:italic;">Desi Theatre&#8230;</em></h2>
-        <p style="margin-top: 12px;">Every production is a chapter. Here's how the story began — and how it keeps growing.</p>
+        <h2>Previously on <em>Desi Theatre&#8230;</em></h2>
+        <p class="mt-4">Every production is a chapter. Here's how the story began — and how it keeps growing.</p>
       </div>
       <div class="past-grid">
         <div class="prod-card">
@@ -209,9 +134,8 @@
           <div class="prod-info">
             <h4>Caught in the Net</h4>
             <p>A full-length Hindi comedy about modern technology, social media obsession, and a family that communicates entirely through forwarded WhatsApp messages. Directed by Mukund Marathe.</p>
-            <div style="display:flex; gap:8px; margin-top:12px; flex-wrap:wrap;">
-              <span class="tag tag-muted">Completed</span>
-              <span class="tag tag-muted">San Jose, CA</span>
+            <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;">
+              <span class="tag tag-muted">Completed</span><span class="tag tag-muted">San Jose, CA</span>
             </div>
           </div>
         </div>
@@ -220,29 +144,25 @@
           <div class="prod-info">
             <h4>The Founding Naatak</h4>
             <p>Desi Theatre's debut — a short-form comedy showcase that introduced the Bay Area to a fresh, energetic voice in Hindi theatre. Six scenes, twelve laughs, one very nervous cast.</p>
-            <div style="display:flex; gap:8px; margin-top:12px; flex-wrap:wrap;">
-              <span class="tag tag-muted">Completed</span>
-              <span class="tag tag-muted">San Jose, CA</span>
+            <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;">
+              <span class="tag tag-muted">Completed</span><span class="tag tag-muted">San Jose, CA</span>
             </div>
           </div>
         </div>
-        <div class="prod-card" style="border-style: dashed; background: #1C0610; border-color: rgba(107,31,56,0.50);">
-          <div class="prod-year-badge" style="background: #2E0D1C; border-color: rgba(107,31,56,0.40);">
-            <div class="year" style="color: rgba(255,255,255,0.55);">2026</div>
-            <div class="season" style="color: #9A808A;">Fall</div>
-          </div>
+        <div class="prod-card prod-card-tba">
+          <div class="prod-year-badge"><div class="year">2026</div><div class="season">Fall</div></div>
           <div class="prod-info">
-            <h4 style="color: rgba(255,255,255,0.55);">Next Release &mdash; TBA</h4>
+            <h4>Next Release &mdash; TBA</h4>
             <p>The next chapter is being written. Follow us on Instagram and Facebook to be first in line when tickets drop.</p>
-            <a href="contact.html" class="btn btn-secondary btn-sm" style="margin-top:14px; display:inline-flex;">Get Notified &rarr;</a>
+            <a href="contact.html" class="btn btn-secondary btn-sm mt-4" style="display:inline-flex;">Get Notified &rarr;</a>
           </div>
         </div>
-        <div class="prod-card" style="background: #140F10; border-color: transparent;">
+        <div class="prod-card prod-card-dark">
           <div class="prod-info">
-            <p style="color: #D4748E; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px;">Want to be in the next one?</p>
-            <h4 style="color: #111111; margin-bottom: 10px;">Auditions Open Year-Round</h4>
-            <p style="color: rgba(255,255,255,0.55); font-size: 13px;">Prepare a short Hindi monologue and bring your energy. No experience required — just expression, confidence, and presence.</p>
-            <a href="join.html#auditions" class="btn btn-gold btn-sm" style="margin-top:18px; display:inline-flex;">Register for Audition &rarr;</a>
+            <p class="prod-card-eyebrow">Want to be in the next one?</p>
+            <h4>Auditions Open Year-Round</h4>
+            <p>Prepare a short Hindi monologue and bring your energy. No experience required — just expression, confidence, and presence.</p>
+            <a href="join.html#auditions" class="btn btn-gold btn-sm mt-4" style="display:inline-flex;">Register for Audition &rarr;</a>
           </div>
         </div>
       </div>
@@ -259,22 +179,11 @@
         </div>
         <div class="footer-col">
           <div class="footer-col-title">Navigate</div>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="shows.html">Current Show</a></li>
-            <li><a href="shows.html#past">Past Productions</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="team.html">The Company</a></li>
-          </ul>
+          <ul><li><a href="index.html">Home</a></li><li><a href="shows.html">Current Show</a></li><li><a href="shows.html#past">Past Productions</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">The Company</a></li></ul>
         </div>
         <div class="footer-col">
           <div class="footer-col-title">Get Involved</div>
-          <ul>
-            <li><a href="join.html">Volunteer</a></li>
-            <li><a href="join.html#auditions">Auditions</a></li>
-            <li><a href="https://www.zeffy.com/donation-form/48fbff1d-6cfd-417b-a36d-4b484be8253f" target="_blank">Donate</a></li>
-            <li><a href="contact.html">Partner With Us</a></li>
-          </ul>
+          <ul><li><a href="join.html">Volunteer</a></li><li><a href="join.html#auditions">Auditions</a></li><li><a href="https://www.zeffy.com/donation-form/48fbff1d-6cfd-417b-a36d-4b484be8253f" target="_blank">Donate</a></li><li><a href="contact.html">Partner With Us</a></li></ul>
         </div>
         <div class="footer-col">
           <div class="footer-col-title">Contact</div>
@@ -285,10 +194,7 @@
       </div>
       <div class="footer-bottom">
         <span class="footer-copy">&copy; 2026 Desi Theatre Company. All rights reserved.</span>
-        <div class="social-links">
-          <a href="https://www.instagram.com/desi_theatre/" target="_blank">Instagram</a>
-          <a href="https://www.facebook.com/desitheatre" target="_blank">Facebook</a>
-        </div>
+        <div class="social-links"><a href="https://www.instagram.com/desi_theatre/" target="_blank">Instagram</a><a href="https://www.facebook.com/desitheatre" target="_blank">Facebook</a></div>
       </div>
     </div>
   </footer>
