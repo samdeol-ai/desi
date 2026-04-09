@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Join Us — Desi Theatre</title>
+  <title>Volunteer &amp; Join — Desi Theatre</title>
   <meta name="description" content="Join Desi Theatre as a volunteer or audition for our next production. No experience required — just curiosity and enthusiasm."/>
   <link rel="stylesheet" href="css/style.css"/>
 </head>
@@ -13,15 +13,9 @@
       <a href="index.html" class="nav-logo">Desi <em>Theatre</em></a>
       <ul class="nav-links" id="nav-links">
         <li class="nav-item"><a href="index.html">Home</a></li>
-        <li class="nav-item">
-          <button class="nav-parent-btn" aria-haspopup="true">Shows <span class="nav-chevron"></span></button>
-          <ul class="nav-dropdown"><li><a href="shows.html">Current Show</a></li><li><a href="shows.html#past">Past Productions</a></li><li><a href="shows.html">Book Tickets</a></li></ul>
-        </li>
+        <li class="nav-item"><button class="nav-parent-btn" aria-haspopup="true">Shows <span class="nav-chevron"></span></button><ul class="nav-dropdown"><li><a href="shows.html">Current Show</a></li><li><a href="shows.html#past">Past Productions</a></li><li><a href="shows.html">Book Tickets</a></li></ul></li>
         <li class="nav-item"><a href="about.html">About</a></li>
-        <li class="nav-item">
-          <button class="nav-parent-btn active" aria-haspopup="true">The Company <span class="nav-chevron"></span></button>
-          <ul class="nav-dropdown"><li><a href="team.html">Meet the Team</a></li><li><a href="join.html">Volunteer With Us</a></li><li><a href="join.html#auditions">Auditions</a></li></ul>
-        </li>
+        <li class="nav-item"><button class="nav-parent-btn active" aria-haspopup="true">The Company <span class="nav-chevron"></span></button><ul class="nav-dropdown"><li><a href="team.html">Meet the Team</a></li><li><a href="join.html">Volunteer With Us</a></li><li><a href="join.html#auditions">Auditions</a></li></ul></li>
         <li class="nav-item"><a href="contact.html">Contact</a></li>
       </ul>
       <button class="nav-burger" id="nav-burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
@@ -29,144 +23,248 @@
     </div>
   </nav>
 
+  <!-- ═══ HERO ═══ -->
   <section class="join-page-hero">
-    <div class="join-page-hero-bg"><img src="images/join-hero-1.jpg" alt="Desi Theatre volunteers on stage rehearsing together"/></div>
+    <div class="join-page-hero-bg"><img src="images/join-hero-1.jpg" alt="Desi Theatre cast rehearsing on stage"/></div>
     <div class="join-page-hero-overlay"></div>
     <div class="join-page-hero-inner">
       <div>
         <div class="breadcrumb light mb-6"><a href="index.html">Home</a><span>/</span><span>Join Us</span></div>
-        <span class="section-eyebrow light">Be Part of the Story</span>
+        <span class="section-eyebrow light">Your Stage is Waiting</span>
         <h1>This could be your <em>moment.</em></h1>
-        <p class="hero-sub">You don't need experience. Just curiosity and enthusiasm. From acting to backstage, marketing to hospitality — there's a place for you here.</p>
-        <div class="role-pill-row">
-          <span class="role-pill">Acting</span><span class="role-pill">Set Design</span><span class="role-pill">Marketing</span>
-          <span class="role-pill">Costume</span><span class="role-pill">Dancing</span><span class="role-pill">Singing</span>
-          <span class="role-pill">Props</span><span class="role-pill">Food &amp; Hospitality</span><span class="role-pill">IT &amp; Tech</span>
+        <p class="hero-sub">No experience needed. Just curiosity and enthusiasm. From acting to backstage, marketing to hospitality — there's a role here with your name on it.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:32px;">
+          <a href="#volunteer" class="btn btn-gold btn-lg">Volunteer Now &rarr;</a>
+          <a href="join.html#auditions" class="btn btn-ghost btn-lg">Audition Info</a>
         </div>
       </div>
-      <div class="form-box">
-        <h3>Join the Mailing List</h3>
-        <p class="mt-2 mb-6">Be first to hear about productions, auditions, and volunteer opportunities.</p>
-        <div class="form-group"><label class="form-label">Full name</label><input type="text" class="form-input" placeholder="Your name"/></div>
-        <div class="form-group"><label class="form-label">Email address</label><input type="email" class="form-input" placeholder="you@email.com"/></div>
-        <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:18px;">
-          <input type="checkbox" id="sub-check" style="margin-top:3px;"/>
-          <label for="sub-check" class="checkbox-label">I want to subscribe to Desi Theatre updates.</label>
+      <div class="audition-status-card">
+        <div class="asc-badge">Accepting Applications</div>
+        <p class="asc-title">Season 4 Volunteers</p>
+        <p class="asc-sub">We're building the team for our next production. All roles open — stage to social media.</p>
+        <div class="asc-dates">
+          <div class="asc-date"><span class="asc-date-icon">&#127919;</span><span class="asc-date-text">Auditions: Rolling Intake</span></div>
+          <div class="asc-date"><span class="asc-date-icon">&#128197;</span><span class="asc-date-text">Production: Fall 2026</span></div>
+          <div class="asc-date"><span class="asc-date-icon">&#128205;</span><span class="asc-date-text">San Jose, CA</span></div>
         </div>
-        <a href="contact.html" class="btn btn-primary w-full" style="justify-content:center;">Subscribe &rarr;</a>
+        <a href="#volunteer" class="btn btn-primary w-full" style="justify-content:center;">Apply to Join &rarr;</a>
       </div>
     </div>
   </section>
 
+  <!-- ═══ STATS BAND ═══ -->
+  <section class="stats-band">
+    <div class="stats-band-inner">
+      <div class="stat-band-item"><span class="stat-band-num">40+</span><span class="stat-band-label">Active Volunteers</span></div>
+      <div class="stat-band-item"><span class="stat-band-num">3</span><span class="stat-band-label">Seasons Produced</span></div>
+      <div class="stat-band-item"><span class="stat-band-num">500+</span><span class="stat-band-label">Audience Members</span></div>
+      <div class="stat-band-item"><span class="stat-band-num">10+</span><span class="stat-band-label">Show Nights</span></div>
+    </div>
+  </section>
+
+  <!-- ═══ WHY JOIN ═══ -->
   <section class="section section-cream">
     <div class="container">
-      <div class="volunteer-grid">
+      <div class="text-center mb-12">
+        <span class="section-eyebrow">Why Volunteer With Us</span>
+        <h2 class="section-heading-accent">More than a theatre. <em>A community.</em></h2>
+      </div>
+      <div class="feature-cards-3">
+        <div class="feature-card">
+          <span class="fc-icon">&#127775;</span>
+          <h3>Learn Real Skills</h3>
+          <p>Direction, production, marketing, costume, set design — every role teaches you something you can use for life. No theatre background required.</p>
+        </div>
+        <div class="feature-card">
+          <span class="fc-icon">&#129309;</span>
+          <h3>Find Your People</h3>
+          <p>Desi Theatre is built on friendships. You'll rehearse, laugh, stress, and celebrate with a group who genuinely has your back.</p>
+        </div>
+        <div class="feature-card">
+          <span class="fc-icon">&#127942;</span>
+          <h3>Create Something Real</h3>
+          <p>Not a workshop. Not a hobby night. A full professional production that sells tickets and fills a real theatre. Your name in the programme.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ROLES SHOWCASE ═══ -->
+  <section class="section section-golden">
+    <div class="container">
+      <div class="grid-2 mb-12" style="gap:64px;align-items:center;">
         <div>
-          <span class="section-eyebrow">Volunteer With Us</span>
-          <h2 class="section-heading-accent">Ever thought about being part of something <em>creative?</em></h2>
+          <span class="section-eyebrow">Open Roles</span>
+          <h2 class="section-heading-accent">Find where you <em>fit in.</em></h2>
           <div class="gold-rule mt-6"></div>
-          <p class="mt-4">Desi Theatre Company is dedicated to supporting local talent and providing a platform for aspiring individuals to learn and grow in the performing arts.</p>
-          <p class="mt-4">Whether you've been on stage or never left the audience — you are welcome here.</p>
-          <div class="role-item-grid mt-6">
-            <div class="role-item"><span class="role-dot"></span>Acting</div>
-            <div class="role-item"><span class="role-dot"></span>Event Management</div>
-            <div class="role-item"><span class="role-dot"></span>Set Design</div>
-            <div class="role-item"><span class="role-dot"></span>Painting</div>
-            <div class="role-item"><span class="role-dot"></span>Costume</div>
-            <div class="role-item"><span class="role-dot"></span>Props</div>
-            <div class="role-item"><span class="role-dot"></span>Marketing</div>
-            <div class="role-item"><span class="role-dot"></span>Dancing</div>
-            <div class="role-item"><span class="role-dot"></span>Singing</div>
-            <div class="role-item"><span class="role-dot"></span>Food &amp; Refreshments</div>
-            <div class="role-item"><span class="role-dot"></span>IT &amp; Tech</div>
-            <div class="role-item"><span class="role-dot"></span>Not sure, but fun!</div>
+          <p class="mt-4">Desi Theatre is a multi-disciplinary company. Whether you're a performer, a builder, a storyteller, or an organiser — we have a role that will challenge and reward you.</p>
+        </div>
+        <div class="role-showcase">
+          <div class="role-showcase-card">
+            <span class="rsc-icon">&#127918;</span>
+            <p class="rsc-title">On Stage</p>
+            <p class="rsc-desc">Acting, singing, dancing. The lights are on you — make the audience laugh, cry, and applaud.</p>
+            <div class="rsc-tags"><span class="rsc-tag">Acting</span><span class="rsc-tag">Singing</span><span class="rsc-tag">Dancing</span></div>
+          </div>
+          <div class="role-showcase-card">
+            <span class="rsc-icon">&#127916;</span>
+            <p class="rsc-title">Production</p>
+            <p class="rsc-desc">Set design, costumes, props, lighting. Build the world the audience believes in.</p>
+            <div class="rsc-tags"><span class="rsc-tag">Set Design</span><span class="rsc-tag">Costume</span><span class="rsc-tag">Props</span></div>
+          </div>
+          <div class="role-showcase-card">
+            <span class="rsc-icon">&#128227;</span>
+            <p class="rsc-title">Marketing</p>
+            <p class="rsc-desc">Social media, outreach, photography, design. Fill those seats and grow the audience.</p>
+            <div class="rsc-tags"><span class="rsc-tag">Social Media</span><span class="rsc-tag">Design</span><span class="rsc-tag">PR</span></div>
+          </div>
+          <div class="role-showcase-card">
+            <span class="rsc-icon">&#128187;</span>
+            <p class="rsc-title">Tech &amp; IT</p>
+            <p class="rsc-desc">Website, AV, supertitles. Keep the tech running so the show can go on.</p>
+            <div class="rsc-tags"><span class="rsc-tag">IT</span><span class="rsc-tag">AV</span><span class="rsc-tag">Subtitles</span></div>
+          </div>
+          <div class="role-showcase-card">
+            <span class="rsc-icon">&#127869;</span>
+            <p class="rsc-title">Hospitality</p>
+            <p class="rsc-desc">Food, refreshments, front of house. The audience experience starts before the curtain rises.</p>
+            <div class="rsc-tags"><span class="rsc-tag">Food</span><span class="rsc-tag">Front of House</span></div>
+          </div>
+          <div class="role-showcase-card">
+            <span class="rsc-icon">&#128200;</span>
+            <p class="rsc-title">Operations</p>
+            <p class="rsc-desc">Event management, logistics, partnerships. Keep everything moving smoothly behind the scenes.</p>
+            <div class="rsc-tags"><span class="rsc-tag">Events</span><span class="rsc-tag">Logistics</span></div>
           </div>
         </div>
-        <div class="form-box">
-          <h3>Apply to Volunteer</h3>
-          <p class="mt-2 mb-6">Tell us about yourself. We'll be in touch before our next production.</p>
-          <div class="form-row">
-            <div class="form-group"><label class="form-label">Full name *</label><input type="text" class="form-input" placeholder="Your name"/></div>
-            <div class="form-group"><label class="form-label">Email *</label><input type="email" class="form-input" placeholder="you@email.com"/></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ VOLUNTEER FORM ═══ -->
+  <section class="section section-cream" id="volunteer">
+    <div class="container">
+      <div class="grid-2" style="gap:64px;align-items:start;">
+        <div>
+          <span class="section-eyebrow">Ready to Join?</span>
+          <h2 class="section-heading-accent">Let's find your <em>role.</em></h2>
+          <div class="gold-rule mt-6"></div>
+          <p class="mt-4">Fill in the form and we'll reach out before our next production cycle. No commitments yet — just a conversation.</p>
+          <div class="timeline mt-8">
+            <div class="tl-item">
+              <div class="tl-dot">1</div>
+              <div class="tl-content"><h4>Submit Your Interest</h4><p>Tell us who you are and what excites you. Takes 2 minutes.</p></div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot">2</div>
+              <div class="tl-content"><h4>We'll Be in Touch</h4><p>A member of the team will reach out within a week to say hello.</p></div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot">3</div>
+              <div class="tl-content"><h4>Join the Family</h4><p>Come to a rehearsal, meet the cast, and find your place in the company.</p></div>
+            </div>
           </div>
+        </div>
+        <div class="form-panel">
+          <h3>Apply to <em>Volunteer</em></h3>
+          <p class="fp-sub">All fields marked * are required. We'll never share your details.</p>
+          <div class="form-row">
+            <div class="form-group"><label class="form-label">First name *</label><input type="text" class="form-input" placeholder="First"/></div>
+            <div class="form-group"><label class="form-label">Last name *</label><input type="text" class="form-input" placeholder="Last"/></div>
+          </div>
+          <div class="form-group"><label class="form-label">Email address *</label><input type="email" class="form-input" placeholder="you@email.com"/></div>
           <div class="form-group"><label class="form-label">Phone (optional)</label><input type="tel" class="form-input" placeholder="+1 (___) ___-____"/></div>
           <div class="form-group">
             <label class="form-label">Area of interest *</label>
             <select class="form-select">
               <option value="">Select a role&hellip;</option>
-              <option>Acting</option><option>Event Management</option><option>Set Design</option>
-              <option>Painting</option><option>Costume</option><option>Props</option>
-              <option>Marketing</option><option>Dancing</option><option>Singing</option>
-              <option>Food and Refreshments</option><option>IT / Tech</option>
-              <option>Others</option><option>Not sure, but fun!</option>
+              <option>Acting</option><option>Singing</option><option>Dancing</option>
+              <option>Set Design &amp; Construction</option><option>Costume Design</option>
+              <option>Props</option><option>Marketing &amp; Social Media</option>
+              <option>Photography / Videography</option><option>IT &amp; Tech</option>
+              <option>Food &amp; Refreshments</option><option>Event Management</option>
+              <option>Subtitles / Translation</option><option>Not sure — surprise me!</option>
             </select>
           </div>
-          <div class="form-group"><label class="form-label">Short message (optional)</label><textarea class="form-textarea" placeholder="Tell us why you'd like to get involved&#8230;"></textarea></div>
-          <button class="btn btn-primary w-full" style="justify-content:center;">Apply Now &rarr;</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-golden" id="auditions">
-    <div class="container">
-      <div class="audition-box">
-        <div>
-          <h2>Auditions are <em>open.</em></h2>
-          <p>This could be your moment. We're looking for expression, confidence, and presence — not a CV or a showreel. Desi Theatre welcomes first-timers and experienced performers alike.</p>
-          <p>Auditions are held on a rolling basis ahead of each production. Register your interest and we'll notify you when the next round is announced.</p>
-          <a href="contact.html" class="btn btn-gold mt-4" style="display:inline-flex;">Register for Audition &rarr;</a>
-        </div>
-        <div>
-          <p class="step-label">How Auditions Work</p>
-          <div class="step-list">
-            <div class="step-item"><div class="step-num">1</div><div class="step-content"><h4>Register Your Interest</h4><p>Fill in the contact form or email us. We'll add you to the auditions list for the next production.</p></div></div>
-            <div class="step-item"><div class="step-num">2</div><div class="step-content"><h4>Prepare a Short Monologue</h4><p>A 2–3 minute Hindi monologue of your choice. The subject doesn't matter — your energy does.</p></div></div>
-            <div class="step-item"><div class="step-num">3</div><div class="step-content"><h4>Come In &amp; Bring It</h4><p>Walk into the room, own the space, and show us who you are. We're rooting for you before you've said a word.</p></div></div>
-            <div class="step-item"><div class="step-num">4</div><div class="step-content"><h4>We'll Be in Touch</h4><p>Regardless of outcome, every auditionee gets a response. We value your time and your courage.</p></div></div>
+          <div class="form-group">
+            <label class="form-label">Tell us about yourself *</label>
+            <textarea class="form-textarea" placeholder="Any experience? What excites you about Desi Theatre? Why now?&#10;&#10;(No experience required — just be honest and enthusiastic.)"></textarea>
           </div>
+          <button class="btn btn-primary w-full" style="justify-content:center;" class="btn-text-base">Submit My Interest &rarr;</button>
+          <p class="txt-note mt-4">We respond within 3–5 business days.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="mailing-band">
-    <span class="section-eyebrow light">Stay in the Loop</span>
-    <h2>First to hear. First to book.</h2>
-    <p class="hero-sub">Join the Desi Theatre mailing list and never miss a production announcement, ticket drop, or audition call.</p>
-    <div class="mailing-input-row">
-      <input type="email" placeholder="Enter your email address"/>
-      <button class="btn btn-primary">Subscribe</button>
+  <!-- ═══ PULL QUOTE ═══ -->
+  <section class="pull-quote-section">
+    <p class="pull-quote">&#8220;The best thing I ever did was walk into that first rehearsal not knowing <em>anyone.</em> I walked out with a second family.&#8221;</p>
+    <p class="pull-quote-attr">— Aditi Honawar, Costume Designer &amp; Founding Member</p>
+  </section>
+
+  <!-- ═══ AUDITIONS ═══ -->
+  <section class="section section-cream" id="auditions">
+    <div class="container">
+      <div class="text-center mb-12">
+        <span class="section-eyebrow">Auditions</span>
+        <h2 class="section-heading-accent">Open. Year-Round. <em>For everyone.</em></h2>
+        <p class="mt-4" style="max-width:580px;margin-left:auto;margin-right:auto;">Desi Theatre runs on a rolling auditions model. Whether it's March or October — if you're ready, so are we.</p>
+      </div>
+      <div class="numbered-steps">
+        <div class="ns-item">
+          <span class="ns-num">01</span>
+          <p class="ns-title">Register Your Interest</p>
+          <p class="ns-desc">Fill in the contact form or email us directly. We'll add you to the auditions list and let you know when the next round is scheduled.</p>
+        </div>
+        <div class="ns-item">
+          <span class="ns-num">02</span>
+          <p class="ns-title">Prepare a Monologue</p>
+          <p class="ns-desc">A 2–3 minute Hindi monologue of your choice. The subject doesn't matter — it's about your energy, presence, and commitment.</p>
+        </div>
+        <div class="ns-item">
+          <span class="ns-num">03</span>
+          <p class="ns-title">Come In &amp; Bring It</p>
+          <p class="ns-desc">Walk into the room, own the space, and show us who you are. We're rooting for you before you've said your first word.</p>
+        </div>
+        <div class="ns-item">
+          <span class="ns-num">04</span>
+          <p class="ns-title">We'll Be in Touch</p>
+          <p class="ns-desc">Regardless of outcome, every auditionee receives a personalised response. We value your courage and your time.</p>
+        </div>
+      </div>
+      <div class="text-center mt-12">
+        <a href="contact.html" class="btn btn-gold btn-lg">Register for Auditions &rarr;</a>
+        <p class="mt-4 txt-sm">No fees. No agent needed. Just your talent.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ JOIN STRIP ═══ -->
+  <section class="join-strip">
+    <div class="join-strip-side">
+      <span class="section-eyebrow light">Still Deciding?</span>
+      <h3>Come watch a <em>rehearsal</em> first.</h3>
+      <p>No commitment required. We regularly invite curious community members to watch our rehearsal process and meet the team. It's the best way to see if Desi Theatre is for you.</p>
+      <a href="contact.html" class="btn btn-secondary">Get in Touch &rarr;</a>
+    </div>
+    <div class="join-strip-side">
+      <span class="section-eyebrow light">Already Decided?</span>
+      <h3>Apply <em>right now.</em></h3>
+      <p>The form takes 3 minutes. We check applications weekly. Spots for our next production are limited — the sooner you apply, the better your chances of joining the cast.</p>
+      <a href="#volunteer" class="btn btn-gold">Apply to Volunteer &rarr;</a>
     </div>
   </section>
 
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-top">
-        <div>
-          <div class="footer-logo">Desi <em>Theatre</em></div>
-          <p class="footer-desc">Bay Area's Hindi comedy community theatre. Rooted in culture, powered by volunteers, driven by laughter since 2024.</p>
-          <span class="nonprofit-pill">&#10003; Non-profit 501(c) Registered</span>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Navigate</div>
-          <ul><li><a href="index.html">Home</a></li><li><a href="shows.html">Current Show</a></li><li><a href="shows.html#past">Past Productions</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">The Company</a></li></ul>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Get Involved</div>
-          <ul><li><a href="join.html">Volunteer</a></li><li><a href="join.html#auditions">Auditions</a></li><li><a href="https://www.zeffy.com/donation-form/48fbff1d-6cfd-417b-a36d-4b484be8253f" target="_blank">Donate</a></li><li><a href="contact.html">Partner With Us</a></li></ul>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Contact</div>
-          <div class="footer-contact-item"><span>&#9742;</span><span>510-926-6339</span></div>
-          <div class="footer-contact-item"><span>&#9993;</span><span>contact@desitheatre.com</span></div>
-          <div class="footer-contact-item"><span>&#128205;</span><span>5068 Calwa Ct, San Jose CA 95111</span></div>
-        </div>
+        <div><div class="footer-logo">Desi <em>Theatre</em></div><p class="footer-desc">Bay Area's Hindi comedy community theatre. Rooted in culture, powered by volunteers, driven by laughter since 2024.</p><span class="nonprofit-pill">&#10003; Non-profit 501(c) Registered</span></div>
+        <div class="footer-col"><div class="footer-col-title">Navigate</div><ul><li><a href="index.html">Home</a></li><li><a href="shows.html">Current Show</a></li><li><a href="shows.html#past">Past Productions</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">The Company</a></li></ul></div>
+        <div class="footer-col"><div class="footer-col-title">Get Involved</div><ul><li><a href="join.html">Volunteer</a></li><li><a href="join.html#auditions">Auditions</a></li><li><a href="https://www.zeffy.com/donation-form/48fbff1d-6cfd-417b-a36d-4b484be8253f" target="_blank">Donate</a></li><li><a href="contact.html">Partner With Us</a></li></ul></div>
+        <div class="footer-col"><div class="footer-col-title">Contact</div><div class="footer-contact-item"><span>&#9742;</span><span>510-926-6339</span></div><div class="footer-contact-item"><span>&#9993;</span><span>contact@desitheatre.com</span></div><div class="footer-contact-item"><span>&#128205;</span><span>5068 Calwa Ct, San Jose CA 95111</span></div></div>
       </div>
-      <div class="footer-bottom">
-        <span class="footer-copy">&copy; 2026 Desi Theatre Company. All rights reserved.</span>
-        <div class="social-links"><a href="https://www.instagram.com/desi_theatre/" target="_blank">Instagram</a><a href="https://www.facebook.com/desitheatre" target="_blank">Facebook</a></div>
-      </div>
+      <div class="footer-bottom"><span class="footer-copy">&copy; 2026 Desi Theatre Company. All rights reserved.</span><div class="social-links"><a href="https://www.instagram.com/desi_theatre/" target="_blank">Instagram</a><a href="https://www.facebook.com/desitheatre" target="_blank">Facebook</a></div></div>
     </div>
   </footer>
   <script src="css/shared.js"></script>

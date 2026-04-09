@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact — Desi Theatre</title>
-  <meta name="description" content="Get in touch with Desi Theatre — ticket enquiries, partnerships, sponsorship, media, or audition registration."/>
+  <meta name="description" content="Get in touch with Desi Theatre — tickets, partnerships, auditions, sponsorship, or media enquiries."/>
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
@@ -13,15 +13,9 @@
       <a href="index.html" class="nav-logo">Desi <em>Theatre</em></a>
       <ul class="nav-links" id="nav-links">
         <li class="nav-item"><a href="index.html">Home</a></li>
-        <li class="nav-item">
-          <button class="nav-parent-btn" aria-haspopup="true">Shows <span class="nav-chevron"></span></button>
-          <ul class="nav-dropdown"><li><a href="shows.html">Current Show</a></li><li><a href="shows.html#past">Past Productions</a></li><li><a href="shows.html">Book Tickets</a></li></ul>
-        </li>
+        <li class="nav-item"><button class="nav-parent-btn" aria-haspopup="true">Shows <span class="nav-chevron"></span></button><ul class="nav-dropdown"><li><a href="shows.html">Current Show</a></li><li><a href="shows.html#past">Past Productions</a></li><li><a href="shows.html">Book Tickets</a></li></ul></li>
         <li class="nav-item"><a href="about.html">About</a></li>
-        <li class="nav-item">
-          <button class="nav-parent-btn" aria-haspopup="true">The Company <span class="nav-chevron"></span></button>
-          <ul class="nav-dropdown"><li><a href="team.html">Meet the Team</a></li><li><a href="join.html">Volunteer With Us</a></li><li><a href="join.html#auditions">Auditions</a></li></ul>
-        </li>
+        <li class="nav-item"><button class="nav-parent-btn" aria-haspopup="true">The Company <span class="nav-chevron"></span></button><ul class="nav-dropdown"><li><a href="team.html">Meet the Team</a></li><li><a href="join.html">Volunteer With Us</a></li><li><a href="join.html#auditions">Auditions</a></li></ul></li>
         <li class="nav-item"><a href="contact.html" class="active">Contact</a></li>
       </ul>
       <button class="nav-burger" id="nav-burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
@@ -29,128 +23,174 @@
     </div>
   </nav>
 
+  <!-- ═══ HERO ═══ -->
   <section class="contact-page-hero">
-    <div class="contact-page-hero-bg"><img src="images/contact-hero-1.jpg" alt="Historic Hoover Theater exterior, San Jose"/></div>
+    <div class="contact-page-hero-bg"><img src="images/contact-hero-1.jpg" alt="Historic Hoover Theater, San Jose"/></div>
     <div class="contact-page-hero-overlay"></div>
     <div class="contact-page-hero-inner">
       <div class="breadcrumb light mb-6"><a href="index.html">Home</a><span>/</span><span>Contact</span></div>
-      <span class="section-eyebrow light">Get in Touch</span>
-      <h1>We'd love to hear from <em>you.</em></h1>
-      <p class="hero-sub">Ticket questions, partnership enquiries, audition registration, sponsorship, or media — the right person is just a message away.</p>
+      <span class="section-eyebrow light">We're Here for You</span>
+      <h1>Let's start a <em>conversation.</em></h1>
+      <p class="hero-sub">Tickets, partnerships, auditions, media, or just a question — reach out and the right person will get back to you within 24 hours.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:32px;">
+        <a href="tel:5109266339" class="btn btn-gold btn-lg">&#9742; Call Us Now</a>
+        <a href="mailto:contact@desitheatre.com" class="btn btn-ghost btn-lg">&#9993; Send Email</a>
+      </div>
     </div>
   </section>
 
+  <!-- ═══ QUICK CONTACT BAND ═══ -->
+  <section class="stats-band">
+    <div class="stats-band-inner">
+      <div class="stat-band-item"><span class="stat-band-num" class="stat-band-icon">&#9742;</span><span class="stat-band-label">510-926-6339</span></div>
+      <div class="stat-band-item"><span class="stat-band-num" class="stat-band-icon">&#9993;</span><span class="stat-band-label">contact@desitheatre.com</span></div>
+      <div class="stat-band-item"><span class="stat-band-num" class="stat-band-icon">&#128247;</span><span class="stat-band-label">@desi_theatre</span></div>
+      <div class="stat-band-item"><span class="stat-band-num" class="stat-band-icon">&#127975;</span><span class="stat-band-label">San Jose, CA</span></div>
+    </div>
+  </section>
+
+  <!-- ═══ MAIN CONTACT BODY ═══ -->
   <section class="section section-cream">
     <div class="container">
-      <div class="contact-grid">
+      <div class="grid-2" style="gap:48px;align-items:start;">
+
+        <!-- LEFT: Info + Map -->
         <div>
-          <span class="section-eyebrow">Direct Lines</span>
-          <h2 class="mt-4 mb-8">Find us</h2>
-          <div class="info-card">
-            <div class="info-icon">&#9742;</div>
-            <div class="info-content"><h4>Phone</h4><p><a href="tel:5109266339">510-926-6339</a></p><p>Mon–Sat, 10am–7pm PT</p></div>
+          <span class="section-eyebrow">Find Us</span>
+          <h2 class="mt-4 mb-8">Direct <em>lines.</em></h2>
+          <div class="contact-info-panel">
+            <div class="cip-header">
+              <span class="tag tag-burg">&#9679; Mon–Sat, 10am–7pm PT</span>
+            </div>
+            <div class="contact-line">
+              <div class="contact-line-icon">&#9742;</div>
+              <div class="contact-line-body"><h4>Phone</h4><p><a href="tel:5109266339">510-926-6339</a></p></div>
+            </div>
+            <div class="contact-line">
+              <div class="contact-line-icon">&#9993;</div>
+              <div class="contact-line-body"><h4>Email</h4><p><a href="mailto:contact@desitheatre.com">contact@desitheatre.com</a></p></div>
+            </div>
+            <div class="contact-line">
+              <div class="contact-line-icon">&#128205;</div>
+              <div class="contact-line-body"><h4>Mailing Address</h4><p>5068 Calwa Ct, San Jose, CA 95111</p></div>
+            </div>
+            <div class="contact-line">
+              <div class="contact-line-icon">&#127981;</div>
+              <div class="contact-line-body"><h4>Show Venue</h4><p><a href="https://maps.google.com/?q=Historic+Hoover+Theater+1635+Park+Ave+San+Jose+CA" target="_blank">Historic Hoover Theater<br/>1635 Park Ave, San Jose, CA 95126</a></p></div>
+            </div>
+            <div class="contact-line">
+              <div class="contact-line-icon">&#128247;</div>
+              <div class="contact-line-body"><h4>Instagram</h4><p><a href="https://www.instagram.com/desi_theatre/" target="_blank">@desi_theatre</a></p></div>
+            </div>
+            <div class="contact-line">
+              <div class="contact-line-icon">&#128483;</div>
+              <div class="contact-line-body"><h4>Facebook</h4><p><a href="https://www.facebook.com/desitheatre" target="_blank">facebook.com/desitheatre</a></p></div>
+            </div>
           </div>
-          <div class="info-card">
-            <div class="info-icon">&#9993;</div>
-            <div class="info-content"><h4>Email</h4><p><a href="mailto:contact@desitheatre.com">contact@desitheatre.com</a></p><p>We respond within 24 hours</p></div>
-          </div>
-          <div class="info-card">
-            <div class="info-icon">&#128205;</div>
-            <div class="info-content"><h4>Mailing Address</h4><p>5068 Calwa Ct<br/>San Jose, CA 95111</p></div>
-          </div>
-          <div class="info-card">
-            <div class="info-icon">&#127981;</div>
-            <div class="info-content"><h4>Show Venue</h4><p><strong>Historic Hoover Theater</strong><br/>1635 Park Ave, San Jose, CA 95126</p></div>
-          </div>
-          <div class="map-box">
-            <div class="map-icon">&#128506;</div>
-            <h4>Historic Hoover Theater</h4>
-            <p>1635 Park Ave, San Jose, CA 95126</p>
-            <a href="https://maps.google.com/?q=Historic+Hoover+Theater+1635+Park+Ave+San+Jose+CA" target="_blank" class="btn btn-secondary btn-sm mt-6" style="display:inline-flex;">Open in Google Maps &rarr;</a>
+          <div class="map-embed mt-6">
+            <div class="map-embed-placeholder">
+              <span class="map-embed-icon">&#128506;</span>
+              <p class="map-embed-label">Historic Hoover Theater</p>
+              <p class="map-embed-address">1635 Park Ave, San Jose, CA 95126</p>
+            </div>
+            <div class="map-embed-footer">
+              <p>Show venue &mdash; Home of Desi Theatre</p>
+              <a href="https://maps.google.com/?q=Historic+Hoover+Theater+1635+Park+Ave+San+Jose+CA" target="_blank" class="btn btn-secondary btn-sm">Open Maps &rarr;</a>
+            </div>
           </div>
         </div>
+
+        <!-- RIGHT: Form -->
         <div>
           <span class="section-eyebrow">Send a Message</span>
-          <h2 class="mt-4">What can we help with?</h2>
-          <p class="mt-4 mb-6">Select an enquiry type — we'll make sure it gets to the right person.</p>
-          <div class="eq-grid" id="eq-types">
-            <div class="eq-type selected">&#127917; Tickets &amp; Shows</div>
-            <div class="eq-type">&#127941; Auditions</div>
-            <div class="eq-type">&#129309; Partnerships</div>
-            <div class="eq-type">&#128227; Media &amp; Press</div>
-            <div class="eq-type">&#128588; Volunteering</div>
-            <div class="eq-type">&#128172; General</div>
+          <h2 class="mt-4">We'll get back to <em>you.</em></h2>
+          <p class="mt-4 mb-8">Tell us what's on your mind. Every message goes to a real person on our team.</p>
+          <div class="eq-tabs" id="eq-tabs">
+            <button class="eq-tab selected">&#127917; Tickets</button>
+            <button class="eq-tab">&#127941; Auditions</button>
+            <button class="eq-tab">&#129309; Partnerships</button>
+            <button class="eq-tab">&#128227; Media</button>
+            <button class="eq-tab">&#128588; Volunteering</button>
+            <button class="eq-tab">&#128172; General</button>
           </div>
-          <div class="form-box" style="border-top-left-radius:0;border-top-right-radius:0;border-top:none;">
+          <div class="form-panel">
+            <h3>Send a <em>Message</em></h3>
+            <p class="fp-sub">We respond within one business day, usually same day.</p>
             <div class="form-row">
               <div class="form-group"><label class="form-label">First name *</label><input type="text" class="form-input" placeholder="First"/></div>
               <div class="form-group"><label class="form-label">Last name *</label><input type="text" class="form-input" placeholder="Last"/></div>
             </div>
             <div class="form-group"><label class="form-label">Email address *</label><input type="email" class="form-input" placeholder="you@email.com"/></div>
             <div class="form-group"><label class="form-label">Phone (optional)</label><input type="tel" class="form-input" placeholder="+1 (___) ___-____"/></div>
-            <div class="form-group"><label class="form-label">Subject *</label><input type="text" class="form-input" placeholder="e.g. Ticket enquiry for April 30th"/></div>
-            <div class="form-group"><label class="form-label">Message *</label><textarea class="form-textarea" placeholder="Tell us what's on your mind&#8230;"></textarea></div>
-            <button class="btn btn-primary w-full" style="justify-content:center;">Send Message &rarr;</button>
-            <p class="txt-note mt-4">We respond within one business day.</p>
-          </div>
-          <div class="social-box">
-            <h3>Follow the <em>story</em></h3>
-            <p>Behind-the-scenes, rehearsal moments, show announcements. All on social.</p>
-            <div class="social-btns">
-              <a href="https://www.instagram.com/desi_theatre/" target="_blank" class="social-btn">&#128247; @desi_theatre on Instagram</a>
-              <a href="https://www.facebook.com/desitheatre" target="_blank" class="social-btn">&#128483; Desi Theatre on Facebook</a>
-            </div>
+            <div class="form-group"><label class="form-label">Subject *</label><input type="text" class="form-input" placeholder="e.g. Ticket enquiry for Apr 30"/></div>
+            <div class="form-group"><label class="form-label">Message *</label><textarea class="form-textarea" placeholder="Tell us what's on your mind…"></textarea></div>
+            <button class="btn btn-primary w-full" style="justify-content:center;" class="btn-text-base">Send Message &rarr;</button>
+            <p class="txt-note mt-4">We respond within one business day. Your details are never shared.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ═══ QUICK LINKS ═══ -->
   <section class="section section-golden">
     <div class="container">
-      <div class="donate-band">
-        <div>
-          <h2>Help us make the next production happen.</h2>
-          <p>Desi Theatre is a non-profit 501(c) organisation. Every contribution goes directly into producing better theatre for the Bay Area community.</p>
-        </div>
-        <a href="https://www.zeffy.com/donation-form/48fbff1d-6cfd-417b-a36d-4b484be8253f" target="_blank" class="btn btn-gold btn-lg" style="white-space:nowrap;">Donate Now &rarr;</a>
+      <div class="text-center mb-12">
+        <span class="section-eyebrow">Common Questions</span>
+        <h2 class="section-heading-accent">Looking for something <em>specific?</em></h2>
       </div>
+      <div class="feature-cards-3">
+        <div class="feature-card">
+          <span class="fc-icon">&#127917;</span>
+          <h3>Book Tickets</h3>
+          <p>Reserve seats for Pati, Patni, aur &#8220;Oh Terri&#8221; — Apr 30 to May 3, 2026 at Historic Hoover Theater.</p>
+          <a href="shows.html" class="btn btn-gold btn-sm mt-6" style="display:inline-flex;">View Shows &rarr;</a>
+        </div>
+        <div class="feature-card">
+          <span class="fc-icon">&#127941;</span>
+          <h3>Audition Info</h3>
+          <p>Auditions are open year-round. Prepare a 2–3 min Hindi monologue and we'll be in touch within a week.</p>
+          <a href="join.html#auditions" class="btn btn-secondary btn-sm mt-6" style="display:inline-flex;">Audition Details &rarr;</a>
+        </div>
+        <div class="feature-card">
+          <span class="fc-icon">&#128180;</span>
+          <h3>Sponsorship &amp; Donate</h3>
+          <p>Support Bay Area's Hindi comedy theatre. Desi Theatre is a registered non-profit 501(c) organisation.</p>
+          <a href="https://www.zeffy.com/donation-form/48fbff1d-6cfd-417b-a36d-4b484be8253f" target="_blank" class="btn btn-secondary btn-sm mt-6" style="display:inline-flex;">Donate Now &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ DONATE BAND ═══ -->
+  <section class="split-accent">
+    <div class="split-accent-image">
+      <img src="images/about-values-4.jpg" alt="Desi Theatre community on stage"/>
+    </div>
+    <div class="split-accent-content">
+      <span class="section-eyebrow light">Support the Company</span>
+      <h2>Help us make the next production <em>happen.</em></h2>
+      <p>Desi Theatre is a non-profit 501(c) organisation. Every contribution — large or small — goes directly into producing better theatre for the Bay Area community.</p>
+      <p>No advertisers. No corporate backing. Just you and the stage.</p>
+      <a href="https://www.zeffy.com/donation-form/48fbff1d-6cfd-417b-a36d-4b484be8253f" target="_blank" class="btn btn-gold mt-6" style="display:inline-flex;">Donate Now &rarr;</a>
     </div>
   </section>
 
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-top">
-        <div>
-          <div class="footer-logo">Desi <em>Theatre</em></div>
-          <p class="footer-desc">Bay Area's Hindi comedy community theatre. Rooted in culture, powered by volunteers, driven by laughter since 2024.</p>
-          <span class="nonprofit-pill">&#10003; Non-profit 501(c) Registered</span>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Navigate</div>
-          <ul><li><a href="index.html">Home</a></li><li><a href="shows.html">Current Show</a></li><li><a href="shows.html#past">Past Productions</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">The Company</a></li></ul>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Get Involved</div>
-          <ul><li><a href="join.html">Volunteer</a></li><li><a href="join.html#auditions">Auditions</a></li><li><a href="https://www.zeffy.com/donation-form/48fbff1d-6cfd-417b-a36d-4b484be8253f" target="_blank">Donate</a></li><li><a href="contact.html">Partner With Us</a></li></ul>
-        </div>
-        <div class="footer-col">
-          <div class="footer-col-title">Contact</div>
-          <div class="footer-contact-item"><span>&#9742;</span><span>510-926-6339</span></div>
-          <div class="footer-contact-item"><span>&#9993;</span><span>contact@desitheatre.com</span></div>
-          <div class="footer-contact-item"><span>&#128205;</span><span>5068 Calwa Ct, San Jose CA 95111</span></div>
-        </div>
+        <div><div class="footer-logo">Desi <em>Theatre</em></div><p class="footer-desc">Bay Area's Hindi comedy community theatre. Rooted in culture, powered by volunteers, driven by laughter since 2024.</p><span class="nonprofit-pill">&#10003; Non-profit 501(c) Registered</span></div>
+        <div class="footer-col"><div class="footer-col-title">Navigate</div><ul><li><a href="index.html">Home</a></li><li><a href="shows.html">Current Show</a></li><li><a href="shows.html#past">Past Productions</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">The Company</a></li></ul></div>
+        <div class="footer-col"><div class="footer-col-title">Get Involved</div><ul><li><a href="join.html">Volunteer</a></li><li><a href="join.html#auditions">Auditions</a></li><li><a href="https://www.zeffy.com/donation-form/48fbff1d-6cfd-417b-a36d-4b484be8253f" target="_blank">Donate</a></li><li><a href="contact.html">Partner With Us</a></li></ul></div>
+        <div class="footer-col"><div class="footer-col-title">Contact</div><div class="footer-contact-item"><span>&#9742;</span><span>510-926-6339</span></div><div class="footer-contact-item"><span>&#9993;</span><span>contact@desitheatre.com</span></div><div class="footer-contact-item"><span>&#128205;</span><span>5068 Calwa Ct, San Jose CA 95111</span></div></div>
       </div>
-      <div class="footer-bottom">
-        <span class="footer-copy">&copy; 2026 Desi Theatre Company. All rights reserved.</span>
-        <div class="social-links"><a href="https://www.instagram.com/desi_theatre/" target="_blank">Instagram</a><a href="https://www.facebook.com/desitheatre" target="_blank">Facebook</a></div>
-      </div>
+      <div class="footer-bottom"><span class="footer-copy">&copy; 2026 Desi Theatre Company. All rights reserved.</span><div class="social-links"><a href="https://www.instagram.com/desi_theatre/" target="_blank">Instagram</a><a href="https://www.facebook.com/desitheatre" target="_blank">Facebook</a></div></div>
     </div>
   </footer>
   <script>
-    document.querySelectorAll('.eq-type').forEach(function(el){
+    document.querySelectorAll('.eq-tab').forEach(function(el){
       el.addEventListener('click',function(){
-        document.querySelectorAll('.eq-type').forEach(function(e){e.classList.remove('selected');});
+        document.querySelectorAll('.eq-tab').forEach(function(e){e.classList.remove('selected');});
         el.classList.add('selected');
       });
     });
